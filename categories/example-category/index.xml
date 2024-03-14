@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Example Category on Garfield Zhang</title>
-        <link>https://jiafie7.github.io/categories/example-category/</link>
+        <link>https://garfieldzhang.site/categories/example-category/</link>
         <description>Recent content in Example Category on Garfield Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://jiafie7.github.io/categories/example-category/index.xml" rel="self" type="application/rss+xml" />
+        <language>en-us</language><atom:link href="https://garfieldzhang.site/categories/example-category/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
