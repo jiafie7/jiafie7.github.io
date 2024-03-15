@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='11. Container With Most Water 分析 用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。
-为什么更新出来的值一定是最优解。 i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。
-可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; '>
-<title>Container With Most Water</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
+但是，可以找下规律。
+千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。'>
+<title>Integer to Roman</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/container-with-most-water/'>
+<link rel='canonical' href='https://garfieldzhang.site/p/integer-to-roman/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Container With Most Water'>
-<meta property='og:description' content='11. Container With Most Water 分析 用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。
-为什么更新出来的值一定是最优解。 i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。
-可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/container-with-most-water/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Integer to Roman'>
+<meta property='og:description' content='12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
+但是，可以找下规律。
+千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。'>
+<meta property='og:url' content='https://garfieldzhang.site/p/integer-to-roman/'>
 <meta property='og:site_name' content='Garfield Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='双指针算法' /><meta property='article:published_time' content='2024-03-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/p/container-with-most-water/leetcode.png' />
-<meta name="twitter:title" content="Container With Most Water">
-<meta name="twitter:description" content="11. Container With Most Water 分析 用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。
-为什么更新出来的值一定是最优解。 i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。
-可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/p/container-with-most-water/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-03-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/p/integer-to-roman/leetcode.png' />
+<meta name="twitter:title" content="Integer to Roman">
+<meta name="twitter:description" content="12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
+但是，可以找下规律。
+千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://garfieldzhang.site/p/integer-to-roman/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>
@@ -257,7 +254,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#11-container-with-most-waterhttpsleetcodecomproblemscontainer-with-most-waterdescription"><a href="https://leetcode.com/problems/container-with-most-water/description/">11. Container With Most Water</a></a>
+    <li><a href="#12-integer-to-romanhttpsleetcodecomproblemsinteger-to-romandescription"><a href="https://leetcode.com/problems/integer-to-roman/description/">12. Integer to Roman</a></a>
       <ol>
         <li><a href="#分析">分析</a></li>
         <li><a href="#c代码">C++代码</a></li>
@@ -277,13 +274,13 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/container-with-most-water/">
-                <img src="/p/container-with-most-water/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png"
-                        srcset="/p/container-with-most-water/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png 800w, /p/container-with-most-water/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_1600x0_resize_box_3.png 1600w"
+            <a href="/p/integer-to-roman/">
+                <img src="/p/integer-to-roman/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png"
+                        srcset="/p/integer-to-roman/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png 800w, /p/integer-to-roman/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_1600x0_resize_box_3.png 1600w"
                         width="800" 
                         height="450" 
                         loading="lazy"
-                        alt="Featured image of post Container With Most Water" />
+                        alt="Featured image of post Integer to Roman" />
                 
             </a>
         </div>
@@ -302,7 +299,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/container-with-most-water/">Container With Most Water</a>
+            <a href="/p/integer-to-roman/">Integer to Roman</a>
         </h2>
     
         
@@ -324,7 +321,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 13, 2024</time>
+                <time class="article-time--published">Mar 14, 2024</time>
             </div>
         
 
@@ -354,13 +351,120 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
     <section class="article-content">
     
     
-    <h2 id="11-container-with-most-waterhttpsleetcodecomproblemscontainer-with-most-waterdescription"><a class="link" href="https://leetcode.com/problems/container-with-most-water/description/"  target="_blank" rel="noopener"
-    >11. Container With Most Water</a></h2>
+    <h2 id="12-integer-to-romanhttpsleetcodecomproblemsinteger-to-romandescription"><a class="link" href="https://leetcode.com/problems/integer-to-roman/description/"  target="_blank" rel="noopener"
+    >12. Integer to Roman</a></h2>
 <h3 id="分析">分析</h3>
-<p>用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。</p>
-<p>为什么更新出来的值一定是最优解。
-i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。</p>
-<p>可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>I</td>
+<td>II</td>
+<td>III</td>
+<td>IV</td>
+<td>V</td>
+<td>VI</td>
+<td>VII</td>
+<td>VIII</td>
+<td>IX</td>
+</tr>
+<tr>
+<td>10</td>
+<td>20</td>
+<td>30</td>
+<td>40</td>
+<td>50</td>
+<td>60</td>
+<td>70</td>
+<td>80</td>
+<td>90</td>
+</tr>
+<tr>
+<td>X</td>
+<td>XX</td>
+<td>XXX</td>
+<td>XL</td>
+<td>L</td>
+<td>LX</td>
+<td>LXX</td>
+<td>LXXX</td>
+<td>XL</td>
+</tr>
+<tr>
+<td>100</td>
+<td>200</td>
+<td>300</td>
+<td>400</td>
+<td>500</td>
+<td>600</td>
+<td>700</td>
+<td>800</td>
+<td>900</td>
+</tr>
+<tr>
+<td>C</td>
+<td>CC</td>
+<td>CCC</td>
+<td>CD</td>
+<td>D</td>
+<td>DC</td>
+<td>DCC</td>
+<td>DCCC</td>
+<td>CM</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>2000</td>
+<td>3000</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>M</td>
+<td>MM</td>
+<td>MMM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。</p>
+<p>但是，可以找下规律。</p>
+<p>千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。</p>
+<p>百位的100～300记下C，每减100就换一个C。400无规律，单独记下CD。同理，500～800记下D，900记下CM。</p>
+<p>十位记下10、40、50、90，也就是X、XL、L、XC。个位记下1、4、5、9，也就是I、IV、V、IX。</p>
+<p>然后对记下的这些数字，从大到小去考虑。例如大于900，当前值减去900，字符串拼接一个CM。</p>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -376,16 +480,44 @@ i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">maxArea</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">height</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">height</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="n">i</span> <span class="o">++</span> <span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="n">j</span> <span class="o">--</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">intToRoman</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">values</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="mi">1000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="mi">900</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="mi">90</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="n">romans</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;M&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;CM&#34;</span><span class="p">,</span> <span class="s">&#34;D&#34;</span><span class="p">,</span> <span class="s">&#34;CD&#34;</span><span class="p">,</span> <span class="s">&#34;C&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;XC&#34;</span><span class="p">,</span> <span class="s">&#34;L&#34;</span><span class="p">,</span> <span class="s">&#34;XL&#34;</span><span class="p">,</span> <span class="s">&#34;X&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;IX&#34;</span><span class="p">,</span> <span class="s">&#34;V&#34;</span><span class="p">,</span> <span class="s">&#34;IV&#34;</span><span class="p">,</span> <span class="s">&#34;I&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">+=</span> <span class="n">romans</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="n">num</span> <span class="o">-=</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -403,8 +535,6 @@ i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一
             <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
-        
-            <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88%E7%AE%97%E6%B3%95/">双指针算法</a>
         
     </section>
 
@@ -462,15 +592,15 @@ i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一
             
                 
 <article class="has-image">
-    <a href="/p/integer-to-roman/">
+    <a href="/p/container-with-most-water/">
         
         
             <div class="article-image">
-                <img src="/p/integer-to-roman/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
+                <img src="/p/container-with-most-water/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
-                        alt="Featured image of post Integer to Roman"
+                        alt="Featured image of post Container With Most Water"
                         
                         data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
                 
@@ -478,7 +608,7 @@ i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一
         
 
         <div class="article-details">
-            <h2 class="article-title">Integer to Roman</h2>
+            <h2 class="article-title">Container With Most Water</h2>
         </div>
     </a>
 </article>
