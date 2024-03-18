@@ -3,12 +3,11 @@
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='15. 3Sum 分析 首先将数组排序，每个答案数组包含三个数，而双指针只能处理两个位置，所以先枚举第一个数的位置。为了减少一些重复情况，我们设定 i &amp;lt; j &amp;lt; k。当i固定后，对于当前j，只需要找到最小的k使得 nums[i] &#43; nums[j] &#43; nums[k] &amp;gt;= 0。此时，若 nums[i] &#43; nums[j] &#43; nums[k] = 0， 则为答案数组。否则，由于 nums[i] &#43; nums[j] &#43; nums[k - 1] &amp;lt; 0，k不能再向左移动（递减），需要j向右移动（递增）。
 最后考虑避免重复情况。只需要保证i指向的下一个元素与当前元素不等即可，因为当前元素对应的答案数组已经被考虑过了。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; threeSum(vector&amp;lt;int&amp;gt;&amp;amp; nums) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; sort(nums.begin(), nums.end()); for (int i = 0; i &amp;lt; nums.'>
-<title>3Sum</title>
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; threeSum(vector&amp;lt;int&amp;gt;&amp;amp; nums) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; sort(nums.begin(), nums.end()); for (int i = 0; i &amp;lt; nums.'><title>3Sum</title>
 
 <link rel='canonical' href='https://garfieldzhang.site/p/3sum/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='3Sum'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='3Sum'>
 <meta property='og:description' content='15. 3Sum 分析 首先将数组排序，每个答案数组包含三个数，而双指针只能处理两个位置，所以先枚举第一个数的位置。为了减少一些重复情况，我们设定 i &amp;lt; j &amp;lt; k。当i固定后，对于当前j，只需要找到最小的k使得 nums[i] &#43; nums[j] &#43; nums[k] &amp;gt;= 0。此时，若 nums[i] &#43; nums[j] &#43; nums[k] = 0， 则为答案数组。否则，由于 nums[i] &#43; nums[j] &#43; nums[k - 1] &amp;lt; 0，k不能再向左移动（递减），需要j向右移动（递增）。
 最后考虑避免重复情况。只需要保证i指向的下一个元素与当前元素不等即可，因为当前元素对应的答案数组已经被考虑过了。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; threeSum(vector&amp;lt;int&amp;gt;&amp;amp; nums) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; sort(nums.begin(), nums.end()); for (int i = 0; i &amp;lt; nums.'>
@@ -88,7 +87,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
                         href='https://github.com/jiafie7'
                         target="_blank"
                         title="GitHub"
-                        rel="me"
                     >
                         
                         
@@ -108,7 +106,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
                         href='https://twitter.com'
                         target="_blank"
                         title="Twitter"
-                        rel="me"
                     >
                         
                         
@@ -127,6 +124,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         
         
         
+
         <li >
             <a href='/' >
                 
@@ -147,6 +145,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         </li>
         
         
+
         <li >
             <a href='/archives/' >
                 
@@ -167,6 +166,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         </li>
         
         
+
         <li >
             <a href='/search/' >
                 
@@ -186,6 +186,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         </li>
         
         
+
         <li >
             <a href='/links/' >
                 
@@ -231,46 +232,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         </div>
     </ol>
 </aside>
-
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#15-3sumhttpsleetcodecomproblems3sumdescription"><a href="https://leetcode.com/problems/3sum/description/">15. 3Sum</a></a>
-      <ol>
-        <li><a href="#分析">分析</a></li>
-        <li><a href="#c代码">C++代码</a></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
-
-            <main class="main full-width">
+<main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
@@ -305,9 +267,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         
     </div>
 
-    
-    
-    
     
     <footer class="article-time">
         
@@ -345,7 +304,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
 
     
 </div>
-
 </header>
 
     <section class="article-content">
@@ -442,6 +400,30 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
     <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/3sum-closest/">
+        
+        
+            <div class="article-image">
+                <img src="/p/3sum-closest/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 3Sum Closest"
+                        
+                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">3Sum Closest</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
@@ -546,7 +528,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
      
     
         
-    <script src="//cdn.jsdelivr.net/npm/twikoo@1.6.21/dist/twikoo.all.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/twikoo@1.5.11/dist/twikoo.all.min.js"></script>
 <div id="tcomment"></div>
 <style>
     .twikoo {
@@ -599,7 +581,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.14.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -683,6 +665,44 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
             >
 
             </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#15-3sumhttpsleetcodecomproblems3sumdescription"><a href="https://leetcode.com/problems/3sum/description/">15. 3Sum</a></a>
+      <ol>
+        <li><a href="#分析">分析</a></li>
+        <li><a href="#c代码">C++代码</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"

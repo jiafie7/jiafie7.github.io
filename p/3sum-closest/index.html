@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='11. Container With Most Water 分析 用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。
-为什么更新出来的值一定是最优解。 i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。
-可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; '><title>Container With Most Water</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='16. 3Sum Closest 分析 暴力做法就是三重循环，每种答案枚举一遍，求一个最接近的值。
+用双指针优化。先枚举位置i，对每一个位置j，找到一个最小的位置k使得 nums[i] &#43; nums[j] &#43; nums[k] &amp;gt;= target，这样可以得到大于等于target的最小值。并且，当k满足前述条件时，必然有 nums[i] &#43; nums[j] &#43; nums[k - 1] &amp;lt; target，也就可以得到小于target的最大值。每次更新下这两个值即可。
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: int threeSumClosest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { sort(nums.begin(), nums.end()); pair&amp;lt;int, int&amp;gt; res(INT_MAX, INT_MAX); for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) for (int j = i &#43; 1, k = nums.'><title>3Sum Closest</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/container-with-most-water/'>
+<link rel='canonical' href='https://garfieldzhang.site/p/3sum-closest/'>
 
-<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Container With Most Water'>
-<meta property='og:description' content='11. Container With Most Water 分析 用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。
-为什么更新出来的值一定是最优解。 i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。
-可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/container-with-most-water/'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='3Sum Closest'>
+<meta property='og:description' content='16. 3Sum Closest 分析 暴力做法就是三重循环，每种答案枚举一遍，求一个最接近的值。
+用双指针优化。先枚举位置i，对每一个位置j，找到一个最小的位置k使得 nums[i] &#43; nums[j] &#43; nums[k] &amp;gt;= target，这样可以得到大于等于target的最小值。并且，当k满足前述条件时，必然有 nums[i] &#43; nums[j] &#43; nums[k - 1] &amp;lt; target，也就可以得到小于target的最大值。每次更新下这两个值即可。
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: int threeSumClosest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { sort(nums.begin(), nums.end()); pair&amp;lt;int, int&amp;gt; res(INT_MAX, INT_MAX); for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) for (int j = i &#43; 1, k = nums.'>
+<meta property='og:url' content='https://garfieldzhang.site/p/3sum-closest/'>
 <meta property='og:site_name' content='Garfield Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='双指针算法' /><meta property='article:published_time' content='2024-03-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/p/container-with-most-water/leetcode.png' />
-<meta name="twitter:title" content="Container With Most Water">
-<meta name="twitter:description" content="11. Container With Most Water 分析 用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。
-为什么更新出来的值一定是最优解。 i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。
-可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/p/container-with-most-water/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='双指针算法' /><meta property='article:published_time' content='2024-03-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-18T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/p/3sum-closest/leetcode.png' />
+<meta name="twitter:title" content="3Sum Closest">
+<meta name="twitter:description" content="16. 3Sum Closest 分析 暴力做法就是三重循环，每种答案枚举一遍，求一个最接近的值。
+用双指针优化。先枚举位置i，对每一个位置j，找到一个最小的位置k使得 nums[i] &#43; nums[j] &#43; nums[k] &amp;gt;= target，这样可以得到大于等于target的最小值。并且，当k满足前述条件时，必然有 nums[i] &#43; nums[j] &#43; nums[k - 1] &amp;lt; target，也就可以得到小于target的最大值。每次更新下这两个值即可。
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: int threeSumClosest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { sort(nums.begin(), nums.end()); pair&amp;lt;int, int&amp;gt; res(INT_MAX, INT_MAX); for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) for (int j = i &#43; 1, k = nums."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://garfieldzhang.site/p/3sum-closest/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>
@@ -239,13 +236,13 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/container-with-most-water/">
-                <img src="/p/container-with-most-water/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png"
-                        srcset="/p/container-with-most-water/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png 800w, /p/container-with-most-water/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_1600x0_resize_box_3.png 1600w"
+            <a href="/p/3sum-closest/">
+                <img src="/p/3sum-closest/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png"
+                        srcset="/p/3sum-closest/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png 800w, /p/3sum-closest/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_1600x0_resize_box_3.png 1600w"
                         width="800" 
                         height="450" 
                         loading="lazy"
-                        alt="Featured image of post Container With Most Water" />
+                        alt="Featured image of post 3Sum Closest" />
                 
             </a>
         </div>
@@ -264,7 +261,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/container-with-most-water/">Container With Most Water</a>
+            <a href="/p/3sum-closest/">3Sum Closest</a>
         </h2>
     
         
@@ -283,7 +280,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 13, 2024</time>
+                <time class="article-time--published">Mar 18, 2024</time>
             </div>
         
 
@@ -312,13 +309,11 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
     <section class="article-content">
     
     
-    <h2 id="11-container-with-most-waterhttpsleetcodecomproblemscontainer-with-most-waterdescription"><a class="link" href="https://leetcode.com/problems/container-with-most-water/description/"  target="_blank" rel="noopener"
-    >11. Container With Most Water</a></h2>
+    <h2 id="16-3sum-closesthttpsleetcodecomproblems3sum-closestdescription"><a class="link" href="https://leetcode.com/problems/3sum-closest/description/"  target="_blank" rel="noopener"
+    >16. 3Sum Closest</a></h2>
 <h3 id="分析">分析</h3>
-<p>用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。</p>
-<p>为什么更新出来的值一定是最优解。
-i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。</p>
-<p>可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。</p>
+<p>暴力做法就是三重循环，每种答案枚举一遍，求一个最接近的值。</p>
+<p>用双指针优化。先枚举位置i，对每一个位置j，找到一个最小的位置k使得 nums[i] + nums[j] + nums[k] &gt;= target，这样可以得到大于等于target的最小值。并且，当k满足前述条件时，必然有 nums[i] + nums[j] + nums[k - 1] &lt; target，也就可以得到小于target的最大值。每次更新下这两个值即可。</p>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -334,18 +329,30 @@ i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">maxArea</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">height</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">height</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="n">i</span> <span class="o">++</span> <span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="n">j</span> <span class="o">--</span> <span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">threeSumClosest</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sort</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">(</span><span class="n">INT_MAX</span><span class="p">,</span> <span class="n">INT_MAX</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="n">j</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="n">j</span> <span class="o">&amp;&amp;</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">target</span><span class="p">)</span> <span class="n">k</span> <span class="o">--</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">make_pair</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">target</span><span class="p">),</span> <span class="n">s</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">s</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">make_pair</span><span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
@@ -396,30 +403,6 @@ i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一
             
                 
 <article class="has-image">
-    <a href="/p/3sum-closest/">
-        
-        
-            <div class="article-image">
-                <img src="/p/3sum-closest/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 3Sum Closest"
-                        
-                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">3Sum Closest</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/3sum/">
         
         
@@ -437,6 +420,30 @@ i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一
 
         <div class="article-details">
             <h2 class="article-title">3Sum</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/container-with-most-water/">
+        
+        
+            <div class="article-image">
+                <img src="/p/container-with-most-water/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Container With Most Water"
+                        
+                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Container With Most Water</h2>
         </div>
     </a>
 </article>
@@ -680,7 +687,7 @@ i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#11-container-with-most-waterhttpsleetcodecomproblemscontainer-with-most-waterdescription"><a href="https://leetcode.com/problems/container-with-most-water/description/">11. Container With Most Water</a></a>
+    <li><a href="#16-3sum-closesthttpsleetcodecomproblems3sum-closestdescription"><a href="https://leetcode.com/problems/3sum-closest/description/">16. 3Sum Closest</a></a>
       <ol>
         <li><a href="#分析">分析</a></li>
         <li><a href="#c代码">C++代码</a></li>

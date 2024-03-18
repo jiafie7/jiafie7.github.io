@@ -2,12 +2,11 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '>
-<title>Longest Common Prefix</title>
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '><title>Longest Common Prefix</title>
 
 <link rel='canonical' href='https://garfieldzhang.site/p/longest-common-prefix/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Longest Common Prefix'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Longest Common Prefix'>
 <meta property='og:description' content='14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '>
 <meta property='og:url' content='https://garfieldzhang.site/p/longest-common-prefix/'>
@@ -85,7 +84,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
                         href='https://github.com/jiafie7'
                         target="_blank"
                         title="GitHub"
-                        rel="me"
                     >
                         
                         
@@ -105,7 +103,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
                         href='https://twitter.com'
                         target="_blank"
                         title="Twitter"
-                        rel="me"
                     >
                         
                         
@@ -124,6 +121,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
         
         
         
+
         <li >
             <a href='/' >
                 
@@ -144,6 +142,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
         </li>
         
         
+
         <li >
             <a href='/archives/' >
                 
@@ -164,6 +163,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
         </li>
         
         
+
         <li >
             <a href='/search/' >
                 
@@ -183,6 +183,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
         </li>
         
         
+
         <li >
             <a href='/links/' >
                 
@@ -228,46 +229,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
         </div>
     </ol>
 </aside>
-
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#14-longest-common-prefixhttpsleetcodecomproblemslongest-common-prefixdescription"><a href="https://leetcode.com/problems/longest-common-prefix/description/">14. Longest Common Prefix</a></a>
-      <ol>
-        <li><a href="#分析">分析</a></li>
-        <li><a href="#c代码">C++代码</a></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
-
-            <main class="main full-width">
+<main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
@@ -302,9 +264,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
         
     </div>
 
-    
-    
-    
     
     <footer class="article-time">
         
@@ -342,7 +301,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 
     
 </div>
-
 </header>
 
     <section class="article-content">
@@ -435,6 +393,30 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
     <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/3sum-closest/">
+        
+        
+            <div class="article-image">
+                <img src="/p/3sum-closest/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 3Sum Closest"
+                        
+                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">3Sum Closest</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
@@ -539,7 +521,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
      
     
         
-    <script src="//cdn.jsdelivr.net/npm/twikoo@1.6.21/dist/twikoo.all.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/twikoo@1.5.11/dist/twikoo.all.min.js"></script>
 <div id="tcomment"></div>
 <style>
     .twikoo {
@@ -592,7 +574,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.14.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -676,6 +658,44 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
             >
 
             </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#14-longest-common-prefixhttpsleetcodecomproblemslongest-common-prefixdescription"><a href="https://leetcode.com/problems/longest-common-prefix/description/">14. Longest Common Prefix</a></a>
+      <ol>
+        <li><a href="#分析">分析</a></li>
+        <li><a href="#c代码">C++代码</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
