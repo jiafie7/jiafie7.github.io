@@ -12,7 +12,7 @@
         <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
         
         <guid>https://garfieldzhang.site/p/3sum-closest/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/p/3sum-closest/leetcode.png" alt="Featured image of post 3Sum Closest" /&gt;&lt;h2 id=&#34;16-3sum-closesthttpsleetcodecomproblems3sum-closestdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/3sum-closest/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post 3Sum Closest" /&gt;&lt;h2 id=&#34;16-3sum-closesthttpsleetcodecomproblems3sum-closestdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/3sum-closest/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;16. 3Sum Closest&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;暴力做法就是三重循环，每种答案枚举一遍，求一个最接近的值。&lt;/p&gt;
@@ -68,7 +68,7 @@
         <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
         
         <guid>https://garfieldzhang.site/p/3sum/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/p/3sum/leetcode.png" alt="Featured image of post 3Sum" /&gt;&lt;h2 id=&#34;15-3sumhttpsleetcodecomproblems3sumdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/3sum/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post 3Sum" /&gt;&lt;h2 id=&#34;15-3sumhttpsleetcodecomproblems3sumdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/3sum/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;15. 3Sum&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;首先将数组排序，每个答案数组包含三个数，而双指针只能处理两个位置，所以先枚举第一个数的位置。为了减少一些重复情况，我们设定 i &amp;lt; j &amp;lt; k。当i固定后，对于当前j，只需要找到最小的k使得 nums[i] + nums[j] + nums[k] &amp;gt;= 0。此时，若 nums[i] + nums[j] + nums[k] = 0， 则为答案数组。否则，由于 nums[i] + nums[j] + nums[k - 1] &amp;lt; 0，k不能再向左移动（递减），需要j向右移动（递增）。&lt;/p&gt;
@@ -124,7 +124,7 @@
         <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
         
         <guid>https://garfieldzhang.site/p/container-with-most-water/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/p/container-with-most-water/leetcode.png" alt="Featured image of post Container With Most Water" /&gt;&lt;h2 id=&#34;11-container-with-most-waterhttpsleetcodecomproblemscontainer-with-most-waterdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/container-with-most-water/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Container With Most Water" /&gt;&lt;h2 id=&#34;11-container-with-most-waterhttpsleetcodecomproblemscontainer-with-most-waterdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/container-with-most-water/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;11. Container With Most Water&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。&lt;/p&gt;

@@ -13,12 +13,12 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; threeSum(vector&amp;lt;int&amp;gt;&amp;amp; nums) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; sort(nums.begin(), nums.end()); for (int i = 0; i &amp;lt; nums.'>
 <meta property='og:url' content='https://garfieldzhang.site/p/3sum/'>
 <meta property='og:site_name' content='Garfield Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='双指针算法' /><meta property='article:published_time' content='2024-03-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-17T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/p/3sum/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='双指针算法' /><meta property='article:published_time' content='2024-03-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-17T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
 <meta name="twitter:title" content="3Sum">
 <meta name="twitter:description" content="15. 3Sum 分析 首先将数组排序，每个答案数组包含三个数，而双指针只能处理两个位置，所以先枚举第一个数的位置。为了减少一些重复情况，我们设定 i &amp;lt; j &amp;lt; k。当i固定后，对于当前j，只需要找到最小的k使得 nums[i] &#43; nums[j] &#43; nums[k] &amp;gt;= 0。此时，若 nums[i] &#43; nums[j] &#43; nums[k] = 0， 则为答案数组。否则，由于 nums[i] &#43; nums[j] &#43; nums[k - 1] &amp;lt; 0，k不能再向左移动（递减），需要j向右移动（递增）。
 最后考虑避免重复情况。只需要保证i指向的下一个元素与当前元素不等即可，因为当前元素对应的答案数组已经被考虑过了。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; threeSum(vector&amp;lt;int&amp;gt;&amp;amp; nums) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; sort(nums.begin(), nums.end()); for (int i = 0; i &amp;lt; nums."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/p/3sum/leetcode.png' />
+    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>
@@ -237,12 +237,8 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
     <header class="article-header">
         <div class="article-image">
             <a href="/p/3sum/">
-                <img src="/p/3sum/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png"
-                        srcset="/p/3sum/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_800x0_resize_box_3.png 800w, /p/3sum/leetcode_hu677363dd926dc347cb12e1564ab4300e_154826_1600x0_resize_box_3.png 1600w"
-                        width="800" 
-                        height="450" 
-                        loading="lazy"
-                        alt="Featured image of post 3Sum" />
+                
+                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post 3Sum" />
                 
             </a>
         </div>
@@ -407,13 +403,8 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         
         
             <div class="article-image">
-                <img src="/p/3sum-closest/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 3Sum Closest"
-                        
-                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
                 
             </div>
         
@@ -431,13 +422,8 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         
         
             <div class="article-image">
-                <img src="/p/container-with-most-water/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Container With Most Water"
-                        
-                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
                 
             </div>
         
@@ -451,17 +437,31 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
             
                 
 <article class="has-image">
+    <a href="/p/letter-combinations-of-a-phone-number/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Letter Combinations of a Phone Number</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/longest-common-prefix/">
         
         
             <div class="article-image">
-                <img src="/p/longest-common-prefix/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Longest Common Prefix"
-                        
-                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
                 
             </div>
         
@@ -479,43 +479,14 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
         
         
             <div class="article-image">
-                <img src="/p/roman-to-integer/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Roman to Integer"
-                        
-                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
                 
             </div>
         
 
         <div class="article-details">
             <h2 class="article-title">Roman to Integer</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/integer-to-roman/">
-        
-        
-            <div class="article-image">
-                <img src="/p/integer-to-roman/leetcode.308931a4987f7c3b0e028488113f6793_hu677363dd926dc347cb12e1564ab4300e_154826_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Integer to Roman"
-                        
-                        data-hash="md5-MIkxpJh/fDsOAoSIET9nkw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Integer to Roman</h2>
         </div>
     </a>
 </article>
