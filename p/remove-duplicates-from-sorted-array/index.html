@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
-但是，可以找下规律。
-千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。'><title>Integer to Roman</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='26. Remove Duplicates from Sorted Array 分析 用索引 k 记录非重复元素的位置。 判断当前元素 i 是否为第一个元素 或 是否与前一个元素不等。 如果满足上述条件，将当前元素复制到数组中索引为 k 的位置，然后递增 k。 最后返回索引 k，它表示移除重复元素后的数组长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 class Solution { public: int removeDuplicates(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int k = 0; for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) if (!i || nums[i] != nums[i - 1]) nums[k &#43;&#43; ] = nums[i]; return k; } }; '><title>Remove Duplicates from Sorted Array</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/integer-to-roman/'>
+<link rel='canonical' href='https://garfieldzhang.site/p/remove-duplicates-from-sorted-array/'>
 
-<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Integer to Roman'>
-<meta property='og:description' content='12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
-但是，可以找下规律。
-千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。'>
-<meta property='og:url' content='https://garfieldzhang.site/p/integer-to-roman/'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Remove Duplicates from Sorted Array'>
+<meta property='og:description' content='26. Remove Duplicates from Sorted Array 分析 用索引 k 记录非重复元素的位置。 判断当前元素 i 是否为第一个元素 或 是否与前一个元素不等。 如果满足上述条件，将当前元素复制到数组中索引为 k 的位置，然后递增 k。 最后返回索引 k，它表示移除重复元素后的数组长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 class Solution { public: int removeDuplicates(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int k = 0; for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) if (!i || nums[i] != nums[i - 1]) nums[k &#43;&#43; ] = nums[i]; return k; } }; '>
+<meta property='og:url' content='https://garfieldzhang.site/p/remove-duplicates-from-sorted-array/'>
 <meta property='og:site_name' content='Garfield Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-03-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
-<meta name="twitter:title" content="Integer to Roman">
-<meta name="twitter:description" content="12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
-但是，可以找下规律。
-千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。"><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='双指针算法' /><meta property='article:published_time' content='2024-03-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta name="twitter:title" content="Remove Duplicates from Sorted Array">
+<meta name="twitter:description" content="26. Remove Duplicates from Sorted Array 分析 用索引 k 记录非重复元素的位置。 判断当前元素 i 是否为第一个元素 或 是否与前一个元素不等。 如果满足上述条件，将当前元素复制到数组中索引为 k 的位置，然后递增 k。 最后返回索引 k，它表示移除重复元素后的数组长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 class Solution { public: int removeDuplicates(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int k = 0; for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) if (!i || nums[i] != nums[i - 1]) nums[k &#43;&#43; ] = nums[i]; return k; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
@@ -255,9 +249,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/integer-to-roman/">
+            <a href="/p/remove-duplicates-from-sorted-array/">
                 
-                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Integer to Roman" />
+                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Remove Duplicates from Sorted Array" />
                 
             </a>
         </div>
@@ -276,7 +270,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/integer-to-roman/">Integer to Roman</a>
+            <a href="/p/remove-duplicates-from-sorted-array/">Remove Duplicates from Sorted Array</a>
         </h2>
     
         
@@ -295,7 +289,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 14, 2024</time>
+                <time class="article-time--published">Mar 27, 2024</time>
             </div>
         
 
@@ -324,120 +318,15 @@
     <section class="article-content">
     
     
-    <h2 id="12-integer-to-romanhttpsleetcodecomproblemsinteger-to-romandescription"><a class="link" href="https://leetcode.com/problems/integer-to-roman/description/"  target="_blank" rel="noopener"
-    >12. Integer to Roman</a></h2>
+    <h2 id="26-remove-duplicates-from-sorted-arrayhttpsleetcodecomproblemsremove-duplicates-from-sorted-arraydescription"><a class="link" href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/"  target="_blank" rel="noopener"
+    >26. Remove Duplicates from Sorted Array</a></h2>
 <h3 id="分析">分析</h3>
-<div class="table-wrapper"><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-<td>9</td>
-</tr>
-<tr>
-<td>I</td>
-<td>II</td>
-<td>III</td>
-<td>IV</td>
-<td>V</td>
-<td>VI</td>
-<td>VII</td>
-<td>VIII</td>
-<td>IX</td>
-</tr>
-<tr>
-<td>10</td>
-<td>20</td>
-<td>30</td>
-<td>40</td>
-<td>50</td>
-<td>60</td>
-<td>70</td>
-<td>80</td>
-<td>90</td>
-</tr>
-<tr>
-<td>X</td>
-<td>XX</td>
-<td>XXX</td>
-<td>XL</td>
-<td>L</td>
-<td>LX</td>
-<td>LXX</td>
-<td>LXXX</td>
-<td>XL</td>
-</tr>
-<tr>
-<td>100</td>
-<td>200</td>
-<td>300</td>
-<td>400</td>
-<td>500</td>
-<td>600</td>
-<td>700</td>
-<td>800</td>
-<td>900</td>
-</tr>
-<tr>
-<td>C</td>
-<td>CC</td>
-<td>CCC</td>
-<td>CD</td>
-<td>D</td>
-<td>DC</td>
-<td>DCC</td>
-<td>DCCC</td>
-<td>CM</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>2000</td>
-<td>3000</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>M</td>
-<td>MM</td>
-<td>MMM</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table></div>
-<p>1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。</p>
-<p>但是，可以找下规律。</p>
-<p>千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。</p>
-<p>百位的100～300记下C，每减100就换一个C。400无规律，单独记下CD。同理，500～800记下D，900记下CM。</p>
-<p>十位记下10、40、50、90，也就是X、XL、L、XC。个位记下1、4、5、9，也就是I、IV、V、IX。</p>
-<p>然后对记下的这些数字，从大到小去考虑。例如大于900，当前值减去900，字符串拼接一个CM。</p>
+<ol>
+<li>用索引 k 记录非重复元素的位置。</li>
+<li>判断当前元素 i 是否为第一个元素 或 是否与前一个元素不等。</li>
+<li>如果满足上述条件，将当前元素复制到数组中索引为 k 的位置，然后递增 k。</li>
+<li>最后返回索引 k，它表示移除重复元素后的数组长度。</li>
+</ol>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -451,48 +340,16 @@
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">intToRoman</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">values</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="mi">1000</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="mi">900</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="mi">90</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="p">};</span>
-</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="n">romans</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s">&#34;M&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s">&#34;CM&#34;</span><span class="p">,</span> <span class="s">&#34;D&#34;</span><span class="p">,</span> <span class="s">&#34;CD&#34;</span><span class="p">,</span> <span class="s">&#34;C&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s">&#34;XC&#34;</span><span class="p">,</span> <span class="s">&#34;L&#34;</span><span class="p">,</span> <span class="s">&#34;XL&#34;</span><span class="p">,</span> <span class="s">&#34;X&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s">&#34;IX&#34;</span><span class="p">,</span> <span class="s">&#34;V&#34;</span><span class="p">,</span> <span class="s">&#34;IV&#34;</span><span class="p">,</span> <span class="s">&#34;I&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">+=</span> <span class="n">romans</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">                <span class="n">num</span> <span class="o">-=</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">removeDuplicates</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">i</span> <span class="o">||</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> 
+</span></span><span class="line"><span class="cl">                <span class="n">nums</span><span class="p">[</span><span class="n">k</span> <span class="o">++</span> <span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">k</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
@@ -508,6 +365,8 @@
             <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
+        
+            <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88%E7%AE%97%E6%B3%95/">双指针算法</a>
         
     </section>
 
@@ -541,7 +400,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/remove-duplicates-from-sorted-array/">
+    <a href="/p/4sum/">
         
         
             <div class="article-image">
@@ -552,7 +411,64 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Remove Duplicates from Sorted Array</h2>
+            <h2 class="article-title">4Sum</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/3sum-closest/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">3Sum Closest</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/3sum/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">3Sum</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/container-with-most-water/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Container With Most Water</h2>
         </div>
     </a>
 </article>
@@ -572,63 +488,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Reverse Nodes in k-Group</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/swap-nodes-in-pairs/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Swap Nodes in Pairs</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/merge-k-sorted-lists/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Merge k Sorted Lists</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/generate-parentheses/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Generate Parentheses</h2>
         </div>
     </a>
 </article>
@@ -800,7 +659,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#12-integer-to-romanhttpsleetcodecomproblemsinteger-to-romandescription"><a href="https://leetcode.com/problems/integer-to-roman/description/">12. Integer to Roman</a></a>
+    <li><a href="#26-remove-duplicates-from-sorted-arrayhttpsleetcodecomproblemsremove-duplicates-from-sorted-arraydescription"><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/">26. Remove Duplicates from Sorted Array</a></a>
       <ol>
         <li><a href="#分析">分析</a></li>
         <li><a href="#c代码">C++代码</a></li>
