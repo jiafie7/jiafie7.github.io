@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='24. Swap Nodes in Pairs C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* swapPairs(ListNode* head) { ListNode *dummy = new ListNode(-1); dummy-&amp;gt;next = head; for (ListNode* p = dummy; p-&amp;gt;next &amp;amp;&amp;amp; p-&amp;gt;next-&amp;gt;next; ) { ListNode* a = p-&amp;gt;next; ListNode* b = a-&amp;gt;next; p-&amp;gt;next = b; a-&amp;gt;next = b-&amp;gt;next; b-&amp;gt;next = a; p = a; } return dummy-&amp;gt;next; } }; '><title>Swap Nodes in Pairs</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='28. Find the Index of the First Occurrence in a String 分析 在源传和目标串首部添加一个字符，使得下标匹配从1开始，方便处理。 构建目标串的 next 数组。具体来说，对于目标串的任意位置 i，我们要找到一个数 j，使得 needle[1:j] 和 needle[i-j&#43;1:i] 是相等的，并且 j 的值尽可能大。每个 next[i] 对应一个 j 。 遍历源串，在匹配过程中，若 haystack[i] 与 needle[j&#43;1] 不相等，则将 j 回溯到 next[j]。若相等，则同时向后移动 i 和 j。若 j 移动到 needle 的末尾，则表示在 haystack 中找到了 needle，返回 i - m 即可。 时间复杂度为 O(n&#43;m)，其中 n 和 m 分别是 haystack 和 needle 的长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 class Solution { public: int strStr(string haystack, string needle) { if (needle.'><title>Find the Index of the First Occurrence in a String</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/swap-nodes-in-pairs/'>
+<link rel='canonical' href='https://garfieldzhang.site/p/find-the-index-of-the-first-occurrence-in-a-string/'>
 
-<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Swap Nodes in Pairs'>
-<meta property='og:description' content='24. Swap Nodes in Pairs C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* swapPairs(ListNode* head) { ListNode *dummy = new ListNode(-1); dummy-&amp;gt;next = head; for (ListNode* p = dummy; p-&amp;gt;next &amp;amp;&amp;amp; p-&amp;gt;next-&amp;gt;next; ) { ListNode* a = p-&amp;gt;next; ListNode* b = a-&amp;gt;next; p-&amp;gt;next = b; a-&amp;gt;next = b-&amp;gt;next; b-&amp;gt;next = a; p = a; } return dummy-&amp;gt;next; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/swap-nodes-in-pairs/'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Find the Index of the First Occurrence in a String'>
+<meta property='og:description' content='28. Find the Index of the First Occurrence in a String 分析 在源传和目标串首部添加一个字符，使得下标匹配从1开始，方便处理。 构建目标串的 next 数组。具体来说，对于目标串的任意位置 i，我们要找到一个数 j，使得 needle[1:j] 和 needle[i-j&#43;1:i] 是相等的，并且 j 的值尽可能大。每个 next[i] 对应一个 j 。 遍历源串，在匹配过程中，若 haystack[i] 与 needle[j&#43;1] 不相等，则将 j 回溯到 next[j]。若相等，则同时向后移动 i 和 j。若 j 移动到 needle 的末尾，则表示在 haystack 中找到了 needle，返回 i - m 即可。 时间复杂度为 O(n&#43;m)，其中 n 和 m 分别是 haystack 和 needle 的长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 class Solution { public: int strStr(string haystack, string needle) { if (needle.'>
+<meta property='og:url' content='https://garfieldzhang.site/p/find-the-index-of-the-first-occurrence-in-a-string/'>
 <meta property='og:site_name' content='Garfield Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Linked List' /><meta property='article:published_time' content='2024-03-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
-<meta name="twitter:title" content="Swap Nodes in Pairs">
-<meta name="twitter:description" content="24. Swap Nodes in Pairs C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* swapPairs(ListNode* head) { ListNode *dummy = new ListNode(-1); dummy-&amp;gt;next = head; for (ListNode* p = dummy; p-&amp;gt;next &amp;amp;&amp;amp; p-&amp;gt;next-&amp;gt;next; ) { ListNode* a = p-&amp;gt;next; ListNode* b = a-&amp;gt;next; p-&amp;gt;next = b; a-&amp;gt;next = b-&amp;gt;next; b-&amp;gt;next = a; p = a; } return dummy-&amp;gt;next; } }; "><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='KMP' /><meta property='article:published_time' content='2024-03-29T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-29T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta name="twitter:title" content="Find the Index of the First Occurrence in a String">
+<meta name="twitter:description" content="28. Find the Index of the First Occurrence in a String 分析 在源传和目标串首部添加一个字符，使得下标匹配从1开始，方便处理。 构建目标串的 next 数组。具体来说，对于目标串的任意位置 i，我们要找到一个数 j，使得 needle[1:j] 和 needle[i-j&#43;1:i] 是相等的，并且 j 的值尽可能大。每个 next[i] 对应一个 j 。 遍历源串，在匹配过程中，若 haystack[i] 与 needle[j&#43;1] 不相等，则将 j 回溯到 next[j]。若相等，则同时向后移动 i 和 j。若 j 移动到 needle 的末尾，则表示在 haystack 中找到了 needle，返回 i - m 即可。 时间复杂度为 O(n&#43;m)，其中 n 和 m 分别是 haystack 和 needle 的长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 class Solution { public: int strStr(string haystack, string needle) { if (needle."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
@@ -231,9 +231,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/swap-nodes-in-pairs/">
+            <a href="/p/find-the-index-of-the-first-occurrence-in-a-string/">
                 
-                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Swap Nodes in Pairs" />
+                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Find the Index of the First Occurrence in a String" />
                 
             </a>
         </div>
@@ -252,7 +252,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/swap-nodes-in-pairs/">Swap Nodes in Pairs</a>
+            <a href="/p/find-the-index-of-the-first-occurrence-in-a-string/">Find the Index of the First Occurrence in a String</a>
         </h2>
     
         
@@ -271,7 +271,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 26, 2024</time>
+                <time class="article-time--published">Mar 29, 2024</time>
             </div>
         
 
@@ -300,8 +300,15 @@
     <section class="article-content">
     
     
-    <h2 id="24-swap-nodes-in-pairshttpsleetcodecomproblemsswap-nodes-in-pairsdescription"><a class="link" href="https://leetcode.com/problems/swap-nodes-in-pairs/description/"  target="_blank" rel="noopener"
-    >24. Swap Nodes in Pairs</a></h2>
+    <h2 id="28-find-the-index-of-the-first-occurrence-in-a-stringhttpsleetcodecomproblemsfind-the-index-of-the-first-occurrence-in-a-stringdescription"><a class="link" href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/"  target="_blank" rel="noopener"
+    >28. Find the Index of the First Occurrence in a String</a></h2>
+<h3 id="分析">分析</h3>
+<ol>
+<li>在源传和目标串首部添加一个字符，使得下标匹配从1开始，方便处理。</li>
+<li>构建目标串的 next 数组。具体来说，对于目标串的任意位置 i，我们要找到一个数 j，使得 needle[1:j] 和 needle[i-j+1:i] 是相等的，并且 j 的值尽可能大。每个 next[i] 对应一个 j 。</li>
+<li>遍历源串，在匹配过程中，若 haystack[i] 与 needle[j+1] 不相等，则将 j 回溯到 next[j]。若相等，则同时向后移动 i 和 j。若 j 移动到 needle 的末尾，则表示在 haystack 中找到了 needle，返回 i - m 即可。</li>
+<li>时间复杂度为 O(n+m)，其中 n 和 m 分别是 haystack 和 needle 的长度。</li>
+</ol>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -327,38 +334,28 @@
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Definition for singly-linked list.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * struct ListNode {
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     int val;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode *next;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode() : val(0), next(nullptr) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode(int x) : val(x), next(nullptr) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * };
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ListNode</span><span class="o">*</span> <span class="n">swapPairs</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ListNode</span> <span class="o">*</span><span class="n">dummy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dummy</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">dummy</span><span class="p">;</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">&amp;&amp;</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ListNode</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ListNode</span><span class="o">*</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">a</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">b</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">b</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">strStr</span><span class="p">(</span><span class="n">string</span> <span class="n">haystack</span><span class="p">,</span> <span class="n">string</span> <span class="n">needle</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">needle</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">haystack</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">m</span> <span class="o">=</span> <span class="n">needle</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">haystack</span> <span class="o">=</span> <span class="sc">&#39; &#39;</span> <span class="o">+</span> <span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span> <span class="o">=</span> <span class="sc">&#39; &#39;</span> <span class="o">+</span> <span class="n">needle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">next</span><span class="p">(</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&amp;&amp;</span> <span class="n">needle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">needle</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="n">j</span> <span class="o">=</span> <span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">needle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">needle</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="n">j</span> <span class="o">++</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&amp;&amp;</span> <span class="n">haystack</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">needle</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="n">j</span> <span class="o">=</span> <span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">haystack</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">needle</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="n">j</span> <span class="o">++</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">m</span><span class="p">)</span> <span class="k">return</span> <span class="n">i</span> <span class="o">-</span> <span class="n">m</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dummy</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
@@ -375,7 +372,7 @@
         
             <a href="/tags/leetcode/">Leetcode</a>
         
-            <a href="/tags/linked-list/">Linked List</a>
+            <a href="/tags/kmp/">KMP</a>
         
     </section>
 
@@ -409,6 +406,44 @@
             
                 
 <article class="has-image">
+    <a href="/p/remove-element/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Remove Element</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/remove-duplicates-from-sorted-array/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Remove Duplicates from Sorted Array</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/reverse-nodes-in-k-group/">
         
         
@@ -428,7 +463,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/merge-two-sorted-lists/">
+    <a href="/p/swap-nodes-in-pairs/">
         
         
             <div class="article-image">
@@ -439,7 +474,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Merge Two Sorted Lists</h2>
+            <h2 class="article-title">Swap Nodes in Pairs</h2>
         </div>
     </a>
 </article>
@@ -447,7 +482,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/remove-nth-node-from-end-of-list/">
+    <a href="/p/merge-k-sorted-lists/">
         
         
             <div class="article-image">
@@ -458,45 +493,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Remove Nth Node From End of List</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/find-the-index-of-the-first-occurrence-in-a-string/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Find the Index of the First Occurrence in a String</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/remove-element/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Remove Element</h2>
+            <h2 class="article-title">Merge k Sorted Lists</h2>
         </div>
     </a>
 </article>
@@ -668,8 +665,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#24-swap-nodes-in-pairshttpsleetcodecomproblemsswap-nodes-in-pairsdescription"><a href="https://leetcode.com/problems/swap-nodes-in-pairs/description/">24. Swap Nodes in Pairs</a></a>
+    <li><a href="#28-find-the-index-of-the-first-occurrence-in-a-stringhttpsleetcodecomproblemsfind-the-index-of-the-first-occurrence-in-a-stringdescription"><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/">28. Find the Index of the First Occurrence in a String</a></a>
       <ol>
+        <li><a href="#分析">分析</a></li>
         <li><a href="#c代码">C++代码</a></li>
       </ol>
     </li>
