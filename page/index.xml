@@ -15,36 +15,12 @@
         <description></description>
         </item>
         <item>
-        <title></title>
-        <link>https://garfieldzhang.site/</link>
+        <title>Links</title>
+        <link>https://garfieldzhang.site/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/</guid>
-        <description>&lt;!-- ---
-title: Links
-links:
-  - title: 刘未鹏 | Mind Hacks
-    description: 思维改变生活.
-    website: https://mindhacks.cn/
-
-  # - title: JieFie5
-  #   description: I am jiafie5.
-  #   website: https://github.com/jiafie7
-  #   image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  # - title: JieFie6
-  #   description: I am jiafie6.
-  #   website: https://github.com/jiafie7
-  #   image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-
-menu:
-    main:
-        weight: 4
-        params:
-            icon: link
-
-comments: false
---- --&gt;
-&lt;!-- To use this feature, add `links` section to frontmatter.
+        <guid>https://garfieldzhang.site/links/</guid>
+        <description>&lt;!-- To use this feature, add `links` section to frontmatter.
 
 This page&#39;s frontmatter: --&gt;
 &lt;!-- ```yaml
