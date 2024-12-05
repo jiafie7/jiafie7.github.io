@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://garfieldzhang.site/p/combination-sum/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/p/palindrome-partitioning/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/p/word-search/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/p/permutations/</loc>
+    <lastmod>2024-12-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/p/subsets/</loc>
+    <lastmod>2024-12-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://garfieldzhang.site/p/course-schedule/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -204,7 +219,34 @@
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://garfieldzhang.site/</loc>
-    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/tags/backtracking/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/tags/c&#43;&#43;/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/categories/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/categories/data-structure-and-algorithm/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/tags/dynamic-programming/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/tags/leetcode/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/post/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/tags/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://garfieldzhang.site/tags/bit-manipulatioon/</loc>
+    <lastmod>2024-12-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://garfieldzhang.site/tags/bfs/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
@@ -212,28 +254,10 @@
     <loc>https://garfieldzhang.site/tags/binary-search-tree/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://garfieldzhang.site/tags/c&#43;&#43;/</loc>
-    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garfieldzhang.site/categories/</loc>
-    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garfieldzhang.site/categories/data-structure-and-algorithm/</loc>
-    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://garfieldzhang.site/tags/dfs/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://garfieldzhang.site/tags/hash/</loc>
-    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garfieldzhang.site/tags/leetcode/</loc>
-    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garfieldzhang.site/post/</loc>
-    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garfieldzhang.site/tags/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://garfieldzhang.site/tags/topological-sort/</loc>
@@ -262,9 +286,6 @@
   </url><url>
     <loc>https://garfieldzhang.site/tags/matrix/</loc>
     <lastmod>2024-11-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://garfieldzhang.site/tags/dynamic-programming/</loc>
-    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://garfieldzhang.site/tags/prefix-sum/</loc>
     <lastmod>2024-11-27T00:00:00+00:00</lastmod>

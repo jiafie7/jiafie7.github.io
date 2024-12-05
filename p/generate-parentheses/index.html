@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='22. Generate Parentheses 分析 一个合法括号系列（只有一种括号时）的充分必要条件是：
-任意前缀序列中左括号数量大于等于右括号数量 左右括号数量相等 这里的左右括号数量一定是相等的，所以只要满足第一个条件就行了。
-如果不需要输出所有方案，只要方案数量的话，那就可以直接用公式 $\frac{C_{2n}^{n}}{n&#43;1}$ 求。
-假设当前位置为i，则该位置要么是左括号，要么是右括号。
-当0～i-1中的左括号数量小于n时，则位置i可以为左括号，否则不可以。 当0～i-1中的右括号数量小于n时，且前缀序列中左括号数量大于右括号数量，则位置i可以为右括号，否则不可以。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: vector&amp;lt;string&amp;gt; res; vector&amp;lt;string&amp;gt; generateParenthesis(int n) { dfs(n, 0, 0, &amp;#34;&amp;#34;); return res; } void dfs(int n, int lc, int rc, string seq) { if (lc == n &amp;amp;&amp;amp; rc == n) res.push_back(seq); else { if (lc &amp;lt; n) dfs(n, lc &#43; 1, rc, seq &#43; &amp;#39;(&amp;#39;); if (rc &amp;lt; n &amp;amp;&amp;amp; rc &amp;lt; lc) dfs(n, lc, rc &#43; 1, seq &#43; &amp;#39;)&amp;#39;); } } }; '><title>Generate Parentheses</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='22. Generate Parentheses 分析 合法的括号组合需要满足：
+左括号 ( 的数量不能超过 n 右括号 ) 的数量不能超过左括号的数量 递归函数在每一步根据当前左括号和右括号的数量，选择是否添加 ( 或 )
+如果左括号数量小于 n，可以添加 ( 如果右括号数量小于左括号，可以添加 ) 当左右括号数量均达到 n 时，将当前路径 path 加入结果集 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 class Solution { public: std::vector&amp;lt;std::string&amp;gt; res; // 存储所有合法的括号组合 std::string path; // 当前生成的括号组合 vector&amp;lt;string&amp;gt; generateParenthesis(int n) { dfs(n, 0, 0); // 从 0 左括号和 0 右括号开始递归 return res; } void dfs(int n, int l_p, int r_p) { // 如果左右括号都用完，生成一个合法组合 if (l_p == n &amp;amp;&amp;amp; r_p == n) { res.'><title>Generate Parentheses</title>
 
 <link rel='canonical' href='https://garfieldzhang.site/p/generate-parentheses/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Generate Parentheses'>
-<meta property='og:description' content='22. Generate Parentheses 分析 一个合法括号系列（只有一种括号时）的充分必要条件是：
-任意前缀序列中左括号数量大于等于右括号数量 左右括号数量相等 这里的左右括号数量一定是相等的，所以只要满足第一个条件就行了。
-如果不需要输出所有方案，只要方案数量的话，那就可以直接用公式 $\frac{C_{2n}^{n}}{n&#43;1}$ 求。
-假设当前位置为i，则该位置要么是左括号，要么是右括号。
-当0～i-1中的左括号数量小于n时，则位置i可以为左括号，否则不可以。 当0～i-1中的右括号数量小于n时，且前缀序列中左括号数量大于右括号数量，则位置i可以为右括号，否则不可以。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: vector&amp;lt;string&amp;gt; res; vector&amp;lt;string&amp;gt; generateParenthesis(int n) { dfs(n, 0, 0, &amp;#34;&amp;#34;); return res; } void dfs(int n, int lc, int rc, string seq) { if (lc == n &amp;amp;&amp;amp; rc == n) res.push_back(seq); else { if (lc &amp;lt; n) dfs(n, lc &#43; 1, rc, seq &#43; &amp;#39;(&amp;#39;); if (rc &amp;lt; n &amp;amp;&amp;amp; rc &amp;lt; lc) dfs(n, lc, rc &#43; 1, seq &#43; &amp;#39;)&amp;#39;); } } }; '>
+<meta property='og:description' content='22. Generate Parentheses 分析 合法的括号组合需要满足：
+左括号 ( 的数量不能超过 n 右括号 ) 的数量不能超过左括号的数量 递归函数在每一步根据当前左括号和右括号的数量，选择是否添加 ( 或 )
+如果左括号数量小于 n，可以添加 ( 如果右括号数量小于左括号，可以添加 ) 当左右括号数量均达到 n 时，将当前路径 path 加入结果集 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 class Solution { public: std::vector&amp;lt;std::string&amp;gt; res; // 存储所有合法的括号组合 std::string path; // 当前生成的括号组合 vector&amp;lt;string&amp;gt; generateParenthesis(int n) { dfs(n, 0, 0); // 从 0 左括号和 0 右括号开始递归 return res; } void dfs(int n, int l_p, int r_p) { // 如果左右括号都用完，生成一个合法组合 if (l_p == n &amp;amp;&amp;amp; r_p == n) { res.'>
 <meta property='og:url' content='https://garfieldzhang.site/p/generate-parentheses/'>
 <meta property='og:site_name' content='Garfield Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='DFS' /><meta property='article:published_time' content='2024-03-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-24T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='DFS' /><meta property='article:tag' content='Backtracking' /><meta property='article:published_time' content='2024-03-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-24T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
 <meta name="twitter:title" content="Generate Parentheses">
-<meta name="twitter:description" content="22. Generate Parentheses 分析 一个合法括号系列（只有一种括号时）的充分必要条件是：
-任意前缀序列中左括号数量大于等于右括号数量 左右括号数量相等 这里的左右括号数量一定是相等的，所以只要满足第一个条件就行了。
-如果不需要输出所有方案，只要方案数量的话，那就可以直接用公式 $\frac{C_{2n}^{n}}{n&#43;1}$ 求。
-假设当前位置为i，则该位置要么是左括号，要么是右括号。
-当0～i-1中的左括号数量小于n时，则位置i可以为左括号，否则不可以。 当0～i-1中的右括号数量小于n时，且前缀序列中左括号数量大于右括号数量，则位置i可以为右括号，否则不可以。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: vector&amp;lt;string&amp;gt; res; vector&amp;lt;string&amp;gt; generateParenthesis(int n) { dfs(n, 0, 0, &amp;#34;&amp;#34;); return res; } void dfs(int n, int lc, int rc, string seq) { if (lc == n &amp;amp;&amp;amp; rc == n) res.push_back(seq); else { if (lc &amp;lt; n) dfs(n, lc &#43; 1, rc, seq &#43; &amp;#39;(&amp;#39;); if (rc &amp;lt; n &amp;amp;&amp;amp; rc &amp;lt; lc) dfs(n, lc, rc &#43; 1, seq &#43; &amp;#39;)&amp;#39;); } } }; "><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="22. Generate Parentheses 分析 合法的括号组合需要满足：
+左括号 ( 的数量不能超过 n 右括号 ) 的数量不能超过左括号的数量 递归函数在每一步根据当前左括号和右括号的数量，选择是否添加 ( 或 )
+如果左括号数量小于 n，可以添加 ( 如果右括号数量小于左括号，可以添加 ) 当左右括号数量均达到 n 时，将当前路径 path 加入结果集 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 class Solution { public: std::vector&amp;lt;std::string&amp;gt; res; // 存储所有合法的括号组合 std::string path; // 当前生成的括号组合 vector&amp;lt;string&amp;gt; generateParenthesis(int n) { dfs(n, 0, 0); // 从 0 左括号和 0 右括号开始递归 return res; } void dfs(int n, int l_p, int r_p) { // 如果左右括号都用完，生成一个合法组合 if (l_p == n &amp;amp;&amp;amp; r_p == n) { res."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
@@ -315,18 +309,17 @@
     <h2 id="22-generate-parentheseshttpsleetcodecomproblemsgenerate-parenthesesdescription"><a class="link" href="https://leetcode.com/problems/generate-parentheses/description/"  target="_blank" rel="noopener"
     >22. Generate Parentheses</a></h2>
 <h3 id="分析">分析</h3>
-<p>一个合法括号系列（只有一种括号时）的充分必要条件是：</p>
-<ol>
-<li>任意前缀序列中左括号数量大于等于右括号数量</li>
-<li>左右括号数量相等</li>
-</ol>
-<p>这里的左右括号数量一定是相等的，所以只要满足第一个条件就行了。</p>
-<p>如果不需要输出所有方案，只要方案数量的话，那就可以直接用公式 $\frac{C_{2n}^{n}}{n+1}$ 求。</p>
-<p>假设当前位置为i，则该位置要么是左括号，要么是右括号。</p>
-<ol>
-<li>当0～i-1中的左括号数量小于n时，则位置i可以为左括号，否则不可以。</li>
-<li>当0～i-1中的右括号数量小于n时，且前缀序列中左括号数量大于右括号数量，则位置i可以为右括号，否则不可以。</li>
-</ol>
+<p>合法的括号组合需要满足：</p>
+<ul>
+<li>左括号 <code>(</code> 的数量不能超过 <code>n</code></li>
+<li>右括号 <code>)</code> 的数量不能超过左括号的数量</li>
+</ul>
+<p>递归函数在每一步根据当前左括号和右括号的数量，选择是否添加 <code>(</code> 或 <code>)</code></p>
+<ul>
+<li>如果左括号数量小于 <code>n</code>，可以添加 <code>(</code></li>
+<li>如果右括号数量小于左括号，可以添加 <code>)</code></li>
+<li>当左右括号数量均达到 <code>n</code> 时，将当前路径 <code>path</code> 加入结果集</li>
+</ul>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -347,23 +340,63 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">generateParenthesis</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">;</span>   <span class="c1">// 存储所有合法的括号组合
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">path</span><span class="p">;</span>               <span class="c1">// 当前生成的括号组合
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="nf">generateParenthesis</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>               <span class="c1">// 从 0 左括号和 0 右括号开始递归
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rc</span><span class="p">,</span> <span class="n">string</span> <span class="n">seq</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">lc</span> <span class="o">==</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">rc</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">seq</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">lc</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="n">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lc</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">rc</span><span class="p">,</span> <span class="n">seq</span> <span class="o">+</span> <span class="sc">&#39;(&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">rc</span> <span class="o">&lt;</span> <span class="n">lc</span><span class="p">)</span> <span class="n">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lc</span><span class="p">,</span> <span class="n">rc</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">seq</span> <span class="o">+</span> <span class="sc">&#39;)&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l_p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r_p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 如果左右括号都用完，生成一个合法组合
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">l_p</span> <span class="o">==</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">r_p</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="p">.</span><span class="nf">push_back</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 尝试添加左括号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">l_p</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">path</span><span class="p">.</span><span class="nf">push_back</span><span class="p">(</span><span class="sc">&#39;(&#39;</span><span class="p">);</span>    <span class="c1">// 添加左括号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nf">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">l_p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r_p</span><span class="p">);</span>  <span class="c1">// 递归进入下一层
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">path</span><span class="p">.</span><span class="nf">pop_back</span><span class="p">();</span>        <span class="c1">// 回溯，移除左括号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 尝试添加右括号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">r_p</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">r_p</span> <span class="o">&lt;</span> <span class="n">l_p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">path</span><span class="p">.</span><span class="nf">push_back</span><span class="p">(</span><span class="sc">&#39;)&#39;</span><span class="p">);</span>    <span class="c1">// 添加右括号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nf">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">l_p</span><span class="p">,</span> <span class="n">r_p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 递归进入下一层
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">path</span><span class="p">.</span><span class="nf">pop_back</span><span class="p">();</span>        <span class="c1">// 回溯，移除右括号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
@@ -381,6 +414,8 @@
             <a href="/tags/leetcode/">Leetcode</a>
         
             <a href="/tags/dfs/">DFS</a>
+        
+            <a href="/tags/backtracking/">Backtracking</a>
         
     </section>
 
@@ -414,7 +449,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/number-of-islands/">
+    <a href="/p/combination-sum/">
         
         
             <div class="article-image">
@@ -425,7 +460,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Number of Islands</h2>
+            <h2 class="article-title">Combination Sum</h2>
         </div>
     </a>
 </article>
@@ -433,7 +468,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/validate-binary-search-tree/">
+    <a href="/p/palindrome-partitioning/">
         
         
             <div class="article-image">
@@ -444,7 +479,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Validate Binary Search Tree</h2>
+            <h2 class="article-title">Palindrome Partitioning</h2>
         </div>
     </a>
 </article>
@@ -452,7 +487,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/invert-binary-tree/">
+    <a href="/p/word-search/">
         
         
             <div class="article-image">
@@ -463,7 +498,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Invert Binary Tree</h2>
+            <h2 class="article-title">Word Search</h2>
         </div>
     </a>
 </article>
@@ -471,7 +506,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/binary-tree-inorder-traversal/">
+    <a href="/p/permutations/">
         
         
             <div class="article-image">
@@ -482,7 +517,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Binary Tree inorder Traversal</h2>
+            <h2 class="article-title">Permutations</h2>
         </div>
     </a>
 </article>
@@ -490,7 +525,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/maximum-depth-of-binary-tree/">
+    <a href="/p/subsets/">
         
         
             <div class="article-image">
@@ -501,7 +536,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Maximum Depth of Binary Tree</h2>
+            <h2 class="article-title">subsets</h2>
         </div>
     </a>
 </article>
