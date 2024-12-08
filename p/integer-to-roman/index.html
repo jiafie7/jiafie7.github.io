@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
-但是，可以找下规律。
-千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。'><title>Integer to Roman</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可
+分解数值： 定义一个从大到小排列的数值数组 values，以及对应的罗马数字字符串数组 romans 数值包括基本符号（如 1000, 500）及特殊减法组合（如 900, 400） 逐步转换： 遍历数值数组 values，对于每个值，检查当前数字 num 是否大于等于该值 若是，则从 num 中减去该值，同时将对应的罗马数字添加到结果字符串中 重复上述步骤，直到 num 为 0 输出结果： 返回拼接的罗马数字字符串 时间复杂度 常数时间复杂度 O(1)'><title>Integer to Roman</title>
 
 <link rel='canonical' href='https://garfieldzhang.site/p/integer-to-roman/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Integer to Roman'>
-<meta property='og:description' content='12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
-但是，可以找下规律。
-千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。'>
+<meta property='og:description' content='12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可
+分解数值： 定义一个从大到小排列的数值数组 values，以及对应的罗马数字字符串数组 romans 数值包括基本符号（如 1000, 500）及特殊减法组合（如 900, 400） 逐步转换： 遍历数值数组 values，对于每个值，检查当前数字 num 是否大于等于该值 若是，则从 num 中减去该值，同时将对应的罗马数字添加到结果字符串中 重复上述步骤，直到 num 为 0 输出结果： 返回拼接的罗马数字字符串 时间复杂度 常数时间复杂度 O(1)'>
 <meta property='og:url' content='https://garfieldzhang.site/p/integer-to-roman/'>
 <meta property='og:site_name' content='Garfield Zhang'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-03-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
 <meta name="twitter:title" content="Integer to Roman">
-<meta name="twitter:description" content="12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。
-但是，可以找下规律。
-千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="12. Integer to Roman 分析 1 2 3 4 5 6 7 8 9 I II III IV V VI VII VIII IX 10 20 30 40 50 60 70 80 90 X XX XXX XL L LX LXX LXXX XL 100 200 300 400 500 600 700 800 900 C CC CCC CD D DC DCC DCCC CM 1000 2000 3000 M MM MMM 1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可
+分解数值： 定义一个从大到小排列的数值数组 values，以及对应的罗马数字字符串数组 romans 数值包括基本符号（如 1000, 500）及特殊减法组合（如 900, 400） 逐步转换： 遍历数值数组 values，对于每个值，检查当前数字 num 是否大于等于该值 若是，则从 num 中减去该值，同时将对应的罗马数字添加到结果字符串中 重复上述步骤，直到 num 为 0 输出结果： 返回拼接的罗马数字字符串 时间复杂度 常数时间复杂度 O(1)"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
@@ -414,12 +411,31 @@
 </tr>
 </tbody>
 </table></div>
-<p>1234 转换成罗马数字是 MCCXXXIV，也就是从千位到个位依次拼接，用代码将过程模拟出来即可。</p>
-<p>但是，可以找下规律。</p>
-<p>千位是1000～3000，把1000的M记下即可，只要当前数大于1000，就减去1000，换成一个M。</p>
-<p>百位的100～300记下C，每减100就换一个C。400无规律，单独记下CD。同理，500～800记下D，900记下CM。</p>
-<p>十位记下10、40、50、90，也就是X、XL、L、XC。个位记下1、4、5、9，也就是I、IV、V、IX。</p>
-<p>然后对记下的这些数字，从大到小去考虑。例如大于900，当前值减去900，字符串拼接一个CM。</p>
+<p><code>1234</code> 转换成罗马数字是 <code>MCCXXXIV</code>，也就是从千位到个位依次拼接，用代码将过程模拟出来即可</p>
+<ol>
+<li>分解数值：
+<ul>
+<li>定义一个从大到小排列的数值数组 <code>values</code>，以及对应的罗马数字字符串数组 <code>romans</code></li>
+<li>数值包括基本符号（如 <code>1000</code>, <code>500</code>）及特殊减法组合（如 <code>900</code>, <code>400</code>）</li>
+</ul>
+</li>
+<li>逐步转换：
+<ul>
+<li>遍历数值数组 <code>values</code>，对于每个值，检查当前数字 <code>num</code> 是否大于等于该值</li>
+<li>若是，则从 <code>num</code> 中减去该值，同时将对应的罗马数字添加到结果字符串中</li>
+<li>重复上述步骤，直到 <code>num</code> 为 <code>0</code></li>
+</ul>
+</li>
+<li>输出结果：
+<ul>
+<li>返回拼接的罗马数字字符串</li>
+</ul>
+</li>
+</ol>
+<h3 id="时间复杂度">时间复杂度</h3>
+<p>常数时间复杂度 <code>O(1)</code></p>
+<h3 id="空间复杂度">空间复杂度</h3>
+<p>常数空间复杂度 <code>O(1)</code></p>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -449,29 +465,41 @@
 </span><span class="lnt">24
 </span><span class="lnt">25
 </span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">intToRoman</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">values</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="mi">1000</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="mi">900</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="mi">90</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="p">};</span>
-</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="n">romans</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s">&#34;M&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s">&#34;CM&#34;</span><span class="p">,</span> <span class="s">&#34;D&#34;</span><span class="p">,</span> <span class="s">&#34;CD&#34;</span><span class="p">,</span> <span class="s">&#34;C&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s">&#34;XC&#34;</span><span class="p">,</span> <span class="s">&#34;L&#34;</span><span class="p">,</span> <span class="s">&#34;XL&#34;</span><span class="p">,</span> <span class="s">&#34;X&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s">&#34;IX&#34;</span><span class="p">,</span> <span class="s">&#34;V&#34;</span><span class="p">,</span> <span class="s">&#34;IV&#34;</span><span class="p">,</span> <span class="s">&#34;I&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="nf">intToRoman</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 定义数值和对应的罗马数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="mi">1000</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="mi">90</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span>
 </span></span><span class="line"><span class="cl">        <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">+=</span> <span class="n">romans</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">romans</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;M&#34;</span><span class="p">,</span> <span class="s">&#34;CM&#34;</span><span class="p">,</span> <span class="s">&#34;D&#34;</span><span class="p">,</span> <span class="s">&#34;CD&#34;</span><span class="p">,</span> <span class="s">&#34;C&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;XC&#34;</span><span class="p">,</span> <span class="s">&#34;L&#34;</span><span class="p">,</span> <span class="s">&#34;XL&#34;</span><span class="p">,</span> <span class="s">&#34;X&#34;</span><span class="p">,</span> <span class="s">&#34;IX&#34;</span><span class="p">,</span> <span class="s">&#34;V&#34;</span><span class="p">,</span> <span class="s">&#34;IV&#34;</span><span class="p">,</span> <span class="s">&#34;I&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 遍历数值数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">.</span><span class="nf">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 减去当前值，拼接对应罗马数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="n">num</span> <span class="o">-=</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">+=</span> <span class="n">romans</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
@@ -523,6 +551,63 @@
             
                 
 <article class="has-image">
+    <a href="/p/daily-temperatures/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Daily Temperatures</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/decode-string/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Decode String</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/min-stack/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Min Stack</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/median-of-two-sorted-arrays/">
         
         
@@ -554,63 +639,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Multiply Strings</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/push-dominoes/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Push Dominoes</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/find-first-and-last-postion-of-element-in-sorted-array/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Find First and Last Postion of Element In Sorted Array</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/find-minimum-in-rotated-sorted-array/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Find Minimum in Rotated Sorted Array</h2>
         </div>
     </a>
 </article>
@@ -785,6 +813,8 @@
     <li><a href="#12-integer-to-romanhttpsleetcodecomproblemsinteger-to-romandescription"><a href="https://leetcode.com/problems/integer-to-roman/description/">12. Integer to Roman</a></a>
       <ol>
         <li><a href="#分析">分析</a></li>
+        <li><a href="#时间复杂度">时间复杂度</a></li>
+        <li><a href="#空间复杂度">空间复杂度</a></li>
         <li><a href="#c代码">C++代码</a></li>
       </ol>
     </li>
