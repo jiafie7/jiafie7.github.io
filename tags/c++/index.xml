@@ -9602,7 +9602,7 @@
 &lt;li&gt;如果不存在这样的 &lt;code&gt;k-1&lt;/code&gt;，说明整个数组是降序排列，直接反转数组即可&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;从右往左找到第一个比 &lt;code&gt;nums[k-1]&lt;/code&gt; 大的数：
+&lt;li&gt;从左往右找到最后一个比 &lt;code&gt;nums[k-1]&lt;/code&gt; 大的数：
 &lt;ul&gt;
 &lt;li&gt;从 &lt;code&gt;k&lt;/code&gt; 开始向右遍历，找到最后一个比 &lt;code&gt;nums[k-1]&lt;/code&gt; 大的数，记为 &lt;code&gt;nums[t]&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
