@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '><title>Longest Common Prefix</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1768. 交替合并字符串 时间复杂度 时间复杂度 O(max(n, m))
+空间复杂度 空间复杂度为 O(n &#43; m)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: string mergeAlternately(string word1, string word2) { std::string res; int n = word1.size(), m = word2.size(); int i = 0, j = 0; while (i &amp;lt; n || j &amp;lt; m) { if (i &amp;lt; n) res &#43;= word1[i &#43;&#43; ]; if (j &amp;lt; m) res &#43;= word2[j &#43;&#43; ]; } return res; } }; '><title>Merge Strings Alternately</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/longest-common-prefix/'>
+<link rel='canonical' href='https://garfieldzhang.site/p/merge-strings-alternately/'>
 
-<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Longest Common Prefix'>
-<meta property='og:description' content='14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/longest-common-prefix/'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Merge Strings Alternately'>
+<meta property='og:description' content='1768. 交替合并字符串 时间复杂度 时间复杂度 O(max(n, m))
+空间复杂度 空间复杂度为 O(n &#43; m)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: string mergeAlternately(string word1, string word2) { std::string res; int n = word1.size(), m = word2.size(); int i = 0, j = 0; while (i &amp;lt; n || j &amp;lt; m) { if (i &amp;lt; n) res &#43;= word1[i &#43;&#43; ]; if (j &amp;lt; m) res &#43;= word2[j &#43;&#43; ]; } return res; } }; '>
+<meta property='og:url' content='https://garfieldzhang.site/p/merge-strings-alternately/'>
 <meta property='og:site_name' content='Garfield Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
-<meta name="twitter:title" content="Longest Common Prefix">
-<meta name="twitter:description" content="14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-12-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-18T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta name="twitter:title" content="Merge Strings Alternately">
+<meta name="twitter:description" content="1768. 交替合并字符串 时间复杂度 时间复杂度 O(max(n, m))
+空间复杂度 空间复杂度为 O(n &#43; m)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: string mergeAlternately(string word1, string word2) { std::string res; int n = word1.size(), m = word2.size(); int i = 0, j = 0; while (i &amp;lt; n || j &amp;lt; m) { if (i &amp;lt; n) res &#43;= word1[i &#43;&#43; ]; if (j &amp;lt; m) res &#43;= word2[j &#43;&#43; ]; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
@@ -234,9 +237,9 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/longest-common-prefix/">
+            <a href="/p/merge-strings-alternately/">
                 
-                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Longest Common Prefix" />
+                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Merge Strings Alternately" />
                 
             </a>
         </div>
@@ -255,7 +258,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/longest-common-prefix/">Longest Common Prefix</a>
+            <a href="/p/merge-strings-alternately/">Merge Strings Alternately</a>
         </h2>
     
         
@@ -274,7 +277,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 16, 2024</time>
+                <time class="article-time--published">Dec 18, 2024</time>
             </div>
         
 
@@ -303,11 +306,12 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
     <section class="article-content">
     
     
-    <h2 id="14-longest-common-prefixhttpsleetcodecomproblemslongest-common-prefixdescription"><a class="link" href="https://leetcode.com/problems/longest-common-prefix/description/"  target="_blank" rel="noopener"
-    >14. Longest Common Prefix</a></h2>
-<h3 id="分析">分析</h3>
-<p>首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。
-再看第二个字符是否一样，这样一直遍历下去&hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。</p>
+    <h2 id="1768-交替合并字符串httpsleetcodecnproblemsmerge-strings-alternatelydescription"><a class="link" href="https://leetcode.cn/problems/merge-strings-alternately/description/"  target="_blank" rel="noopener"
+    >1768. 交替合并字符串</a></h2>
+<h3 id="时间复杂度">时间复杂度</h3>
+<p>时间复杂度 <code>O(max(n, m))</code></p>
+<h3 id="空间复杂度">空间复杂度</h3>
+<p>空间复杂度为 <code>O(n + m)</code></p>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -327,24 +331,22 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">longestCommonPrefix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">strs</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">strs</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">())</span> <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">str</span><span class="p">:</span> <span class="n">strs</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">||</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">+=</span> <span class="n">c</span><span class="p">;</span>    
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="nf">mergeAlternately</span><span class="p">(</span><span class="n">string</span> <span class="n">word1</span><span class="p">,</span> <span class="n">string</span> <span class="n">word2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">word1</span><span class="p">.</span><span class="nf">size</span><span class="p">(),</span> <span class="n">m</span> <span class="o">=</span> <span class="n">word2</span><span class="p">.</span><span class="nf">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">||</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="n">res</span> <span class="o">+=</span> <span class="n">word1</span><span class="p">[</span><span class="n">i</span> <span class="o">++</span> <span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">)</span> <span class="n">res</span> <span class="o">+=</span> <span class="n">word2</span><span class="p">[</span><span class="n">j</span> <span class="o">++</span> <span class="p">];</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
@@ -360,6 +362,8 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
             <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
+        
+            <a href="/tags/double-pointer/">Double Pointer</a>
         
     </section>
 
@@ -393,82 +397,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
             
                 
 <article class="has-image">
-    <a href="/p/greatest-common-divisor-of-strings/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Greatest Common Divisor Of Strings</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/merge-strings-alternately/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Merge Strings Alternately</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/best-time-to-buy-and-sell-stock/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Best Time to Buy and Sell Stock</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/jump-game/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Jump Game</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/jupm-game-ii/">
         
         
@@ -481,6 +409,82 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 
         <div class="article-details">
             <h2 class="article-title">Jupm Game II</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/partition-lables/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Partition Lables</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/find-the-duplicate-number/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Find the Duplicate Number</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/sort-colors/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Sort Colors</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/longest-palindromic-substring/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Longest Palindromic Substring</h2>
         </div>
     </a>
 </article>
@@ -652,9 +656,10 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#14-longest-common-prefixhttpsleetcodecomproblemslongest-common-prefixdescription"><a href="https://leetcode.com/problems/longest-common-prefix/description/">14. Longest Common Prefix</a></a>
+    <li><a href="#1768-交替合并字符串httpsleetcodecnproblemsmerge-strings-alternatelydescription"><a href="https://leetcode.cn/problems/merge-strings-alternately/description/">1768. 交替合并字符串</a></a>
       <ol>
-        <li><a href="#分析">分析</a></li>
+        <li><a href="#时间复杂度">时间复杂度</a></li>
+        <li><a href="#空间复杂度">空间复杂度</a></li>
         <li><a href="#c代码">C++代码</a></li>
       </ol>
     </li>
