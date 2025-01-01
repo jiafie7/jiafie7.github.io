@@ -16,7 +16,7 @@ f(0) = 1 ：到达第 1 阶的方法只有一种 f(1) = 1 ：到达第 1 阶的�
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int climbStairs(int n) { int a = 1, b = 1; // 初始状态：f(0) = 1, f(1) = 1 while ( -- n) // 从第 2 阶开始计算 { int c = a &#43; b; // 当前阶方法数等于前两阶之和 a = b; // 更新前一阶为当前阶 b = c; // 更新当前阶为下一阶 } return b; // 返回第 n 阶的方法数 } }; '>
 <meta property='og:url' content='https://garfieldzhang.site/p/climbing-stairs/'>
-<meta property='og:site_name' content='Garfield Zhang'>
+<meta property='og:site_name' content='Hang Zhang'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
 <meta name="twitter:title" content="Climbing Stairs">
 <meta name="twitter:description" content="70. 爬楼梯 分析 典型的斐波那契数列问题。到达第 n 阶的方法数等于到达第 n-1 阶和第 n-2 阶的方法数之和 状态转移方程：f(n) = f(n-1) &#43; f(n-2)
@@ -83,7 +83,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Garfield Zhang</a></h1>
+            <h1 class="site-name"><a href="/">Hang Zhang</a></h1>
             <h2 class="site-description">NEVER GIVE UP.</h2>
         </div>
     </header><ol class="social-menu">
@@ -549,7 +549,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
         
             2023 - 
         
-        2024 Garfield Zhang
+        2025 Hang Zhang
     </section>
     
     <section class="powerby">

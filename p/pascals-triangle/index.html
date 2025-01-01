@@ -16,7 +16,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 空间复杂度 空间复杂度为 O(n^2)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; generate(int numRows) { std::vector&amp;lt;std::vector&amp;lt;int&amp;gt;&amp;gt; f; for (int i = 0; i &amp;lt; numRows; &#43;&#43; i) // 遍历每一行 { std::vector&amp;lt;int&amp;gt; line(i &#43; 1); // 初始化当前行，长度为 i&#43;1 line[0] = line[i] = 1; // 每行的首尾元素为 1 for (int j = 1; j &amp;lt; i; &#43;&#43; j) // 中间元素由上一行相邻元素之和计算得出 line[j] = f[i - 1][j - 1] &#43; f[i - 1][j]; f.'>
 <meta property='og:url' content='https://garfieldzhang.site/p/pascals-triangle/'>
-<meta property='og:site_name' content='Garfield Zhang'>
+<meta property='og:site_name' content='Hang Zhang'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
 <meta name="twitter:title" content="Pascals Triangle">
 <meta name="twitter:description" content="118. 杨辉三角 分析 杨辉三角的特点是：
@@ -83,7 +83,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Garfield Zhang</a></h1>
+            <h1 class="site-name"><a href="/">Hang Zhang</a></h1>
             <h2 class="site-description">NEVER GIVE UP.</h2>
         </div>
     </header><ol class="social-menu">
@@ -569,7 +569,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
         
             2023 - 
         
-        2024 Garfield Zhang
+        2025 Hang Zhang
     </section>
     
     <section class="powerby">

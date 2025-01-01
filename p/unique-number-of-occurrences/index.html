@@ -12,7 +12,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 空间复杂度 空间复杂度为 O(m)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 class Solution { public: bool uniqueOccurrences(vector&amp;lt;int&amp;gt;&amp;amp; arr) { // 统计元素出现次数 std::unordered_map&amp;lt;int, int&amp;gt; cnt; for (int x : arr) &#43;&#43;cnt[x]; // 检查出现次数是否唯一 std::unordered_set&amp;lt;int&amp;gt; hash; for (auto item : cnt) { // 如果某个次数已存在，返回 false if (hash.'>
 <meta property='og:url' content='https://garfieldzhang.site/p/unique-number-of-occurrences/'>
-<meta property='og:site_name' content='Garfield Zhang'>
+<meta property='og:site_name' content='Hang Zhang'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Hash' /><meta property='article:published_time' content='2024-12-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
 <meta name="twitter:title" content="Unique Number of Occurrences">
 <meta name="twitter:description" content="1207. 独一无二的出现次数 分析 统计出现次数： 使用哈希表 cnt 统计数组中每个元素的出现次数，键为元素值，值为该元素的出现次数 判断次数是否唯一： 使用集合 hash 存储所有出现次数。 遍历哈希表 cnt，如果发现某次出现次数已存在于集合中，则返回 false 如果遍历结束后没有重复次数，返回 true 时间复杂度 统计元素出现次数的时间是 O(n)，其中 n 是数组的长度 检查次数唯一性的时间是 O(m)，其中 m 是数组中不同元素的个数 总时间复杂度为 O(n &#43; m)
@@ -77,7 +77,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Garfield Zhang</a></h1>
+            <h1 class="site-name"><a href="/">Hang Zhang</a></h1>
             <h2 class="site-description">NEVER GIVE UP.</h2>
         </div>
     </header><ol class="social-menu">
@@ -561,7 +561,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
         
             2023 - 
         
-        2024 Garfield Zhang
+        2025 Hang Zhang
     </section>
     
     <section class="powerby">

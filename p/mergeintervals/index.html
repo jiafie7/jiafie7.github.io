@@ -12,7 +12,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 空间复杂度 排序所需的额外空间复杂度为 O(logn) （排序算法的递归栈空间） 结果存储的空间复杂度为 O(n) 总空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; merge(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; intervals) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; // 用于存储最终结果 if (intervals.'>
 <meta property='og:url' content='https://garfieldzhang.site/p/mergeintervals/'>
-<meta property='og:site_name' content='Garfield Zhang'>
+<meta property='og:site_name' content='Hang Zhang'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Sort' /><meta property='article:published_time' content='2024-11-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-24T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
 <meta name="twitter:title" content="mergeIntervals">
 <meta name="twitter:description" content="56. mergeIntervals 分析 排序： 首先将所有区间按照起始值从小到大排序。排序后，若两个区间有重叠，它们一定是相邻的 遍历与合并： 用变量 l 和 r 分别表示当前合并区间的起始和结束 遍历排序后的区间： 如果当前遍历区间的起始值大于当前合并区间的结束值 r，说明当前区间与前面的合并区间没有重叠，应将前面的合并区间加入结果，并更新 l 和 r 如果有重叠，则将 r 更新为当前区间结束值的较大值 遍历结束后，将最后一个合并区间加入结果 时间复杂度 排序：O(nlogn) ，n 是区间的数量 遍历：O(n)，每个区间只会被处理一次 总时间复杂度为 O(nlogn)
@@ -77,7 +77,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Garfield Zhang</a></h1>
+            <h1 class="site-name"><a href="/">Hang Zhang</a></h1>
             <h2 class="site-description">NEVER GIVE UP.</h2>
         </div>
     </header><ol class="social-menu">
@@ -459,6 +459,44 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
             
                 
 <article class="has-image">
+    <a href="/p/longest-zigzag-path-in-a-binary-tree/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Longest Zigzag Path In a Binary Tree</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/search-in-a-binary-search-tree/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Search In a Binary Search Tree</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/construct-binary-tree-from-preorder-and-inorder-traversal/">
         
         
@@ -490,44 +528,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 
         <div class="article-details">
             <h2 class="article-title">Flatten Binary Tree to Linked List</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/binary-tree-right-side-view/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Binary Tree Right Side View</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/kth-smallest-element-in-a-bst/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Kth Smallest Element In A Bst</h2>
         </div>
     </a>
 </article>
@@ -588,7 +588,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
         
             2023 - 
         
-        2024 Garfield Zhang
+        2025 Hang Zhang
     </section>
     
     <section class="powerby">

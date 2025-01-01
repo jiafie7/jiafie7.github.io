@@ -18,7 +18,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 空间复杂度 递归栈空间：递归深度为 O(logn)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: TreeNode* sortedArrayToBST(vector&amp;lt;int&amp;gt;&amp;amp; nums) { // 调用递归函数构建平衡二叉搜索树 return build(nums, 0, nums.size() - 1); } TreeNode* build(std::vector&amp;lt;int&amp;gt;&amp;amp; nums, int l, int r) { if (l &amp;gt; r) return nullptr; // 递归终止条件：无效范围 int mid = (l &#43; r) &amp;gt;&amp;gt; 1; // 找到当前范围的中点 TreeNode* root = new TreeNode(nums[mid]); // 创建根节点 root-&amp;gt;left = build(nums, l, mid - 1); // 构建左子树 root-&amp;gt;right = build(nums, mid &#43; 1, r); // 构建右子树 return root; // 返回根节点 } }; '>
 <meta property='og:url' content='https://garfieldzhang.site/p/convert-sorted-array-to-binary-search-tree/'>
-<meta property='og:site_name' content='Garfield Zhang'>
+<meta property='og:site_name' content='Hang Zhang'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Binary Tree' /><meta property='article:published_time' content='2024-12-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-02T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
 <meta name="twitter:title" content="Convert Sorted Array to Binary Search Tree">
 <meta name="twitter:description" content="108. 将有序数组转换为二叉搜索树 分析 确定递归终止条件
@@ -86,7 +86,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Garfield Zhang</a></h1>
+            <h1 class="site-name"><a href="/">Hang Zhang</a></h1>
             <h2 class="site-description">NEVER GIVE UP.</h2>
         </div>
     </header><ol class="social-menu">
@@ -420,6 +420,25 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
             
                 
 <article class="has-image">
+    <a href="/p/longest-zigzag-path-in-a-binary-tree/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Longest Zigzag Path In a Binary Tree</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/construct-binary-tree-from-preorder-and-inorder-traversal/">
         
         
@@ -494,25 +513,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 </article>
 
             
-                
-<article class="has-image">
-    <a href="/p/lowest-common-ancestor-of-a-binary-tree/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Lowest Common Ancestor Of A Binary Tree</h2>
-        </div>
-    </a>
-</article>
-
-            
         </div>
     </div>
 </aside>
@@ -568,7 +568,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
         
             2023 - 
         
-        2024 Garfield Zhang
+        2025 Hang Zhang
     </section>
     
     <section class="powerby">
