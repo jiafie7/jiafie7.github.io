@@ -7,6 +7,22 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Binary Tree</title>
+        <link>https://garfieldzhang.site/tags/binary-tree/</link>
+        <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://garfieldzhang.site/tags/binary-tree/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>BST</title>
+        <link>https://garfieldzhang.site/tags/bst/</link>
+        <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://garfieldzhang.site/tags/bst/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>C&#43;&#43;</title>
         <link>https://garfieldzhang.site/tags/c&#43;&#43;/</link>
         <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
@@ -44,22 +60,6 @@
         <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
         
         <guid>https://garfieldzhang.site/tags/bfs/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Binary Tree</title>
-        <link>https://garfieldzhang.site/tags/binary-tree/</link>
-        <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://garfieldzhang.site/tags/binary-tree/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>BST</title>
-        <link>https://garfieldzhang.site/tags/bst/</link>
-        <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://garfieldzhang.site/tags/bst/</guid>
         <description></description>
         </item>
         <item>
