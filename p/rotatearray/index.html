@@ -5,20 +5,20 @@
 空间复杂度 原地操作：仅使用常数级别的额外空间，空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void rotate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { int n = nums.size(); k %= n; // 计算有效的轮转次数 // 反转整个数组 for (int i = 0; i &amp;lt; n / 2; &#43;&#43;i) std::swap(nums[i], nums[n - 1 - i]); // 反转前 k 个元素 for (int i = 0; i &amp;lt; k / 2; &#43;&#43;i) std::swap(nums[i], nums[k - 1 - i]); // 反转后 n-k 个元素 for (int i = k; i &amp;lt; (n &#43; k) / 2; &#43;&#43;i) std::swap(nums[i], nums[n - 1 - i &#43; k]); } }; '><title>rotateArray</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/rotatearray/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/rotatearray/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='rotateArray'>
 <meta property='og:description' content='189. 轮转数组 分析 确定实际轮转次数： 如果 k 大于数组长度 n，轮转后的结果与 k % n 次轮转相同 因此需要先对 k 取模：k %= n 三次反转法： 整体反转：将整个数组反转，这样后 k 个元素会移动到前面 前部分反转：将前 k 个元素反转，恢复它们的顺序 后部分反转：将剩余的 n-k 个元素反转，恢复它们的顺序 时间复杂度 反转操作：每次反转需要遍历部分数组，整体复杂度为 O(n)
 空间复杂度 原地操作：仅使用常数级别的额外空间，空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void rotate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { int n = nums.size(); k %= n; // 计算有效的轮转次数 // 反转整个数组 for (int i = 0; i &amp;lt; n / 2; &#43;&#43;i) std::swap(nums[i], nums[n - 1 - i]); // 反转前 k 个元素 for (int i = 0; i &amp;lt; k / 2; &#43;&#43;i) std::swap(nums[i], nums[k - 1 - i]); // 反转后 n-k 个元素 for (int i = k; i &amp;lt; (n &#43; k) / 2; &#43;&#43;i) std::swap(nums[i], nums[n - 1 - i &#43; k]); } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/rotatearray/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/rotatearray/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="rotateArray">
 <meta name="twitter:description" content="189. 轮转数组 分析 确定实际轮转次数： 如果 k 大于数组长度 n，轮转后的结果与 k % n 次轮转相同 因此需要先对 k 取模：k %= n 三次反转法： 整体反转：将整个数组反转，这样后 k 个元素会移动到前面 前部分反转：将前 k 个元素反转，恢复它们的顺序 后部分反转：将剩余的 n-k 个元素反转，恢复它们的顺序 时间复杂度 反转操作：每次反转需要遍历部分数组，整体复杂度为 O(n)
 空间复杂度 原地操作：仅使用常数级别的额外空间，空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void rotate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { int n = nums.size(); k %= n; // 计算有效的轮转次数 // 反转整个数组 for (int i = 0; i &amp;lt; n / 2; &#43;&#43;i) std::swap(nums[i], nums[n - 1 - i]); // 反转前 k 个元素 for (int i = 0; i &amp;lt; k / 2; &#43;&#43;i) std::swap(nums[i], nums[k - 1 - i]); // 反转后 n-k 个元素 for (int i = k; i &amp;lt; (n &#43; k) / 2; &#43;&#43;i) std::swap(nums[i], nums[n - 1 - i &#43; k]); } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

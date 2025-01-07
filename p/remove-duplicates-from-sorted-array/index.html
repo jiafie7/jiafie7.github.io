@@ -3,16 +3,16 @@
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='26. Remove Duplicates from Sorted Array 分析 用索引 k 记录非重复元素的位置。 判断当前元素 i 是否为第一个元素 或 是否与前一个元素不等。 如果满足上述条件，将当前元素复制到数组中索引为 k 的位置，然后递增 k。 最后返回索引 k，它表示移除重复元素后的数组长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 class Solution { public: int removeDuplicates(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int k = 0; for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) if (!i || nums[i] != nums[i - 1]) nums[k &#43;&#43; ] = nums[i]; return k; } }; '><title>Remove Duplicates from Sorted Array</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/remove-duplicates-from-sorted-array/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/remove-duplicates-from-sorted-array/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Remove Duplicates from Sorted Array'>
 <meta property='og:description' content='26. Remove Duplicates from Sorted Array 分析 用索引 k 记录非重复元素的位置。 判断当前元素 i 是否为第一个元素 或 是否与前一个元素不等。 如果满足上述条件，将当前元素复制到数组中索引为 k 的位置，然后递增 k。 最后返回索引 k，它表示移除重复元素后的数组长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 class Solution { public: int removeDuplicates(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int k = 0; for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) if (!i || nums[i] != nums[i - 1]) nums[k &#43;&#43; ] = nums[i]; return k; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/remove-duplicates-from-sorted-array/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/remove-duplicates-from-sorted-array/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-03-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-03-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Remove Duplicates from Sorted Array">
 <meta name="twitter:description" content="26. Remove Duplicates from Sorted Array 分析 用索引 k 记录非重复元素的位置。 判断当前元素 i 是否为第一个元素 或 是否与前一个元素不等。 如果满足上述条件，将当前元素复制到数组中索引为 k 的位置，然后递增 k。 最后返回索引 k，它表示移除重复元素后的数组长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 class Solution { public: int removeDuplicates(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int k = 0; for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) if (!i || nums[i] != nums[i - 1]) nums[k &#43;&#43; ] = nums[i]; return k; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

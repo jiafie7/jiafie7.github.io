@@ -6,22 +6,22 @@
 空间复杂度 空间复杂度为 O(h)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: TreeNode* searchBST(TreeNode* root, int val) { // 基本情况：当前节点为空，返回 nullptr if (!root) return nullptr; // 当前节点的值大于目标值，递归查找左子树 if (root-&amp;gt;val &amp;gt; val) return searchBST(root-&amp;gt;left, val); // 当前节点的值小于目标值，递归查找右子树 if (root-&amp;gt;val &amp;lt; val) return searchBST(root-&amp;gt;right, val); // 找到目标节点，返回该节点 return root; } }; '><title>Search In a Binary Search Tree</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/search-in-a-binary-search-tree/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/search-in-a-binary-search-tree/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Search In a Binary Search Tree'>
 <meta property='og:description' content='700. 二叉搜索树中的搜索 分析 递归查找： 如果当前节点为空，返回 null，表示未找到目标节点 如果当前节点的值等于目标值 val，返回该节点 如果当前节点的值大于 val，递归查找其左子树 如果当前节点的值小于 val，递归查找其右子树 返回结果： 如果找到目标节点，返回其为根的子树 如果未找到目标节点，返回 null 时间复杂度 最坏情况下为树的高度 O(h)，其中 h 是树的高度。对于平衡二叉搜索树，时间复杂度为 O(log n)
 对于退化为链表的情况，时间复杂度为 O(n)
 空间复杂度 空间复杂度为 O(h)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: TreeNode* searchBST(TreeNode* root, int val) { // 基本情况：当前节点为空，返回 nullptr if (!root) return nullptr; // 当前节点的值大于目标值，递归查找左子树 if (root-&amp;gt;val &amp;gt; val) return searchBST(root-&amp;gt;left, val); // 当前节点的值小于目标值，递归查找右子树 if (root-&amp;gt;val &amp;lt; val) return searchBST(root-&amp;gt;right, val); // 找到目标节点，返回该节点 return root; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/search-in-a-binary-search-tree/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/search-in-a-binary-search-tree/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='BST' /><meta property='article:published_time' content='2025-01-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-01T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='BST' /><meta property='article:published_time' content='2025-01-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-01T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Search In a Binary Search Tree">
 <meta name="twitter:description" content="700. 二叉搜索树中的搜索 分析 递归查找： 如果当前节点为空，返回 null，表示未找到目标节点 如果当前节点的值等于目标值 val，返回该节点 如果当前节点的值大于 val，递归查找其左子树 如果当前节点的值小于 val，递归查找其右子树 返回结果： 如果找到目标节点，返回其为根的子树 如果未找到目标节点，返回 null 时间复杂度 最坏情况下为树的高度 O(h)，其中 h 是树的高度。对于平衡二叉搜索树，时间复杂度为 O(log n)
 对于退化为链表的情况，时间复杂度为 O(n)
 空间复杂度 空间复杂度为 O(h)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: TreeNode* searchBST(TreeNode* root, int val) { // 基本情况：当前节点为空，返回 nullptr if (!root) return nullptr; // 当前节点的值大于目标值，递归查找左子树 if (root-&amp;gt;val &amp;gt; val) return searchBST(root-&amp;gt;left, val); // 当前节点的值小于目标值，递归查找右子树 if (root-&amp;gt;val &amp;lt; val) return searchBST(root-&amp;gt;right, val); // 找到目标节点，返回该节点 return root; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

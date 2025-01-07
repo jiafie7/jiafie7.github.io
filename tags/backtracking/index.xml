@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Backtracking on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/backtracking/</link>
+        <link>https://hangzhang.xyz/tags/backtracking/</link>
         <description>Recent content in Backtracking on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/backtracking/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/backtracking/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Combination Sum III</title>
-        <link>https://garfieldzhang.site/p/combination-sum-iii/</link>
+        <link>https://hangzhang.xyz/p/combination-sum-iii/</link>
         <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/combination-sum-iii/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Combination Sum III" /&gt;&lt;h2 id=&#34;216-组合总和iiihttpsleetcodecnproblemscombination-sum-iii&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/combination-sum-iii/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/combination-sum-iii/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Combination Sum III" /&gt;&lt;h2 id=&#34;216-组合总和iiihttpsleetcodecnproblemscombination-sum-iii&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/combination-sum-iii/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;216. 组合总和III&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;采用深度优先搜索（DFS）+ 回溯来解决问题：&lt;/p&gt;
@@ -131,11 +131,11 @@
         </item>
         <item>
         <title>N Queens</title>
-        <link>https://garfieldzhang.site/p/n-queens/</link>
+        <link>https://hangzhang.xyz/p/n-queens/</link>
         <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/n-queens/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post N Queens" /&gt;&lt;h2 id=&#34;51-n皇后httpsleetcodecnproblemsn-queensdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/n-queens/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/n-queens/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post N Queens" /&gt;&lt;h2 id=&#34;51-n皇后httpsleetcodecnproblemsn-queensdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/n-queens/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;51. N皇后&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -292,11 +292,11 @@
         </item>
         <item>
         <title>Combination Sum</title>
-        <link>https://garfieldzhang.site/p/combination-sum/</link>
+        <link>https://hangzhang.xyz/p/combination-sum/</link>
         <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/combination-sum/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Combination Sum" /&gt;&lt;h2 id=&#34;39-数组总和httpsleetcodecnproblemscombination-sumdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/combination-sum/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/combination-sum/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Combination Sum" /&gt;&lt;h2 id=&#34;39-数组总和httpsleetcodecnproblemscombination-sumdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/combination-sum/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;39. 数组总和&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ul&gt;
@@ -389,11 +389,11 @@
         </item>
         <item>
         <title>Palindrome Partitioning</title>
-        <link>https://garfieldzhang.site/p/palindrome-partitioning/</link>
+        <link>https://hangzhang.xyz/p/palindrome-partitioning/</link>
         <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/palindrome-partitioning/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Palindrome Partitioning" /&gt;&lt;h2 id=&#34;131-分割回文串httpsleetcodecnproblemspalindrome-partitioningdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/palindrome-partitioning/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/palindrome-partitioning/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Palindrome Partitioning" /&gt;&lt;h2 id=&#34;131-分割回文串httpsleetcodecnproblemspalindrome-partitioningdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/palindrome-partitioning/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;131. 分割回文串&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -536,11 +536,11 @@
         </item>
         <item>
         <title>Word Search</title>
-        <link>https://garfieldzhang.site/p/word-search/</link>
+        <link>https://hangzhang.xyz/p/word-search/</link>
         <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/word-search/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Word Search" /&gt;&lt;h2 id=&#34;79-单词搜索httpsleetcodecnproblemsword-searchdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/word-search/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/word-search/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Word Search" /&gt;&lt;h2 id=&#34;79-单词搜索httpsleetcodecnproblemsword-searchdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/word-search/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;79. 单词搜索&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -679,11 +679,11 @@
         </item>
         <item>
         <title>Permutations</title>
-        <link>https://garfieldzhang.site/p/permutations/</link>
+        <link>https://hangzhang.xyz/p/permutations/</link>
         <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/permutations/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Permutations" /&gt;&lt;h2 id=&#34;46-全排列httpsleetcodecnproblemspermutationsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/permutations/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/permutations/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Permutations" /&gt;&lt;h2 id=&#34;46-全排列httpsleetcodecnproblemspermutationsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/permutations/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;46. 全排列&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -806,11 +806,11 @@
         </item>
         <item>
         <title>subsets</title>
-        <link>https://garfieldzhang.site/p/subsets/</link>
+        <link>https://hangzhang.xyz/p/subsets/</link>
         <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/subsets/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post subsets" /&gt;&lt;h2 id=&#34;78-子集httpsleetcodecnproblemssubsetsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/subsets/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/subsets/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post subsets" /&gt;&lt;h2 id=&#34;78-子集httpsleetcodecnproblemssubsetsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/subsets/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;78. 子集&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;h4 id=&#34;回溯法&#34;&gt;回溯法&lt;/h4&gt;
@@ -995,11 +995,11 @@
         </item>
         <item>
         <title>Generate Parentheses</title>
-        <link>https://garfieldzhang.site/p/generate-parentheses/</link>
+        <link>https://hangzhang.xyz/p/generate-parentheses/</link>
         <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/generate-parentheses/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Generate Parentheses" /&gt;&lt;h2 id=&#34;22-generate-parentheseshttpsleetcodecomproblemsgenerate-parenthesesdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/generate-parentheses/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/generate-parentheses/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Generate Parentheses" /&gt;&lt;h2 id=&#34;22-generate-parentheseshttpsleetcodecomproblemsgenerate-parenthesesdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/generate-parentheses/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;22. Generate Parentheses&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;合法的括号组合需要满足：&lt;/p&gt;
@@ -1098,11 +1098,11 @@
         </item>
         <item>
         <title>Letter Combinations of a Phone Number</title>
-        <link>https://garfieldzhang.site/p/letter-combinations-of-a-phone-number/</link>
+        <link>https://hangzhang.xyz/p/letter-combinations-of-a-phone-number/</link>
         <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/letter-combinations-of-a-phone-number/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Letter Combinations of a Phone Number" /&gt;&lt;h2 id=&#34;17-letter-combinations-of-a-phone-numberhttpsleetcodecomproblemsletter-combinations-of-a-phone-numberdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/letter-combinations-of-a-phone-number/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Letter Combinations of a Phone Number" /&gt;&lt;h2 id=&#34;17-letter-combinations-of-a-phone-numberhttpsleetcodecomproblemsletter-combinations-of-a-phone-numberdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;17. Letter Combinations of a Phone Number&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;使用深度优先搜索（DFS）+ 回溯的方法。&lt;/p&gt;

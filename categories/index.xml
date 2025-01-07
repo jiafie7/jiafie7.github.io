@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Hang Zhang</title>
-        <link>https://garfieldzhang.site/categories/</link>
+        <link>https://hangzhang.xyz/categories/</link>
         <description>Recent content in Categories on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Data Structure and Algorithm</title>
-        <link>https://garfieldzhang.site/categories/data-structure-and-algorithm/</link>
+        <link>https://hangzhang.xyz/categories/data-structure-and-algorithm/</link>
         <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/categories/data-structure-and-algorithm/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/dataStructureAndAlgorithm.jpg" alt="Featured image of post Data Structure and Algorithm" /&gt;</description>
+        <guid>https://hangzhang.xyz/categories/data-structure-and-algorithm/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/dataStructureAndAlgorithm.jpg" alt="Featured image of post Data Structure and Algorithm" /&gt;</description>
         </item>
         <item>
         <title>English</title>
-        <link>https://garfieldzhang.site/categories/english/</link>
+        <link>https://hangzhang.xyz/categories/english/</link>
         <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/categories/english/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/english-language.jpeg" alt="Featured image of post English" /&gt;</description>
+        <guid>https://hangzhang.xyz/categories/english/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/english-language.jpeg" alt="Featured image of post English" /&gt;</description>
         </item>
         
     </channel>

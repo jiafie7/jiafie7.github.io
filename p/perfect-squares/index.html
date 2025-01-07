@@ -6,22 +6,22 @@
 使用了长度为 n &#43; 1 的数组 f，空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int numSquares(int n) { std::vector&amp;lt;int&amp;gt; f(n &#43; 1, 4); // 初始化 f 数组，最大值为 4 f[0] = 0; // 和为 0 时的最少数量为 0 for (int i = 1; i &amp;lt;= n; &#43;&#43;i) { for (int j = 1; j * j &amp;lt;= i; &#43;&#43;j) { f[i] = std::min(f[i], f[i - j * j] &#43; 1); // 状态转移 } } return f[n]; // 返回结果 } }; '><title>Perfect Squares</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/perfect-squares/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/perfect-squares/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Perfect Squares'>
 <meta property='og:description' content='279. 完全平方数 分析 定义状态： f[i] ：表示和为 i 的完全平方数的最少数量 状态转移方程： 对于 i ，尝试减去一个完全平方数 j^2 ，转移状态为：f[i] = min(f[i], f[i - j^2] &#43; 1) 初始化： f[0] = 0 ：和为 0 的最少数量为 0 其他状态 f[i] 初始化为 4，因为根据四平方和定理，一个数至多由 4 个完全平方数组成 遍历顺序： 外层循环遍历 i（目标和），内层循环遍历 j（尝试的完全平方数） 结果： 返回 f[n] 即为和为 n 的完全平方数的最少数量 时间复杂度 外层循环遍历 i 从 1 到 n，内层循环枚举完全平方数的数量，最多为 \sqrt{n} 总复杂度为 O(n*\sqrt{n})
 空间复杂度 使用排序 O(logn) 的额外空间，其余操作在原地完成，空间复杂度为 O(1)
 使用了长度为 n &#43; 1 的数组 f，空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int numSquares(int n) { std::vector&amp;lt;int&amp;gt; f(n &#43; 1, 4); // 初始化 f 数组，最大值为 4 f[0] = 0; // 和为 0 时的最少数量为 0 for (int i = 1; i &amp;lt;= n; &#43;&#43;i) { for (int j = 1; j * j &amp;lt;= i; &#43;&#43;j) { f[i] = std::min(f[i], f[i - j * j] &#43; 1); // 状态转移 } } return f[n]; // 返回结果 } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/perfect-squares/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/perfect-squares/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Perfect Squares">
 <meta name="twitter:description" content="279. 完全平方数 分析 定义状态： f[i] ：表示和为 i 的完全平方数的最少数量 状态转移方程： 对于 i ，尝试减去一个完全平方数 j^2 ，转移状态为：f[i] = min(f[i], f[i - j^2] &#43; 1) 初始化： f[0] = 0 ：和为 0 的最少数量为 0 其他状态 f[i] 初始化为 4，因为根据四平方和定理，一个数至多由 4 个完全平方数组成 遍历顺序： 外层循环遍历 i（目标和），内层循环遍历 j（尝试的完全平方数） 结果： 返回 f[n] 即为和为 n 的完全平方数的最少数量 时间复杂度 外层循环遍历 i 从 1 到 n，内层循环枚举完全平方数的数量，最多为 \sqrt{n} 总复杂度为 O(n*\sqrt{n})
 空间复杂度 使用排序 O(logn) 的额外空间，其余操作在原地完成，空间复杂度为 O(1)
 使用了长度为 n &#43; 1 的数组 f，空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int numSquares(int n) { std::vector&amp;lt;int&amp;gt; f(n &#43; 1, 4); // 初始化 f 数组，最大值为 4 f[0] = 0; // 和为 0 时的最少数量为 0 for (int i = 1; i &amp;lt;= n; &#43;&#43;i) { for (int j = 1; j * j &amp;lt;= i; &#43;&#43;j) { f[i] = std::min(f[i], f[i - j * j] &#43; 1); // 状态转移 } } return f[n]; // 返回结果 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

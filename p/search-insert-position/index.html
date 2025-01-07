@@ -5,20 +5,20 @@
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 int searchInsert(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { int l = 0, r = nums.'><title>Search Insert Position</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/search-insert-position/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/search-insert-position/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Search Insert Position'>
 <meta property='og:description' content='35. 搜索插入位置 分析 定义搜索范围： 使用两个指针 l 和 r 分别表示数组的左边界和右边界，初始值为 0 和 nums.size() 注意右边界初始值为 nums.size()，因为我们需要处理目标值可能插入在数组末尾的情况 进行二分查找： 计算中间位置 mid = (l &#43; r) &amp;gt;&amp;gt; 1 如果 target &amp;lt;= nums[mid]： target 可能在 mid 位置或其左侧，更新右边界 r = mid 如果 target &amp;gt; nums[mid]： target 一定在 mid 右侧，更新左边界 l = mid &#43; 1 返回结果： 最终，l 和 r 会收敛到目标值的位置 如果 target 不在数组中，返回的是它应该插入的位置 时间复杂度 二分查找的时间复杂度为 O(log n)，其中 n 是数组长度
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 int searchInsert(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { int l = 0, r = nums.'>
-<meta property='og:url' content='https://garfieldzhang.site/p/search-insert-position/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/search-insert-position/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Binary Search' /><meta property='article:published_time' content='2024-12-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Binary Search' /><meta property='article:published_time' content='2024-12-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Search Insert Position">
 <meta name="twitter:description" content="35. 搜索插入位置 分析 定义搜索范围： 使用两个指针 l 和 r 分别表示数组的左边界和右边界，初始值为 0 和 nums.size() 注意右边界初始值为 nums.size()，因为我们需要处理目标值可能插入在数组末尾的情况 进行二分查找： 计算中间位置 mid = (l &#43; r) &amp;gt;&amp;gt; 1 如果 target &amp;lt;= nums[mid]： target 可能在 mid 位置或其左侧，更新右边界 r = mid 如果 target &amp;gt; nums[mid]： target 一定在 mid 右侧，更新左边界 l = mid &#43; 1 返回结果： 最终，l 和 r 会收敛到目标值的位置 如果 target 不在数组中，返回的是它应该插入的位置 时间复杂度 二分查找的时间复杂度为 O(log n)，其中 n 是数组长度
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 int searchInsert(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { int l = 0, r = nums."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

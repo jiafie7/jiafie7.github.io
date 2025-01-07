@@ -6,22 +6,22 @@
 可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; '><title>Container With Most Water</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/container-with-most-water/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/container-with-most-water/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Container With Most Water'>
 <meta property='og:description' content='11. Container With Most Water 分析 用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。
 为什么更新出来的值一定是最优解。 i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。
 可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/container-with-most-water/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/container-with-most-water/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-03-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-03-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Container With Most Water">
 <meta name="twitter:description" content="11. Container With Most Water 分析 用两个指针i和j分别指向开头和结尾，如果指针i指向的水柱高度较低，则指针i向后移，反之指针j向前移。每移动一次后，求当前指针i和j指向水柱之间的面积，更新一下最大值。
 为什么更新出来的值一定是最优解。 i和j最开始在两侧，每次把一个指针向中间靠拢，则一定有一侧指针会先到最优解的位置。假定指针i先到最优解位置，则指针j一定在其最优解位置的右边，并且指针j在到达最优解位置前每次指向的水柱高度严格小于最优解位置的高度。
 可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

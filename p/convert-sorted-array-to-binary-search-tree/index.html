@@ -8,7 +8,7 @@
 空间复杂度 递归栈空间：递归深度为 O(logn)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: TreeNode* sortedArrayToBST(vector&amp;lt;int&amp;gt;&amp;amp; nums) { // 调用递归函数构建平衡二叉搜索树 return build(nums, 0, nums.size() - 1); } TreeNode* build(std::vector&amp;lt;int&amp;gt;&amp;amp; nums, int l, int r) { if (l &amp;gt; r) return nullptr; // 递归终止条件：无效范围 int mid = (l &#43; r) &amp;gt;&amp;gt; 1; // 找到当前范围的中点 TreeNode* root = new TreeNode(nums[mid]); // 创建根节点 root-&amp;gt;left = build(nums, l, mid - 1); // 构建左子树 root-&amp;gt;right = build(nums, mid &#43; 1, r); // 构建右子树 return root; // 返回根节点 } }; '><title>Convert Sorted Array to Binary Search Tree</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/convert-sorted-array-to-binary-search-tree/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/convert-sorted-array-to-binary-search-tree/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Convert Sorted Array to Binary Search Tree'>
 <meta property='og:description' content='108. 将有序数组转换为二叉搜索树 分析 确定递归终止条件
@@ -17,9 +17,9 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 根据中点值创建一个新的节点，连接左子树和右子树，返回该节点作为当前子树的根节点 时间复杂度 递归次数：每次递归划分数组为两半，总体复杂度为 O(logn) 层 每层处理复杂度：每层需要处理数组范围，整体为 O(n) 总时间复杂度 O(n)
 空间复杂度 递归栈空间：递归深度为 O(logn)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: TreeNode* sortedArrayToBST(vector&amp;lt;int&amp;gt;&amp;amp; nums) { // 调用递归函数构建平衡二叉搜索树 return build(nums, 0, nums.size() - 1); } TreeNode* build(std::vector&amp;lt;int&amp;gt;&amp;amp; nums, int l, int r) { if (l &amp;gt; r) return nullptr; // 递归终止条件：无效范围 int mid = (l &#43; r) &amp;gt;&amp;gt; 1; // 找到当前范围的中点 TreeNode* root = new TreeNode(nums[mid]); // 创建根节点 root-&amp;gt;left = build(nums, l, mid - 1); // 构建左子树 root-&amp;gt;right = build(nums, mid &#43; 1, r); // 构建右子树 return root; // 返回根节点 } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/convert-sorted-array-to-binary-search-tree/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/convert-sorted-array-to-binary-search-tree/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Binary Tree' /><meta property='article:published_time' content='2024-12-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-02T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Binary Tree' /><meta property='article:published_time' content='2024-12-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-02T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Convert Sorted Array to Binary Search Tree">
 <meta name="twitter:description" content="108. 将有序数组转换为二叉搜索树 分析 确定递归终止条件
 如果当前范围内左边界 l 大于右边界 r，返回 nullptr，表示没有节点 递归构造子树
@@ -27,7 +27,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 根据中点值创建一个新的节点，连接左子树和右子树，返回该节点作为当前子树的根节点 时间复杂度 递归次数：每次递归划分数组为两半，总体复杂度为 O(logn) 层 每层处理复杂度：每层需要处理数组范围，整体为 O(n) 总时间复杂度 O(n)
 空间复杂度 递归栈空间：递归深度为 O(logn)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: TreeNode* sortedArrayToBST(vector&amp;lt;int&amp;gt;&amp;amp; nums) { // 调用递归函数构建平衡二叉搜索树 return build(nums, 0, nums.size() - 1); } TreeNode* build(std::vector&amp;lt;int&amp;gt;&amp;amp; nums, int l, int r) { if (l &amp;gt; r) return nullptr; // 递归终止条件：无效范围 int mid = (l &#43; r) &amp;gt;&amp;gt; 1; // 找到当前范围的中点 TreeNode* root = new TreeNode(nums[mid]); // 创建根节点 root-&amp;gt;left = build(nums, l, mid - 1); // 构建左子树 root-&amp;gt;right = build(nums, mid &#43; 1, r); // 构建右子树 return root; // 返回根节点 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

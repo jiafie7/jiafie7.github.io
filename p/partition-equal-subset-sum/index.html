@@ -5,20 +5,20 @@
 特殊情况处理： 如果数组总和 sum 是奇数，则无法分成两个相等的子集，直接返回 false 动态规划定义： 定义一个布尔数组 f，其中 f[j] 表示是否可以从数组中选取一些元素，使得这些元素的和为 j 初始化 f[0] = true，表示总和为 0 的情况总是成立（即不选任何元素） 状态转移方程： 遍历数组 nums 中的每个数 nums[i]，从目标值 target 开始往下更新： f[j] = f[j] || f[j - nums[i]] 表示如果在之前能凑出 j - nums[i]，则加入当前数字后也能凑出 j 最终结果： 如果能凑出目标值 sum / 2，即 f[target] == true，则可以分成两个相等的子集 时间复杂度 外层循环遍历数组 n 次 内层循环遍历目标值 target 次 总时间复杂度 O(n * target)
 空间复杂度 空间复杂度为 O(target)'><title>Partition Equal Subset Sum</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/partition-equal-subset-sum/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/partition-equal-subset-sum/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Partition Equal Subset Sum'>
 <meta property='og:description' content='416. 分割等和子集 分析 典型的 01 背包问题，我们需要判断是否存在一个子集，其元素和为 sum / 2，其中 sum 是数组 nums 的元素总和
 特殊情况处理： 如果数组总和 sum 是奇数，则无法分成两个相等的子集，直接返回 false 动态规划定义： 定义一个布尔数组 f，其中 f[j] 表示是否可以从数组中选取一些元素，使得这些元素的和为 j 初始化 f[0] = true，表示总和为 0 的情况总是成立（即不选任何元素） 状态转移方程： 遍历数组 nums 中的每个数 nums[i]，从目标值 target 开始往下更新： f[j] = f[j] || f[j - nums[i]] 表示如果在之前能凑出 j - nums[i]，则加入当前数字后也能凑出 j 最终结果： 如果能凑出目标值 sum / 2，即 f[target] == true，则可以分成两个相等的子集 时间复杂度 外层循环遍历数组 n 次 内层循环遍历目标值 target 次 总时间复杂度 O(n * target)
 空间复杂度 空间复杂度为 O(target)'>
-<meta property='og:url' content='https://garfieldzhang.site/p/partition-equal-subset-sum/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/partition-equal-subset-sum/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-12T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-12T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Partition Equal Subset Sum">
 <meta name="twitter:description" content="416. 分割等和子集 分析 典型的 01 背包问题，我们需要判断是否存在一个子集，其元素和为 sum / 2，其中 sum 是数组 nums 的元素总和
 特殊情况处理： 如果数组总和 sum 是奇数，则无法分成两个相等的子集，直接返回 false 动态规划定义： 定义一个布尔数组 f，其中 f[j] 表示是否可以从数组中选取一些元素，使得这些元素的和为 j 初始化 f[0] = true，表示总和为 0 的情况总是成立（即不选任何元素） 状态转移方程： 遍历数组 nums 中的每个数 nums[i]，从目标值 target 开始往下更新： f[j] = f[j] || f[j - nums[i]] 表示如果在之前能凑出 j - nums[i]，则加入当前数字后也能凑出 j 最终结果： 如果能凑出目标值 sum / 2，即 f[target] == true，则可以分成两个相等的子集 时间复杂度 外层循环遍历数组 n 次 内层循环遍历目标值 target 次 总时间复杂度 O(n * target)
 空间复杂度 空间复杂度为 O(target)"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

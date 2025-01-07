@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Prefix Sum on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/prefix-sum/</link>
+        <link>https://hangzhang.xyz/tags/prefix-sum/</link>
         <description>Recent content in Prefix Sum on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/prefix-sum/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/prefix-sum/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Find Pivot Index</title>
-        <link>https://garfieldzhang.site/p/find-pivot-index/</link>
+        <link>https://hangzhang.xyz/p/find-pivot-index/</link>
         <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/find-pivot-index/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Find Pivot Index" /&gt;&lt;h2 id=&#34;724-寻找数组的中心下标httpsleetcodecnproblemsfind-pivot-index&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-pivot-index/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/find-pivot-index/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Find Pivot Index" /&gt;&lt;h2 id=&#34;724-寻找数组的中心下标httpsleetcodecnproblemsfind-pivot-index&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-pivot-index/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;724. 寻找数组的中心下标&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -92,11 +92,11 @@
         </item>
         <item>
         <title>Find The Highest Altitude</title>
-        <link>https://garfieldzhang.site/p/find-the-highest-altitude/</link>
+        <link>https://hangzhang.xyz/p/find-the-highest-altitude/</link>
         <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/find-the-highest-altitude/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Find The Highest Altitude" /&gt;&lt;h2 id=&#34;1732-找到最高海拔httpsleetcodecnproblemsfind-the-highest-altitudedescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-the-highest-altitude/description&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/find-the-highest-altitude/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Find The Highest Altitude" /&gt;&lt;h2 id=&#34;1732-找到最高海拔httpsleetcodecnproblemsfind-the-highest-altitudedescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-the-highest-altitude/description&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1732. 找到最高海拔&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -152,11 +152,11 @@
         </item>
         <item>
         <title>productOfArrayExceptSelf</title>
-        <link>https://garfieldzhang.site/p/productofarrayexceptself/</link>
+        <link>https://hangzhang.xyz/p/productofarrayexceptself/</link>
         <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/productofarrayexceptself/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post productOfArrayExceptSelf" /&gt;&lt;h2 id=&#34;238-除自身以外数组的乘积httpsleetcodecnproblemsproduct-of-array-except-selfdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/product-of-array-except-self/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/productofarrayexceptself/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post productOfArrayExceptSelf" /&gt;&lt;h2 id=&#34;238-除自身以外数组的乘积httpsleetcodecnproblemsproduct-of-array-except-selfdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/product-of-array-except-self/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;238. 除自身以外数组的乘积&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -234,11 +234,11 @@
         </item>
         <item>
         <title>subarraySum</title>
-        <link>https://garfieldzhang.site/p/subarraysum/</link>
+        <link>https://hangzhang.xyz/p/subarraysum/</link>
         <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/subarraysum/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post subarraySum" /&gt;&lt;h2 id=&#34;560-和为k的子数组httpsleetcodecnproblemssubarray-sum-equals-kdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/subarray-sum-equals-k/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/subarraysum/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post subarraySum" /&gt;&lt;h2 id=&#34;560-和为k的子数组httpsleetcodecnproblemssubarray-sum-equals-kdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/subarray-sum-equals-k/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;560. 和为k的子数组&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;

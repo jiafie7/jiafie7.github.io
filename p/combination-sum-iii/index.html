@@ -4,18 +4,18 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='216. 组合总和III 分析 采用深度优先搜索（DFS）&#43; 回溯来解决问题：
 递归函数设计： 参数： 当前搜索起点 start（避免重复选择数字） 当前目标和 n 当前还需要选的数字个数 k 终止条件： 如果 n == 0 且 k == 0 ，说明找到了一组符合条件的组合，将其加入结果列表 如果 n != 0 且 k == 0 ，或者 n &amp;lt; 0 ，直接返回（剪枝） 递归遍历： 从 start 开始，依次尝试数字 i （范围 start 到 9 每次选择 i 后递归：将 i 加入路径，更新 n = n - i ，更新 k = k - 1 递归返回后撤销选择 i（回溯） 剪枝优化： 如果 i &amp;gt; n ，则跳过剩余数字，直接剪枝，因为后续数字只会更大 时间复杂度 最多有 9 / k 个组合，其中 n / k = n!'><title>Combination Sum III</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/combination-sum-iii/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/combination-sum-iii/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Combination Sum III'>
 <meta property='og:description' content='216. 组合总和III 分析 采用深度优先搜索（DFS）&#43; 回溯来解决问题：
 递归函数设计： 参数： 当前搜索起点 start（避免重复选择数字） 当前目标和 n 当前还需要选的数字个数 k 终止条件： 如果 n == 0 且 k == 0 ，说明找到了一组符合条件的组合，将其加入结果列表 如果 n != 0 且 k == 0 ，或者 n &amp;lt; 0 ，直接返回（剪枝） 递归遍历： 从 start 开始，依次尝试数字 i （范围 start 到 9 每次选择 i 后递归：将 i 加入路径，更新 n = n - i ，更新 k = k - 1 递归返回后撤销选择 i（回溯） 剪枝优化： 如果 i &amp;gt; n ，则跳过剩余数字，直接剪枝，因为后续数字只会更大 时间复杂度 最多有 9 / k 个组合，其中 n / k = n!'>
-<meta property='og:url' content='https://garfieldzhang.site/p/combination-sum-iii/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/combination-sum-iii/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Backtracking' /><meta property='article:published_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Backtracking' /><meta property='article:published_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Combination Sum III">
 <meta name="twitter:description" content="216. 组合总和III 分析 采用深度优先搜索（DFS）&#43; 回溯来解决问题：
 递归函数设计： 参数： 当前搜索起点 start（避免重复选择数字） 当前目标和 n 当前还需要选的数字个数 k 终止条件： 如果 n == 0 且 k == 0 ，说明找到了一组符合条件的组合，将其加入结果列表 如果 n != 0 且 k == 0 ，或者 n &amp;lt; 0 ，直接返回（剪枝） 递归遍历： 从 start 开始，依次尝试数字 i （范围 start 到 9 每次选择 i 后递归：将 i 加入路径，更新 n = n - i ，更新 k = k - 1 递归返回后撤销选择 i（回溯） 剪枝优化： 如果 i &amp;gt; n ，则跳过剩余数字，直接剪枝，因为后续数字只会更大 时间复杂度 最多有 9 / k 个组合，其中 n / k = n!"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

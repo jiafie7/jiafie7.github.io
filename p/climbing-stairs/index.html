@@ -7,7 +7,7 @@ f(0) = 1 ：到达第 1 阶的方法只有一种 f(1) = 1 ：到达第 1 阶的�
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int climbStairs(int n) { int a = 1, b = 1; // 初始状态：f(0) = 1, f(1) = 1 while ( -- n) // 从第 2 阶开始计算 { int c = a &#43; b; // 当前阶方法数等于前两阶之和 a = b; // 更新前一阶为当前阶 b = c; // 更新当前阶为下一阶 } return b; // 返回第 n 阶的方法数 } }; '><title>Climbing Stairs</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/climbing-stairs/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/climbing-stairs/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Climbing Stairs'>
 <meta property='og:description' content='70. 爬楼梯 分析 典型的斐波那契数列问题。到达第 n 阶的方法数等于到达第 n-1 阶和第 n-2 阶的方法数之和 状态转移方程：f(n) = f(n-1) &#43; f(n-2)
@@ -15,16 +15,16 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
 f(0) = 1 ：到达第 1 阶的方法只有一种 f(1) = 1 ：到达第 1 阶的方法只有一种 f(2) = 2 ：到达第 2 阶的方法是两种 1 &#43; 1 通过观察状态转移公式，问题可以转化为计算斐波那契数列的第 n 项 使用两个变量来存储状态值，优化空间复杂度： a ：表示到达前一阶的方法数 b ：表示到达当前阶的方法数 迭代更新 a 和 b 的值，直到计算到第 n 阶 时间复杂度 循环执行 n - 1 次，时间复杂度为 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int climbStairs(int n) { int a = 1, b = 1; // 初始状态：f(0) = 1, f(1) = 1 while ( -- n) // 从第 2 阶开始计算 { int c = a &#43; b; // 当前阶方法数等于前两阶之和 a = b; // 更新前一阶为当前阶 b = c; // 更新当前阶为下一阶 } return b; // 返回第 n 阶的方法数 } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/climbing-stairs/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/climbing-stairs/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Climbing Stairs">
 <meta name="twitter:description" content="70. 爬楼梯 分析 典型的斐波那契数列问题。到达第 n 阶的方法数等于到达第 n-1 阶和第 n-2 阶的方法数之和 状态转移方程：f(n) = f(n-1) &#43; f(n-2)
 初始条件：
 f(0) = 1 ：到达第 1 阶的方法只有一种 f(1) = 1 ：到达第 1 阶的方法只有一种 f(2) = 2 ：到达第 2 阶的方法是两种 1 &#43; 1 通过观察状态转移公式，问题可以转化为计算斐波那契数列的第 n 项 使用两个变量来存储状态值，优化空间复杂度： a ：表示到达前一阶的方法数 b ：表示到达当前阶的方法数 迭代更新 a 和 b 的值，直到计算到第 n 阶 时间复杂度 循环执行 n - 1 次，时间复杂度为 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int climbStairs(int n) { int a = 1, b = 1; // 初始状态：f(0) = 1, f(1) = 1 while ( -- n) // 从第 2 阶开始计算 { int c = a &#43; b; // 当前阶方法数等于前两阶之和 a = b; // 更新前一阶为当前阶 b = c; // 更新当前阶为下一阶 } return b; // 返回第 n 阶的方法数 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

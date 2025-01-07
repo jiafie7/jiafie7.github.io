@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Binary Search on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/binary-search/</link>
+        <link>https://hangzhang.xyz/tags/binary-search/</link>
         <description>Recent content in Binary Search on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/binary-search/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/binary-search/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Koko Eating Bananas</title>
-        <link>https://garfieldzhang.site/p/koko-eating-bananas/</link>
+        <link>https://hangzhang.xyz/p/koko-eating-bananas/</link>
         <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/koko-eating-bananas/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Koko Eating Bananas" /&gt;&lt;h2 id=&#34;875-爱吃香蕉的珂珂httpsleetcodecnproblemskoko-eating-bananasdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/koko-eating-bananas/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/koko-eating-bananas/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Koko Eating Bananas" /&gt;&lt;h2 id=&#34;875-爱吃香蕉的珂珂httpsleetcodecnproblemskoko-eating-bananasdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/koko-eating-bananas/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;875. 爱吃香蕉的珂珂&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -115,11 +115,11 @@
         </item>
         <item>
         <title>Find Peak Element</title>
-        <link>https://garfieldzhang.site/p/find-peak-element/</link>
+        <link>https://hangzhang.xyz/p/find-peak-element/</link>
         <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/find-peak-element/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Find Peak Element" /&gt;&lt;h2 id=&#34;162-寻找峰值httpsleetcodecnproblemsfind-peak-element&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-peak-element/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/find-peak-element/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Find Peak Element" /&gt;&lt;h2 id=&#34;162-寻找峰值httpsleetcodecnproblemsfind-peak-element&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-peak-element/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;162. 寻找峰值&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -192,11 +192,11 @@
         </item>
         <item>
         <title>Guess Number Higher Or Lower</title>
-        <link>https://garfieldzhang.site/p/guess-number-higher-or-lower/</link>
+        <link>https://hangzhang.xyz/p/guess-number-higher-or-lower/</link>
         <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/guess-number-higher-or-lower/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Guess Number Higher Or Lower" /&gt;&lt;h2 id=&#34;374-猜数字大小httpsleetcodecnproblemsguess-number-higher-or-lowerdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/guess-number-higher-or-lower/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/guess-number-higher-or-lower/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Guess Number Higher Or Lower" /&gt;&lt;h2 id=&#34;374-猜数字大小httpsleetcodecnproblemsguess-number-higher-or-lowerdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/guess-number-higher-or-lower/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;374. 猜数字大小&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -272,11 +272,11 @@
         </item>
         <item>
         <title>Successful Pairs Of Spells And Potions</title>
-        <link>https://garfieldzhang.site/p/successful-pairs-of-spells-and-potions/</link>
+        <link>https://hangzhang.xyz/p/successful-pairs-of-spells-and-potions/</link>
         <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/successful-pairs-of-spells-and-potions/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Successful Pairs Of Spells And Potions" /&gt;&lt;h2 id=&#34;2300-咒语和药水的成功对数httpsleetcodecnproblemssuccessful-pairs-of-spells-and-potionsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/successful-pairs-of-spells-and-potions/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Successful Pairs Of Spells And Potions" /&gt;&lt;h2 id=&#34;2300-咒语和药水的成功对数httpsleetcodecnproblemssuccessful-pairs-of-spells-and-potionsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;2300. 咒语和药水的成功对数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -379,11 +379,11 @@
         </item>
         <item>
         <title>Longest Increasing Subsequence</title>
-        <link>https://garfieldzhang.site/p/longest-increasing-subsequence/</link>
+        <link>https://hangzhang.xyz/p/longest-increasing-subsequence/</link>
         <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/longest-increasing-subsequence/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Longest Increasing Subsequence" /&gt;&lt;h2 id=&#34;300-最长递增子序列httpsleetcodecnproblemslongest-increasing-subsequencedescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/longest-increasing-subsequence/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/longest-increasing-subsequence/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Longest Increasing Subsequence" /&gt;&lt;h2 id=&#34;300-最长递增子序列httpsleetcodecnproblemslongest-increasing-subsequencedescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/longest-increasing-subsequence/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;300. 最长递增子序列&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -480,11 +480,11 @@
         </item>
         <item>
         <title>Median of Two Sorted Arrays</title>
-        <link>https://garfieldzhang.site/p/median-of-two-sorted-arrays/</link>
+        <link>https://hangzhang.xyz/p/median-of-two-sorted-arrays/</link>
         <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/median-of-two-sorted-arrays/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Median of Two Sorted Arrays" /&gt;&lt;h2 id=&#34;4-寻找两个正序数组的中位数httpsleetcodecnproblemsmedian-of-two-sorted-arraysdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/median-of-two-sorted-arrays/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/median-of-two-sorted-arrays/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Median of Two Sorted Arrays" /&gt;&lt;h2 id=&#34;4-寻找两个正序数组的中位数httpsleetcodecnproblemsmedian-of-two-sorted-arraysdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/median-of-two-sorted-arrays/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;4. 寻找两个正序数组的中位数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;采用 二分查找 的方法，避免直接合并数组：&lt;/p&gt;
@@ -620,11 +620,11 @@
         </item>
         <item>
         <title>Find First and Last Postion of Element In Sorted Array</title>
-        <link>https://garfieldzhang.site/p/find-first-and-last-postion-of-element-in-sorted-array/</link>
+        <link>https://hangzhang.xyz/p/find-first-and-last-postion-of-element-in-sorted-array/</link>
         <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/find-first-and-last-postion-of-element-in-sorted-array/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Find First and Last Postion of Element In Sorted Array" /&gt;&lt;h2 id=&#34;34-在排序数组中查找元素的第一个和最后一个位置httpsleetcodecnproblemsfind-first-and-last-position-of-element-in-sorted-arraydescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/find-first-and-last-postion-of-element-in-sorted-array/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Find First and Last Postion of Element In Sorted Array" /&gt;&lt;h2 id=&#34;34-在排序数组中查找元素的第一个和最后一个位置httpsleetcodecnproblemsfind-first-and-last-position-of-element-in-sorted-arraydescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;34. 在排序数组中查找元素的第一个和最后一个位置&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -740,11 +740,11 @@
         </item>
         <item>
         <title>Find Minimum in Rotated Sorted Array</title>
-        <link>https://garfieldzhang.site/p/find-minimum-in-rotated-sorted-array/</link>
+        <link>https://hangzhang.xyz/p/find-minimum-in-rotated-sorted-array/</link>
         <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/find-minimum-in-rotated-sorted-array/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Find Minimum in Rotated Sorted Array" /&gt;&lt;h2 id=&#34;153-寻找旋转排序数组中的最小值httpsleetcodecnproblemsfind-minimum-in-rotated-sorted-arraydescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/find-minimum-in-rotated-sorted-array/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Find Minimum in Rotated Sorted Array" /&gt;&lt;h2 id=&#34;153-寻找旋转排序数组中的最小值httpsleetcodecnproblemsfind-minimum-in-rotated-sorted-arraydescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;153. 寻找旋转排序数组中的最小值&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -827,11 +827,11 @@
         </item>
         <item>
         <title>Search Insert Position</title>
-        <link>https://garfieldzhang.site/p/search-insert-position/</link>
+        <link>https://hangzhang.xyz/p/search-insert-position/</link>
         <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/search-insert-position/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Search Insert Position" /&gt;&lt;h2 id=&#34;35-搜索插入位置httpsleetcodecnproblemssearch-insert-positiondescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/search-insert-position/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/search-insert-position/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Search Insert Position" /&gt;&lt;h2 id=&#34;35-搜索插入位置httpsleetcodecnproblemssearch-insert-positiondescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/search-insert-position/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;35. 搜索插入位置&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -904,11 +904,11 @@
         </item>
         <item>
         <title>search2dMatrix</title>
-        <link>https://garfieldzhang.site/p/search2dmatrix/</link>
+        <link>https://hangzhang.xyz/p/search2dmatrix/</link>
         <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/search2dmatrix/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post search2dMatrix" /&gt;&lt;h2 id=&#34;74-搜索二维矩阵httpsleetcodecnproblemssearch-a-2d-matrix&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/search-a-2d-matrix/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/search2dmatrix/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post search2dMatrix" /&gt;&lt;h2 id=&#34;74-搜索二维矩阵httpsleetcodecnproblemssearch-a-2d-matrix&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/search-a-2d-matrix/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;74. 搜索二维矩阵&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;由于矩阵按行列有序，可以将整个二维矩阵视为一个长度为 &lt;code&gt;n * m&lt;/code&gt; 的一维数组，并在这个一维数组上进行二分查找&lt;/p&gt;
@@ -987,11 +987,11 @@
         </item>
         <item>
         <title>Search in Rotated Sorted Array</title>
-        <link>https://garfieldzhang.site/p/search-in-rotated-sorted-array/</link>
+        <link>https://hangzhang.xyz/p/search-in-rotated-sorted-array/</link>
         <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/search-in-rotated-sorted-array/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Search in Rotated Sorted Array" /&gt;&lt;h2 id=&#34;33-search-in-rotated-sorted-arrayhttpsleetcodecomproblemssearch-in-rotated-sorted-arraydescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/search-in-rotated-sorted-array/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/search-in-rotated-sorted-array/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Search in Rotated Sorted Array" /&gt;&lt;h2 id=&#34;33-search-in-rotated-sorted-arrayhttpsleetcodecomproblemssearch-in-rotated-sorted-arraydescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/search-in-rotated-sorted-array/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;33. Search in Rotated Sorted Array&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;

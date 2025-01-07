@@ -5,20 +5,20 @@
 空间复杂度 递归栈深度取决于岛屿的最大面积，最坏情况下为 O(m * n)，即岛屿覆盖整个网格
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 class Solution { public: std::vector&amp;lt;std::vector&amp;lt;char&amp;gt;&amp;gt; g; // 全局保存网格 int dx[4] = {0, 1, 0, -1}, dy[4] = {1, 0, -1, 0}; // 四个方向 int numIslands(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; grid) { g = grid; // 初始化网格 int res = 0; // 岛屿数量 for (int i = 0; i &amp;lt; g.'><title>Number of Islands</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/number-of-islands/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/number-of-islands/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Number of Islands'>
 <meta property='og:description' content='200. 岛屿数量 分析 岛屿的定义 &#39;1&#39; 表示陆地，&#39;0&#39; 表示水 一个岛屿是由相邻（水平或垂直方向）的 &#39;1&#39; 连续组成的一块区域 遍历网格 遍历网格中每个位置 (i, j)，若当前位置为 &#39;1&#39;，说明发现了一个新的岛屿： 执行深度优先搜索 dfs() 标记当前岛屿的所有陆地为 &#39;*&#39;，表示已访问 岛屿数量加 1 深度优先搜索dfs() 从当前陆地 (x, y) 出发，尝试向四个方向移动（上、下、左、右） 若移动后的位置仍为 &#39;1&#39; 且未越界，递归调用 dfs() 继续标记 时间复杂度 每个格子最多被访问一次，时间复杂度为 O(m * n)，其中 m 和 n 分别是网格的行数和列数
 空间复杂度 递归栈深度取决于岛屿的最大面积，最坏情况下为 O(m * n)，即岛屿覆盖整个网格
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 class Solution { public: std::vector&amp;lt;std::vector&amp;lt;char&amp;gt;&amp;gt; g; // 全局保存网格 int dx[4] = {0, 1, 0, -1}, dy[4] = {1, 0, -1, 0}; // 四个方向 int numIslands(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; grid) { g = grid; // 初始化网格 int res = 0; // 岛屿数量 for (int i = 0; i &amp;lt; g.'>
-<meta property='og:url' content='https://garfieldzhang.site/p/number-of-islands/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/number-of-islands/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='DFS' /><meta property='article:published_time' content='2024-12-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-03T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='DFS' /><meta property='article:published_time' content='2024-12-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-03T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Number of Islands">
 <meta name="twitter:description" content="200. 岛屿数量 分析 岛屿的定义 &#39;1&#39; 表示陆地，&#39;0&#39; 表示水 一个岛屿是由相邻（水平或垂直方向）的 &#39;1&#39; 连续组成的一块区域 遍历网格 遍历网格中每个位置 (i, j)，若当前位置为 &#39;1&#39;，说明发现了一个新的岛屿： 执行深度优先搜索 dfs() 标记当前岛屿的所有陆地为 &#39;*&#39;，表示已访问 岛屿数量加 1 深度优先搜索dfs() 从当前陆地 (x, y) 出发，尝试向四个方向移动（上、下、左、右） 若移动后的位置仍为 &#39;1&#39; 且未越界，递归调用 dfs() 继续标记 时间复杂度 每个格子最多被访问一次，时间复杂度为 O(m * n)，其中 m 和 n 分别是网格的行数和列数
 空间复杂度 递归栈深度取决于岛屿的最大面积，最坏情况下为 O(m * n)，即岛屿覆盖整个网格
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 class Solution { public: std::vector&amp;lt;std::vector&amp;lt;char&amp;gt;&amp;gt; g; // 全局保存网格 int dx[4] = {0, 1, 0, -1}, dy[4] = {1, 0, -1, 0}; // 四个方向 int numIslands(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; grid) { g = grid; // 初始化网格 int res = 0; // 岛屿数量 for (int i = 0; i &amp;lt; g."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

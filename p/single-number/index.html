@@ -7,7 +7,7 @@ x ^ x = 0: 任何数字与自身异或结果为 0 x ^ 0 = x: 任何数字与 0 �
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 class Solution { public: int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = 0; // 初始化结果为 0 for (int num : nums) // 遍历数组 res ^= num; // 将每个数字与 res 进行异或操作 return res; // 返回结果 } }; '><title>Single Number</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/single-number/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/single-number/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Single Number'>
 <meta property='og:description' content='136. 只出现一次的数字 分析 异或运算具有以下性质：
@@ -15,16 +15,16 @@ x ^ x = 0: 任何数字与自身异或结果为 0 x ^ 0 = x: 任何数字与 0 �
 时间复杂度 总时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 class Solution { public: int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = 0; // 初始化结果为 0 for (int num : nums) // 遍历数组 res ^= num; // 将每个数字与 res 进行异或操作 return res; // 返回结果 } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/single-number/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/single-number/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Bit Manipulation' /><meta property='article:published_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Bit Manipulation' /><meta property='article:published_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Single Number">
 <meta name="twitter:description" content="136. 只出现一次的数字 分析 异或运算具有以下性质：
 x ^ x = 0: 任何数字与自身异或结果为 0 x ^ 0 = x: 任何数字与 0 异或结果为自身 满足交换律和结合律 通过对数组中的所有数字进行异或操作，成对出现的数字会互相抵消，最终只剩下那个只出现一次的数字
 时间复杂度 总时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 class Solution { public: int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = 0; // 初始化结果为 0 for (int num : nums) // 遍历数组 res ^= num; // 将每个数字与 res 进行异或操作 return res; // 返回结果 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

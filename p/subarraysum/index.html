@@ -9,7 +9,7 @@
 空间复杂度 使用了哈希表存储前缀和及其次数，空间复杂度为 O(n)，其中 n 是数组的长度
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: int subarraySum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { std::unordered_map&amp;lt;int, int&amp;gt; hash; // 存储前缀和及其出现次数 int res = 0, sum = 0; hash[0] = 1; // 初始化前缀和 0 的计数为 1 for (int num : nums) { sum &#43;= num; // 更新前缀和 res &#43;= hash[sum - k]; // 检查是否存在前缀和满足条件 &#43;&#43; hash[sum]; // 更新当前前缀和的计数 } return res; } }; '><title>subarraySum</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/subarraysum/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/subarraysum/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='subarraySum'>
 <meta property='og:description' content='560. 和为k的子数组 分析 定义前缀和：
@@ -19,9 +19,9 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solut
 遍历结束后，结果 res 即为和为 k 的子数组个数 时间复杂度 遍历数组：O(n)，其中 n 是数组的长度 哈希表操作：平均时间复杂度为 O(1) 总时间复杂度：O(n)
 空间复杂度 使用了哈希表存储前缀和及其次数，空间复杂度为 O(n)，其中 n 是数组的长度
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: int subarraySum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { std::unordered_map&amp;lt;int, int&amp;gt; hash; // 存储前缀和及其出现次数 int res = 0, sum = 0; hash[0] = 1; // 初始化前缀和 0 的计数为 1 for (int num : nums) { sum &#43;= num; // 更新前缀和 res &#43;= hash[sum - k]; // 检查是否存在前缀和满足条件 &#43;&#43; hash[sum]; // 更新当前前缀和的计数 } return res; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/subarraysum/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/subarraysum/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Hash' /><meta property='article:tag' content='Prefix Sum' /><meta property='article:published_time' content='2024-11-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Hash' /><meta property='article:tag' content='Prefix Sum' /><meta property='article:published_time' content='2024-11-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="subarraySum">
 <meta name="twitter:description" content="560. 和为k的子数组 分析 定义前缀和：
 用 sum 表示从数组起点到当前位置的元素总和 任意连续子数组的和可以通过前缀和的差来计算：sum[i] - sum[j] = k =&amp;gt; sum[i] - k = sum[j] 使用哈希表存储前缀和出现的次数：
@@ -30,7 +30,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solut
 遍历结束后，结果 res 即为和为 k 的子数组个数 时间复杂度 遍历数组：O(n)，其中 n 是数组的长度 哈希表操作：平均时间复杂度为 O(1) 总时间复杂度：O(n)
 空间复杂度 使用了哈希表存储前缀和及其次数，空间复杂度为 O(n)，其中 n 是数组的长度
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: int subarraySum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { std::unordered_map&amp;lt;int, int&amp;gt; hash; // 存储前缀和及其出现次数 int res = 0, sum = 0; hash[0] = 1; // 初始化前缀和 0 的计数为 1 for (int num : nums) { sum &#43;= num; // 更新前缀和 res &#43;= hash[sum - k]; // 检查是否存在前缀和满足条件 &#43;&#43; hash[sum]; // 更新当前前缀和的计数 } return res; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Bit Manipulation on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/bit-manipulation/</link>
+        <link>https://hangzhang.xyz/tags/bit-manipulation/</link>
         <description>Recent content in Bit Manipulation on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 13 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/bit-manipulation/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 13 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/bit-manipulation/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Single Number</title>
-        <link>https://garfieldzhang.site/p/single-number/</link>
+        <link>https://hangzhang.xyz/p/single-number/</link>
         <pubDate>Fri, 13 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/single-number/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Single Number" /&gt;&lt;h2 id=&#34;136-只出现一次的数字httpsleetcodecnproblemssingle-numberdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/single-number/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/single-number/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Single Number" /&gt;&lt;h2 id=&#34;136-只出现一次的数字httpsleetcodecnproblemssingle-numberdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/single-number/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;136. 只出现一次的数字&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;异或运算具有以下性质：&lt;/p&gt;

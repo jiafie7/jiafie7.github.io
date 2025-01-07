@@ -6,22 +6,22 @@
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; // 存储最大水量 int i = 0, j = height.size() - 1; // 初始化左右指针 while (i &amp;lt; j) { // 计算当前容器的水量 res = std::max(res, std::min(height[i], height[j]) * (j - i)); // 移动高度较小的一侧 if (height[i] &amp;lt; height[j]) &#43;&#43; i; else -- j; } return res; // 返回最大水量 } }; '><title>maxArea</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/maxarea/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/maxarea/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='maxArea'>
 <meta property='og:description' content='11. 盛最多水的容器 分析 容器的水量由两条垂线的较小高度和它们之间的水平距离决定，公式为：min(height[i], height[j]) * (j - i)
 初始时，将左右指针分别置于数组的两端 计算当前两条垂线能容纳的水量，并更新最大水量 移动高度较小的一侧的指针： 因为容器的水量由两条垂线的较小高度决定，移动较小高度的一侧可能增加更高的高度，从而得到更大的水量 当左右指针相遇时，遍历结束，最大水量即为结果 时间复杂度 指针遍历：每次移动一个指针，最多遍历数组一次，时间复杂度为 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; // 存储最大水量 int i = 0, j = height.size() - 1; // 初始化左右指针 while (i &amp;lt; j) { // 计算当前容器的水量 res = std::max(res, std::min(height[i], height[j]) * (j - i)); // 移动高度较小的一侧 if (height[i] &amp;lt; height[j]) &#43;&#43; i; else -- j; } return res; // 返回最大水量 } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/maxarea/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/maxarea/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="maxArea">
 <meta name="twitter:description" content="11. 盛最多水的容器 分析 容器的水量由两条垂线的较小高度和它们之间的水平距离决定，公式为：min(height[i], height[j]) * (j - i)
 初始时，将左右指针分别置于数组的两端 计算当前两条垂线能容纳的水量，并更新最大水量 移动高度较小的一侧的指针： 因为容器的水量由两条垂线的较小高度决定，移动较小高度的一侧可能增加更高的高度，从而得到更大的水量 当左右指针相遇时，遍历结束，最大水量即为结果 时间复杂度 指针遍历：每次移动一个指针，最多遍历数组一次，时间复杂度为 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; // 存储最大水量 int i = 0, j = height.size() - 1; // 初始化左右指针 while (i &amp;lt; j) { // 计算当前容器的水量 res = std::max(res, std::min(height[i], height[j]) * (j - i)); // 移动高度较小的一侧 if (height[i] &amp;lt; height[j]) &#43;&#43; i; else -- j; } return res; // 返回最大水量 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

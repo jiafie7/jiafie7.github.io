@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Priority Queue on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/priority-queue/</link>
+        <link>https://hangzhang.xyz/tags/priority-queue/</link>
         <description>Recent content in Priority Queue on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 04 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/priority-queue/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 04 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/priority-queue/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Maximum Subsequence Score</title>
-        <link>https://garfieldzhang.site/p/maximum-subsequence-score/</link>
+        <link>https://hangzhang.xyz/p/maximum-subsequence-score/</link>
         <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/maximum-subsequence-score/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Maximum Subsequence Score" /&gt;&lt;h2 id=&#34;2542-最大子序列的分数httpsleetcodecnproblemsmaximum-subsequence-scoredescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/maximum-subsequence-score/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/maximum-subsequence-score/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Maximum Subsequence Score" /&gt;&lt;h2 id=&#34;2542-最大子序列的分数httpsleetcodecnproblemsmaximum-subsequence-scoredescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/maximum-subsequence-score/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;2542. 最大子序列的分数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -142,11 +142,11 @@
         </item>
         <item>
         <title>Total Cost To Hire K Workers</title>
-        <link>https://garfieldzhang.site/p/total-cost-to-hire-k-workers/</link>
+        <link>https://hangzhang.xyz/p/total-cost-to-hire-k-workers/</link>
         <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/total-cost-to-hire-k-workers/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Total Cost To Hire K Workers" /&gt;&lt;h2 id=&#34;2462-雇佣k位工人的总代价httpsleetcodecnproblemstotal-cost-to-hire-k-workersdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/total-cost-to-hire-k-workers/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/total-cost-to-hire-k-workers/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Total Cost To Hire K Workers" /&gt;&lt;h2 id=&#34;2462-雇佣k位工人的总代价httpsleetcodecnproblemstotal-cost-to-hire-k-workersdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/total-cost-to-hire-k-workers/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;2462. 雇佣k位工人的总代价&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -281,11 +281,11 @@
         </item>
         <item>
         <title>Find Median From Data Stream</title>
-        <link>https://garfieldzhang.site/p/find-median-from-data-stream/</link>
+        <link>https://hangzhang.xyz/p/find-median-from-data-stream/</link>
         <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/find-median-from-data-stream/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Find Median From Data Stream" /&gt;&lt;h2 id=&#34;295-数据流的中位数httpsleetcodecnproblemsfind-median-from-data-streamdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-median-from-data-stream/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/find-median-from-data-stream/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Find Median From Data Stream" /&gt;&lt;h2 id=&#34;295-数据流的中位数httpsleetcodecnproblemsfind-median-from-data-streamdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/find-median-from-data-stream/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;295. 数据流的中位数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;为了高效地获取中位数，使用 两个优先队列（堆） 来维护数据流的有序性：&lt;/p&gt;

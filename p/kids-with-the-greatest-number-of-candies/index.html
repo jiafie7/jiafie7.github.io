@@ -5,20 +5,20 @@
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: vector&amp;lt;bool&amp;gt; kidsWithCandies(vector&amp;lt;int&amp;gt;&amp;amp; candies, int extraCandies) { int n = candies.size(); std::vector&amp;lt;bool&amp;gt; res(n); // 找到当前糖果的最大值 int max_candies = 0; for (int i = 0; i &amp;lt; n; &#43;&#43;i) max_candies = std::max(max_candies, candies[i]); // 判断每个孩子在获得额外糖果后是否能成为最多糖果的孩子之一 for (int i = 0; i &amp;lt; n; &#43;&#43;i) if (candies[i] &#43; extraCandies &amp;gt;= max_candies) res[i] = true; return res; } }; '><title>Kids with the Greatest Number of Candies</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/kids-with-the-greatest-number-of-candies/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/kids-with-the-greatest-number-of-candies/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Kids with the Greatest Number of Candies'>
 <meta property='og:description' content='1431. 拥有最多糖果的孩子 分析 找到当前的最大糖果数： 遍历数组 candies，找到当前孩子中糖果数目的最大值 max_candies 判断每个孩子是否可以成为拥有最多糖果的孩子： 对于每个孩子 candies[i]，计算其在分配额外糖果后拥有的糖果数：candies[i] &#43; extraCandies 如果结果大于或等于 max_candies，说明该孩子可以成为拥有最多糖果的孩子之一 时间复杂度 寻找最大值：O(n) 判断是否满足条件：O(n) 总时间复杂度：O(n)
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: vector&amp;lt;bool&amp;gt; kidsWithCandies(vector&amp;lt;int&amp;gt;&amp;amp; candies, int extraCandies) { int n = candies.size(); std::vector&amp;lt;bool&amp;gt; res(n); // 找到当前糖果的最大值 int max_candies = 0; for (int i = 0; i &amp;lt; n; &#43;&#43;i) max_candies = std::max(max_candies, candies[i]); // 判断每个孩子在获得额外糖果后是否能成为最多糖果的孩子之一 for (int i = 0; i &amp;lt; n; &#43;&#43;i) if (candies[i] &#43; extraCandies &amp;gt;= max_candies) res[i] = true; return res; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/kids-with-the-greatest-number-of-candies/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/kids-with-the-greatest-number-of-candies/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-12-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-19T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-12-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-19T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Kids with the Greatest Number of Candies">
 <meta name="twitter:description" content="1431. 拥有最多糖果的孩子 分析 找到当前的最大糖果数： 遍历数组 candies，找到当前孩子中糖果数目的最大值 max_candies 判断每个孩子是否可以成为拥有最多糖果的孩子： 对于每个孩子 candies[i]，计算其在分配额外糖果后拥有的糖果数：candies[i] &#43; extraCandies 如果结果大于或等于 max_candies，说明该孩子可以成为拥有最多糖果的孩子之一 时间复杂度 寻找最大值：O(n) 判断是否满足条件：O(n) 总时间复杂度：O(n)
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: vector&amp;lt;bool&amp;gt; kidsWithCandies(vector&amp;lt;int&amp;gt;&amp;amp; candies, int extraCandies) { int n = candies.size(); std::vector&amp;lt;bool&amp;gt; res(n); // 找到当前糖果的最大值 int max_candies = 0; for (int i = 0; i &amp;lt; n; &#43;&#43;i) max_candies = std::max(max_candies, candies[i]); // 判断每个孩子在获得额外糖果后是否能成为最多糖果的孩子之一 for (int i = 0; i &amp;lt; n; &#43;&#43;i) if (candies[i] &#43; extraCandies &amp;gt;= max_candies) res[i] = true; return res; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

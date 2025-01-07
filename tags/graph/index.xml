@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Graph on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/graph/</link>
+        <link>https://hangzhang.xyz/tags/graph/</link>
         <description>Recent content in Graph on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/graph/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/graph/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Evaluate Division</title>
-        <link>https://garfieldzhang.site/p/evaluate-division/</link>
+        <link>https://hangzhang.xyz/p/evaluate-division/</link>
         <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/evaluate-division/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Evaluate Division" /&gt;&lt;h2 id=&#34;399-除法求值httpsleetcodecnproblemsevaluate-division&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/evaluate-division/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/evaluate-division/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Evaluate Division" /&gt;&lt;h2 id=&#34;399-除法求值httpsleetcodecnproblemsevaluate-division&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/evaluate-division/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;399. 除法求值&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -131,11 +131,11 @@
         </item>
         <item>
         <title>Keys And Rooms</title>
-        <link>https://garfieldzhang.site/p/keys-and-rooms/</link>
+        <link>https://hangzhang.xyz/p/keys-and-rooms/</link>
         <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/keys-and-rooms/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Keys And Rooms" /&gt;&lt;h2 id=&#34;841-钥匙和房间httpsleetcodecnproblemskeys-and-roomsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/keys-and-rooms/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/keys-and-rooms/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Keys And Rooms" /&gt;&lt;h2 id=&#34;841-钥匙和房间httpsleetcodecnproblemskeys-and-roomsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/keys-and-rooms/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;841. 钥匙和房间&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;

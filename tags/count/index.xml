@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Count on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/count/</link>
+        <link>https://hangzhang.xyz/tags/count/</link>
         <description>Recent content in Count on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/count/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/count/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Majority Element</title>
-        <link>https://garfieldzhang.site/p/majority-element/</link>
+        <link>https://hangzhang.xyz/p/majority-element/</link>
         <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/majority-element/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Majority Element" /&gt;&lt;h2 id=&#34;169-多数元素httpsleetcodecnproblemsmajority-elementdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/majority-element/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/majority-element/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Majority Element" /&gt;&lt;h2 id=&#34;169-多数元素httpsleetcodecnproblemsmajority-elementdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/majority-element/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;169. 多数元素&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;使用摩尔投票法（Boyer-Moore Voting Algorithm），通过维护一个候选元素和计数器，在一次遍历中找到多数元素&lt;/p&gt;

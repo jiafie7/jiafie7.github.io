@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Math on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/math/</link>
+        <link>https://hangzhang.xyz/tags/math/</link>
         <description>Recent content in Math on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/math/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/math/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Nth Tribonacci Number</title>
-        <link>https://garfieldzhang.site/p/nth-tribonacci-number/</link>
+        <link>https://hangzhang.xyz/p/nth-tribonacci-number/</link>
         <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/nth-tribonacci-number/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Nth Tribonacci Number" /&gt;&lt;h2 id=&#34;1137-第n个泰波那契数httpsleetcodecnproblemsn-th-tribonacci-numberdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/n-th-tribonacci-number/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/nth-tribonacci-number/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Nth Tribonacci Number" /&gt;&lt;h2 id=&#34;1137-第n个泰波那契数httpsleetcodecnproblemsn-th-tribonacci-numberdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/n-th-tribonacci-number/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1137. 第N个泰波那契数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -90,11 +90,11 @@
         </item>
         <item>
         <title>Greatest Common Divisor Of Strings</title>
-        <link>https://garfieldzhang.site/p/greatest-common-divisor-of-strings/</link>
+        <link>https://hangzhang.xyz/p/greatest-common-divisor-of-strings/</link>
         <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/greatest-common-divisor-of-strings/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Greatest Common Divisor Of Strings" /&gt;&lt;h2 id=&#34;1071-字符串的最大公因子httpsleetcodecnproblemsgreatest-common-divisor-of-stringsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/greatest-common-divisor-of-strings/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/greatest-common-divisor-of-strings/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Greatest Common Divisor Of Strings" /&gt;&lt;h2 id=&#34;1071-字符串的最大公因子httpsleetcodecnproblemsgreatest-common-divisor-of-stringsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/greatest-common-divisor-of-strings/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1071. 字符串的最大公因子&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -178,11 +178,11 @@
         </item>
         <item>
         <title>Multiply Strings</title>
-        <link>https://garfieldzhang.site/p/multiply-strings/</link>
+        <link>https://hangzhang.xyz/p/multiply-strings/</link>
         <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/multiply-strings/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Multiply Strings" /&gt;&lt;h2 id=&#34;43-字符串相乘httpsleetcodecnproblemsmultiply-stringsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/multiply-strings/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/multiply-strings/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Multiply Strings" /&gt;&lt;h2 id=&#34;43-字符串相乘httpsleetcodecnproblemsmultiply-stringsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/multiply-strings/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;43. 字符串相乘&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;

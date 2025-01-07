@@ -7,7 +7,7 @@
 f[i][0] = i: 将 word1 的前 i 个字符转换为空字符串，需要删除 i 次 f[0][j] = j: 将空字符串转换为 word2 的前 j 个字符，需要插入 j 次 初始化输入：
 在代码中通过向 word1 和 word2 开头添加空格，统一了状态的表示 最终结果：'><title>Edit Distance</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/edit-distance/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/edit-distance/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Edit Distance'>
 <meta property='og:description' content='72. 编辑距离 分析 状态定义
@@ -15,16 +15,16 @@ f[i][0] = i: 将 word1 的前 i 个字符转换为空字符串，需要删除 i 
 如果 word1[i] == word2[j]：不需要额外操作，状态继承自子问题：f[i][j] = f[i-1][j-1] 如果 word1[i] != word2[j]：需要进行操作，从以下三种操作中选择代价最小的一种：f[i][j] = min(f[i-1][j-1] &#43; 1, f[i-1][j] &#43; 1, f[i][j-1] &#43; 1) 替换：f[i-1][j-1] &#43; 1 删除：f[i-1][j] &#43; 1 插入：f[i][j-1] &#43; 1 边界条件
 f[i][0] = i: 将 word1 的前 i 个字符转换为空字符串，需要删除 i 次 f[0][j] = j: 将空字符串转换为 word2 的前 j 个字符，需要插入 j 次 初始化输入：
 在代码中通过向 word1 和 word2 开头添加空格，统一了状态的表示 最终结果：'>
-<meta property='og:url' content='https://garfieldzhang.site/p/edit-distance/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/edit-distance/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Edit Distance">
 <meta name="twitter:description" content="72. 编辑距离 分析 状态定义
 设 f[i][j] 表示将 word1 的前 i 个字符转换为 word2 的前 j 个字符所需的最少操作数。 状态转移
 如果 word1[i] == word2[j]：不需要额外操作，状态继承自子问题：f[i][j] = f[i-1][j-1] 如果 word1[i] != word2[j]：需要进行操作，从以下三种操作中选择代价最小的一种：f[i][j] = min(f[i-1][j-1] &#43; 1, f[i-1][j] &#43; 1, f[i][j-1] &#43; 1) 替换：f[i-1][j-1] &#43; 1 删除：f[i-1][j] &#43; 1 插入：f[i][j-1] &#43; 1 边界条件
 f[i][0] = i: 将 word1 的前 i 个字符转换为空字符串，需要删除 i 次 f[0][j] = j: 将空字符串转换为 word2 的前 j 个字符，需要插入 j 次 初始化输入：
 在代码中通过向 word1 和 word2 开头添加空格，统一了状态的表示 最终结果："><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

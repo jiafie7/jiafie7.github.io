@@ -5,20 +5,20 @@
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int tribonacci(int n) { int a = 0, b = 1, c = 1; // 初始化 T0, T1, T2 while (n--) // 循环 n 次，计算第 n 个泰波那契数 { long long d = (long long)a &#43; b &#43; c; // 计算当前值 a = b; // 更新 T(n-3) 为 T(n-2) b = c; // 更新 T(n-2) 为 T(n-1) c = d; // 更新 T(n-1) 为 T(n) } return a; // 返回结果 } }; '><title>Nth Tribonacci Number</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/nth-tribonacci-number/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/nth-tribonacci-number/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Nth Tribonacci Number'>
 <meta property='og:description' content='1137. 第N个泰波那契数 分析 状态转移： 当前值 T_n 由前三项的值 T_{n-1}、T_{n-2}、T_{n-3} 相加得出 初始化： a 表示 T_{n-3} b 表示 T_{n-2} c 表示 T_{n-1} 初始值为 a = 0、b = 1、c = 1 迭代计算： 按照递推公式依次计算 T_3 到 T_n，并更新 a、b、c 的值 返回结果： 经过 n 次迭代后，a 存储的就是第 n 个泰波那契数 时间复杂度 计算第 n 个泰波那契数需要迭代 n 次，每次计算仅涉及常数操作 时间复杂度为 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int tribonacci(int n) { int a = 0, b = 1, c = 1; // 初始化 T0, T1, T2 while (n--) // 循环 n 次，计算第 n 个泰波那契数 { long long d = (long long)a &#43; b &#43; c; // 计算当前值 a = b; // 更新 T(n-3) 为 T(n-2) b = c; // 更新 T(n-2) 为 T(n-1) c = d; // 更新 T(n-1) 为 T(n) } return a; // 返回结果 } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/nth-tribonacci-number/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/nth-tribonacci-number/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Math' /><meta property='article:published_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Math' /><meta property='article:published_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Nth Tribonacci Number">
 <meta name="twitter:description" content="1137. 第N个泰波那契数 分析 状态转移： 当前值 T_n 由前三项的值 T_{n-1}、T_{n-2}、T_{n-3} 相加得出 初始化： a 表示 T_{n-3} b 表示 T_{n-2} c 表示 T_{n-1} 初始值为 a = 0、b = 1、c = 1 迭代计算： 按照递推公式依次计算 T_3 到 T_n，并更新 a、b、c 的值 返回结果： 经过 n 次迭代后，a 存储的就是第 n 个泰波那契数 时间复杂度 计算第 n 个泰波那契数需要迭代 n 次，每次计算仅涉及常数操作 时间复杂度为 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int tribonacci(int n) { int a = 0, b = 1, c = 1; // 初始化 T0, T1, T2 while (n--) // 循环 n 次，计算第 n 个泰波那契数 { long long d = (long long)a &#43; b &#43; c; // 计算当前值 a = b; // 更新 T(n-3) 为 T(n-2) b = c; // 更新 T(n-2) 为 T(n-1) c = d; // 更新 T(n-1) 为 T(n) } return a; // 返回结果 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

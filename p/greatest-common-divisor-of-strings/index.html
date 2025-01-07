@@ -6,22 +6,22 @@
 如果 str1 &#43; str2 == str2 &#43; str1，则可以根据字符串的长度来进一步判断最大公因子。 假设 str1 的长度为 n1，str2 的长度为 n2，那么最大公因子字符串的长度应该是 gcd(n1, n2)。我们可以利用 gcd 函数计算出 n1 和 n2 的最大公因子，取 str1 或 str2 的前 gcd(n1, n2) 个字符作为最大公因子字符串 核心步骤：
 判断 str1 &#43; str2 == str2 &#43; str1，如果不成立，返回 &amp;quot;&amp;quot; 计算 gcd(len(str1), len(str2))，然后返回 str1 的前 gcd 长度的子串 时间复杂度 计算 gcd 的时间复杂度是 O(logmin(n1, n2))，其中 n1 和 n2 是 str1 和 str2 的长度 字符串比较的时间复杂度是 O(n1 &#43; n2) 截取子串的时间复杂度是 O(gcd(n1, n2))，由于 gcd(n1, n2) 最大为 min(n1, n2)，因此总体时间复杂度是 O(n1 &#43; n2) 空间复杂度 空间复杂度为 O(n1 &#43; n2)'><title>Greatest Common Divisor Of Strings</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/greatest-common-divisor-of-strings/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/greatest-common-divisor-of-strings/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Greatest Common Divisor Of Strings'>
 <meta property='og:description' content='1071. 字符串的最大公因子 分析 判断条件：
 首先，字符串 str1 能否被 str2 整除以及 str2 能否被 str1 整除的关键条件是：str1 &#43; str2 == str2 &#43; str1。如果这个条件不成立，则不存在一个字符串能够同时整除这两个字符串，返回空字符串 最大公因子：
 如果 str1 &#43; str2 == str2 &#43; str1，则可以根据字符串的长度来进一步判断最大公因子。 假设 str1 的长度为 n1，str2 的长度为 n2，那么最大公因子字符串的长度应该是 gcd(n1, n2)。我们可以利用 gcd 函数计算出 n1 和 n2 的最大公因子，取 str1 或 str2 的前 gcd(n1, n2) 个字符作为最大公因子字符串 核心步骤：
 判断 str1 &#43; str2 == str2 &#43; str1，如果不成立，返回 &amp;quot;&amp;quot; 计算 gcd(len(str1), len(str2))，然后返回 str1 的前 gcd 长度的子串 时间复杂度 计算 gcd 的时间复杂度是 O(logmin(n1, n2))，其中 n1 和 n2 是 str1 和 str2 的长度 字符串比较的时间复杂度是 O(n1 &#43; n2) 截取子串的时间复杂度是 O(gcd(n1, n2))，由于 gcd(n1, n2) 最大为 min(n1, n2)，因此总体时间复杂度是 O(n1 &#43; n2) 空间复杂度 空间复杂度为 O(n1 &#43; n2)'>
-<meta property='og:url' content='https://garfieldzhang.site/p/greatest-common-divisor-of-strings/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/greatest-common-divisor-of-strings/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Math' /><meta property='article:published_time' content='2024-12-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-18T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Math' /><meta property='article:published_time' content='2024-12-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-18T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Greatest Common Divisor Of Strings">
 <meta name="twitter:description" content="1071. 字符串的最大公因子 分析 判断条件：
 首先，字符串 str1 能否被 str2 整除以及 str2 能否被 str1 整除的关键条件是：str1 &#43; str2 == str2 &#43; str1。如果这个条件不成立，则不存在一个字符串能够同时整除这两个字符串，返回空字符串 最大公因子：
 如果 str1 &#43; str2 == str2 &#43; str1，则可以根据字符串的长度来进一步判断最大公因子。 假设 str1 的长度为 n1，str2 的长度为 n2，那么最大公因子字符串的长度应该是 gcd(n1, n2)。我们可以利用 gcd 函数计算出 n1 和 n2 的最大公因子，取 str1 或 str2 的前 gcd(n1, n2) 个字符作为最大公因子字符串 核心步骤：
 判断 str1 &#43; str2 == str2 &#43; str1，如果不成立，返回 &amp;quot;&amp;quot; 计算 gcd(len(str1), len(str2))，然后返回 str1 的前 gcd 长度的子串 时间复杂度 计算 gcd 的时间复杂度是 O(logmin(n1, n2))，其中 n1 和 n2 是 str1 和 str2 的长度 字符串比较的时间复杂度是 O(n1 &#43; n2) 截取子串的时间复杂度是 O(gcd(n1, n2))，由于 gcd(n1, n2) 最大为 min(n1, n2)，因此总体时间复杂度是 O(n1 &#43; n2) 空间复杂度 空间复杂度为 O(n1 &#43; n2)"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

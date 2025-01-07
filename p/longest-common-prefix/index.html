@@ -4,18 +4,18 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '><title>Longest Common Prefix</title>
 
-<link rel='canonical' href='https://garfieldzhang.site/p/longest-common-prefix/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/longest-common-prefix/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Longest Common Prefix'>
 <meta property='og:description' content='14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '>
-<meta property='og:url' content='https://garfieldzhang.site/p/longest-common-prefix/'>
+<meta property='og:url' content='https://hangzhang.xyz/p/longest-common-prefix/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://garfieldzhang.site/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Longest Common Prefix">
 <meta name="twitter:description" content="14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://garfieldzhang.site/leetcode.png' />
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.jpg" />
 
     </head>

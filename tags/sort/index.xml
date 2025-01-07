@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Sort on Hang Zhang</title>
-        <link>https://garfieldzhang.site/tags/sort/</link>
+        <link>https://hangzhang.xyz/tags/sort/</link>
         <description>Recent content in Sort on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://garfieldzhang.site/tags/sort/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/sort/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Successful Pairs Of Spells And Potions</title>
-        <link>https://garfieldzhang.site/p/successful-pairs-of-spells-and-potions/</link>
+        <link>https://hangzhang.xyz/p/successful-pairs-of-spells-and-potions/</link>
         <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/successful-pairs-of-spells-and-potions/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post Successful Pairs Of Spells And Potions" /&gt;&lt;h2 id=&#34;2300-咒语和药水的成功对数httpsleetcodecnproblemssuccessful-pairs-of-spells-and-potionsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/successful-pairs-of-spells-and-potions/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Successful Pairs Of Spells And Potions" /&gt;&lt;h2 id=&#34;2300-咒语和药水的成功对数httpsleetcodecnproblemssuccessful-pairs-of-spells-and-potionsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;2300. 咒语和药水的成功对数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -115,11 +115,11 @@
         </item>
         <item>
         <title>groupAnagrams</title>
-        <link>https://garfieldzhang.site/p/groupanagrams/</link>
+        <link>https://hangzhang.xyz/p/groupanagrams/</link>
         <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/groupanagrams/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post groupAnagrams" /&gt;&lt;h2 id=&#34;49-字母异位词分组httpsleetcodecnproblemsgroup-anagramsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/group-anagrams/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/groupanagrams/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post groupAnagrams" /&gt;&lt;h2 id=&#34;49-字母异位词分组httpsleetcodecnproblemsgroup-anagramsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/group-anagrams/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;49. 字母异位词分组&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -214,11 +214,11 @@
         </item>
         <item>
         <title>mergeIntervals</title>
-        <link>https://garfieldzhang.site/p/mergeintervals/</link>
+        <link>https://hangzhang.xyz/p/mergeintervals/</link>
         <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://garfieldzhang.site/p/mergeintervals/</guid>
-        <description>&lt;img src="https://garfieldzhang.site/leetcode.png" alt="Featured image of post mergeIntervals" /&gt;&lt;h2 id=&#34;56-mergeintervalshttpsleetcodecnproblemsmerge-intervalsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/merge-intervals/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://hangzhang.xyz/p/mergeintervals/</guid>
+        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post mergeIntervals" /&gt;&lt;h2 id=&#34;56-mergeintervalshttpsleetcodecnproblemsmerge-intervalsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/merge-intervals/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;56. mergeIntervals&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
