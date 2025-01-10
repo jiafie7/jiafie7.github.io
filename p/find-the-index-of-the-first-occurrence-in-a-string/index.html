@@ -13,7 +13,7 @@
 <meta name="twitter:title" content="Find the Index of the First Occurrence in a String">
 <meta name="twitter:description" content="28. Find the Index of the First Occurrence in a String 分析 在源传和目标串首部添加一个字符，使得下标匹配从1开始，方便处理。 构建目标串的 next 数组。具体来说，对于目标串的任意位置 i，我们要找到一个数 j，使得 needle[1:j] 和 needle[i-j&#43;1:i] 是相等的，并且 j 的值尽可能大。每个 next[i] 对应一个 j 。 遍历源串，在匹配过程中，若 haystack[i] 与 needle[j&#43;1] 不相等，则将 j 回溯到 next[j]。若相等，则同时向后移动 i 和 j。若 j 移动到 needle 的末尾，则表示在 haystack 中找到了 needle，返回 i - m 即可。 时间复杂度为 O(n&#43;m)，其中 n 和 m 分别是 haystack 和 needle 的长度。 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 class Solution { public: int strStr(string haystack, string needle) { if (needle."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

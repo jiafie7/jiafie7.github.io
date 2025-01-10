@@ -19,7 +19,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 空间复杂度 空间复杂度为 O(max(n, m))
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 class Solution { public: ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) { int sum = 0; // 用于存储每个位的和以及进位 ListNode* dummy = new ListNode(-1); // 虚拟头节点 ListNode* cur = dummy; // 指向结果链表的当前尾部 // 遍历链表 l1 和 l2 while (l1 || l2 || sum) { // 如果 l1 或 l2 不为空，加上它们当前位的值 if (l1) { sum &#43;= l1-&amp;gt;val; l1 = l1-&amp;gt;next; // 移动到下一位 } if (l2) { sum &#43;= l2-&amp;gt;val; l2 = l2-&amp;gt;next; // 移动到下一位 } // 创建新节点存储当前位的值，并连接到结果链表 cur = cur-&amp;gt;next = new ListNode(sum % 10); // 更新进位 sum /= 10; } // 返回结果链表 return dummy-&amp;gt;next; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

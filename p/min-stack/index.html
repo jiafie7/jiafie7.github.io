@@ -25,7 +25,7 @@
 每当一个值入栈时，如果它小于或等于当前最小值f.top()，将其压入辅助栈 当一个值出栈时，如果它等于辅助栈的栈顶，也从辅助栈中弹出 时间复杂度 push、pop、top 和 getMin 的时间复杂度均为 O(1) ，因为每个操作只涉及栈的入栈、出栈或访问栈顶
 空间复杂度 主栈 stk 存储所有元素，占用 O(n) 空间 辅助栈 f 最多存储所有元素，占用 O(n) 空间 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 class MinStack { public: std::stack&amp;lt;int&amp;gt; stk; // 主栈，存储所有元素 std::stack&amp;lt;int&amp;gt; f; // 辅助栈，存储当前最小值 MinStack() { // 构造函数，初始化空栈 } void push(int val) { stk."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

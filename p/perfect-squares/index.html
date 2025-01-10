@@ -22,7 +22,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 使用了长度为 n &#43; 1 的数组 f，空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int numSquares(int n) { std::vector&amp;lt;int&amp;gt; f(n &#43; 1, 4); // 初始化 f 数组，最大值为 4 f[0] = 0; // 和为 0 时的最少数量为 0 for (int i = 1; i &amp;lt;= n; &#43;&#43;i) { for (int j = 1; j * j &amp;lt;= i; &#43;&#43;j) { f[i] = std::min(f[i], f[i - j * j] &#43; 1); // 状态转移 } } return f[n]; // 返回结果 } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

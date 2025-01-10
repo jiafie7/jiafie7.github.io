@@ -19,7 +19,7 @@
 左括号 ( 的数量不能超过 n 右括号 ) 的数量不能超过左括号的数量 递归函数在每一步根据当前左括号和右括号的数量，选择是否添加 ( 或 )
 如果左括号数量小于 n，可以添加 ( 如果右括号数量小于左括号，可以添加 ) 当左右括号数量均达到 n 时，将当前路径 path 加入结果集 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 class Solution { public: std::vector&amp;lt;std::string&amp;gt; res; // 存储所有合法的括号组合 std::string path; // 当前生成的括号组合 vector&amp;lt;string&amp;gt; generateParenthesis(int n) { dfs(n, 0, 0); // 从 0 左括号和 0 右括号开始递归 return res; } void dfs(int n, int l_p, int r_p) { // 如果左右括号都用完，生成一个合法组合 if (l_p == n &amp;amp;&amp;amp; r_p == n) { res."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

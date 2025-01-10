@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="216. 组合总和III 分析 采用深度优先搜索（DFS）&#43; 回溯来解决问题：
 递归函数设计： 参数： 当前搜索起点 start（避免重复选择数字） 当前目标和 n 当前还需要选的数字个数 k 终止条件： 如果 n == 0 且 k == 0 ，说明找到了一组符合条件的组合，将其加入结果列表 如果 n != 0 且 k == 0 ，或者 n &amp;lt; 0 ，直接返回（剪枝） 递归遍历： 从 start 开始，依次尝试数字 i （范围 start 到 9 每次选择 i 后递归：将 i 加入路径，更新 n = n - i ，更新 k = k - 1 递归返回后撤销选择 i（回溯） 剪枝优化： 如果 i &amp;gt; n ，则跳过剩余数字，直接剪枝，因为后续数字只会更大 时间复杂度 最多有 9 / k 个组合，其中 n / k = n!"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

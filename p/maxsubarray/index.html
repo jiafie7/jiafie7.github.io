@@ -28,7 +28,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
 空间复杂度 只使用了 res 和 last 两个变量，空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int maxSubArray(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = INT_MIN; // 全局最大子数组和 int last = 0; // 当前子数组和 for (int num : nums) { last = std::max(num, last &#43; num); // 动态更新以当前元素结尾的最大子数组和 res = std::max(res, last); // 更新全局最大值 } return res; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

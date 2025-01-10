@@ -19,7 +19,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { 
 用双指针优化。先枚举位置i，对每一个位置j，找到一个最小的位置k使得 nums[i] &#43; nums[j] &#43; nums[k] &amp;gt;= target，这样可以得到大于等于target的最小值。并且，当k满足前述条件时，必然有 nums[i] &#43; nums[j] &#43; nums[k - 1] &amp;lt; target，也就可以得到小于target的最大值。每次更新下这两个值即可。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 class Solution { public: int threeSumClosest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { sort(nums.begin(), nums.end()); pair&amp;lt;int, int&amp;gt; res(INT_MAX, INT_MAX); for (int i = 0; i &amp;lt; nums.size(); i &#43;&#43; ) for (int j = i &#43; 1, k = nums."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

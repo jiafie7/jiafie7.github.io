@@ -19,7 +19,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 空间复杂度 空间复杂度为 O(mn)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 class Solution { public: int uniquePaths(int m, int n) { // 创建一个二维数组 f，用于记录每个位置的路径数 std::vector&amp;lt;std::vector&amp;lt;int&amp;gt;&amp;gt; f(n, std::vector&amp;lt;int&amp;gt;(m)); // 遍历每个位置 for (int i = 0; i &amp;lt; n; &#43;&#43;i) { for (int j = 0; j &amp;lt; m; &#43;&#43;j) { // 初始化起点 if (i == 0 &amp;amp;&amp;amp; j == 0) f[i][j] = 1; else { // 从上方到达 if (i) f[i][j] &#43;= f[i - 1][j]; // 从左方到达 if (j) f[i][j] &#43;= f[i][j - 1]; } } } // 返回终点的路径数 return f[n - 1][m - 1]; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

@@ -13,7 +13,7 @@
 <meta name="twitter:title" content="Koko Eating Bananas">
 <meta name="twitter:description" content="875. 爱吃香蕉的珂珂 分析 定义区间： 吃香蕉速度的下界 l 为 1（最低速度） 吃香蕉速度的上界 r 为 10^9（最大速度，假设所有香蕉都在一堆中且时间充足） 判断函数 getTime(piles, k) ： 计算以速度 k 吃完所有香蕉需要的时间 遍历每堆香蕉 pile ，需要的时间为 pile / k 上取整，可以通过 (pile &#43; k - 1) / k 实现 二分查找： 计算中间值 mid = (l &#43; r) / 2 ： 如果 getTime(piles, mid) &amp;lt;= h ，说明速度 mid 可以满足要求，但可能还有更小的速度满足条件，因此缩小上界 r = mid 如果 getTime(piles, mid)} &amp;gt; h ，说明速度 mid 不够快，需要增大速度，更新下界 l = mid &#43; 1 结束条件： 当 l == r 时，搜索范围缩小到单一值，返回 l 或 r 即为最小速度 时间复杂度 二分查找最多进行 O(log(10^9)) 次 每次计算 getTime(piles, k) 需要 O(n)，其中 n 是香蕉堆的数量 总复杂度为 O(n * log(10^9))"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

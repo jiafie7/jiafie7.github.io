@@ -31,7 +31,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 class Solution { public: int findDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int a = 0, b = 0; // 初始化快慢指针 while (true) { a = nums[a]; // 慢指针每次走一步 b = nums[b]; // 快指针第一次走一步 b = nums[b]; // 快指针第二次走一步 // 快慢指针相遇，退出循环 if (a == b) { a = 0; // 慢指针从起点开始 while (a !"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

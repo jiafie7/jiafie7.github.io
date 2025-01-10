@@ -22,7 +22,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 cl
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Solution { public: bool increasingTriplet(vector&amp;lt;int&amp;gt;&amp;amp; nums) { // 初始化递增子序列的前两个元素为无穷大 std::vector&amp;lt;int&amp;gt; q(2, INT_MAX); for (int num : nums) { int k = 2; // 初始化目标位置为第 3 位 while (k &amp;gt; 0 &amp;amp;&amp;amp; q[k - 1] &amp;gt;= num) // 寻找插入位置 --k; if (k == 2) // 如果找到了递增三元组 return true; q[k] = num; // 更新 q 中对应位置的值 } return false; // 遍历结束仍未找到三元组 } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

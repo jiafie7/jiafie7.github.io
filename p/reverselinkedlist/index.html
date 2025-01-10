@@ -28,7 +28,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: ListNode* reverseList(ListNode* head) { ListNode* prev = nullptr; // 初始化反转链表的头节点为 nullptr ListNode* cur = head; // 从链表头节点开始遍历 while (cur) // 遍历整个链表 { ListNode* next = cur-&amp;gt;next; // 保存当前节点的下一节点 cur-&amp;gt;next = prev; // 将当前节点的 next 指向反转链表的头 prev = cur; // 更新 prev 为当前节点 cur = next; // 继续遍历下一个节点 } return prev; // 返回反转后的链表头节点 } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

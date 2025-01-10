@@ -13,7 +13,7 @@
 <meta name="twitter:title" content="Evaluate Division">
 <meta name="twitter:description" content="399. 除法求值 分析 构建图： 遍历 equations 和 values，构建邻接表表示的加权有向图 graph 如果 A / B = v，则添加边 A -&amp;gt; B 和 B -&amp;gt; A Floyd-Warshall 算法： 利用三重循环，尝试通过任意中间节点 k 更新任意两节点 i 和 j 间的比值 如果 i -&amp;gt; k 和 k -&amp;gt; j 的路径存在，则更新 i -&amp;gt; j 的权重为 graph[i][k] * graph[k][j] 处理查询： 对于每个查询 [C, D]： 如果 C 和 D 不在图中，或者两者之间无路径，则返回 -1.0 否则返回图中存储的 C -&amp;gt; D 的权重 时间复杂度 构建图：遍历 equations，时间复杂度为 O(E)，其中 E 是等式的数量 Floyd-Warshall 算法：三重循环，时间复杂度为 O(V^3)，其中 V 是变量的数量 处理查询：遍历 queries，时间复杂度为 O(Q)，其中 Q 是查询的数量 总体时间复杂度为 O(V^3 &#43; E &#43; Q)"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

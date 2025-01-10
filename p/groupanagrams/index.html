@@ -19,7 +19,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 class
 空间复杂度 哈希表存储：需要存储排序后的字符串和对应的原始字符串列表，空间复杂度为 O(n * k) 额外字符串副本：排序时需要创建字符串副本，额外空间复杂度为 O(k) 总空间复杂度为 O(n * k)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 class Solution { public: std::vector&amp;lt;std::vector&amp;lt;std::string&amp;gt;&amp;gt; groupAnagrams(std::vector&amp;lt;std::string&amp;gt;&amp;amp; strs) { std::vector&amp;lt;std::vector&amp;lt;std::string&amp;gt;&amp;gt; res; // 存储最终结果 std::unordered_map&amp;lt;std::string, std::vector&amp;lt;std::string&amp;gt;&amp;gt; hash; // 哈希表用于分组 // 遍历字符串数组 for (string str : strs) { std::string word = str; // 创建副本以便排序 std::sort(word."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

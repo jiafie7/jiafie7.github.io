@@ -19,7 +19,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: int guessNumber(int n) { int l = 1, r = n; // 初始化左右边界 while (l &amp;lt; r) { int mid = (long long)l &#43; r &amp;gt;&amp;gt; 1; // 计算中间值 if (guess(mid) &amp;lt;= 0) // 若目标值小于等于 mid r = mid; // 缩小右边界 else // 若目标值大于 mid l = mid &#43; 1; // 缩小左边界 } return r; // 返回结果 } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

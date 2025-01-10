@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="207. 课程表 分析 构建图结构与入度数组 使用邻接表 g 表示课程之间的依赖关系：对于 prerequisites[i] = [a, b]，将 b -&amp;gt; a 加入图中 使用入度数组 d 记录每个课程的入度（依赖它的先修课程数量） 初始化队列 将入度为 0 的课程（无依赖课程）加入队列 q，这些课程可以直接开始学习 拓扑排序 从队列中取出课程，计数器 res 加 1（表示完成了一门课程） 遍历该课程的邻接课程，将它们的入度减 1。如果某门课程的入度减为 0，将其加入队列 重复直到队列为空 判断是否可行 如果最终完成课程数 res 等于 numCourses，说明可以完成所有课程，返回 true 否则返回 false，表示存在环形依赖，课程无法全部完成 时间复杂度 构建图：遍历所有的先修课程关系，时间复杂度为 O(E)，其中 E 是先修课程的数量 拓扑排序：每门课程和它的邻接课程都最多被访问一次，时间复杂度为 O(V)，其中 V 是课程数 总时间复杂度 O(E &#43; V)
 空间复杂度 图邻接表 g 占用 O(E) 空间 入度数组 d 占用 O(V) 空间。 队列 q 的最大空间占用为 O(V) 空间复杂度为 O(E &#43; V)"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

@@ -16,7 +16,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 <meta name="twitter:description" content="2336. 无限集中的最小数字 分析 使用有序集合 std::set 来维护集合 s，其特性是自动按升序排列元素： popSmallest() 可以通过获取集合中的第一个元素*s.begin() 来实现最小值的提取，时间复杂度为 O(log n) addBack(num) 通过插入操作，将数字加入集合，同时自动维护顺序，时间复杂度为 O(log n) 由于题目给出 1 &amp;lt;= num &amp;lt;= 1000，因此初始化集合时，可以预先将 s 初始化为 1 ~ 1000 时间复杂度 popSmallest()： 获取最小值 *s.begin(): O(1) 删除操作 s.erase(): O(\log n) 总时间复杂度：O(logn) addBack(num)： 插入操作 s.insert()：O(logn) 初始化操作： 插入 n 个初始值：总复杂度为 O(nlogn) 空间复杂度 主要存储集合 s，大小为集合中的元素个数，空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 class SmallestInfiniteSet { public: std::set&amp;lt;int&amp;gt; s; // 构造函数，初始化集合 SmallestInfiniteSet() { // 集合的初始值为 [1, 2, ."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

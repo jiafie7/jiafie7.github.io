@@ -28,7 +28,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 空间复杂度 递归栈空间：递归深度为 O(logn)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: TreeNode* sortedArrayToBST(vector&amp;lt;int&amp;gt;&amp;amp; nums) { // 调用递归函数构建平衡二叉搜索树 return build(nums, 0, nums.size() - 1); } TreeNode* build(std::vector&amp;lt;int&amp;gt;&amp;amp; nums, int l, int r) { if (l &amp;gt; r) return nullptr; // 递归终止条件：无效范围 int mid = (l &#43; r) &amp;gt;&amp;gt; 1; // 找到当前范围的中点 TreeNode* root = new TreeNode(nums[mid]); // 创建根节点 root-&amp;gt;left = build(nums, l, mid - 1); // 构建左子树 root-&amp;gt;right = build(nums, mid &#43; 1, r); // 构建右子树 return root; // 返回根节点 } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

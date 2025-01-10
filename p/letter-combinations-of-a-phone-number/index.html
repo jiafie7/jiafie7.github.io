@@ -19,7 +19,7 @@
 遍历数字字符串，按每个数字对应的字母集依次尝试： 对当前数字的每个字母，将其加入组合路径中 递归进入下一个数字，直到遍历完所有数字，将当前组合加入结果集 回溯到上一步，尝试其他可能性 时间复杂度 数字字符串的长度为 n，每个数字对应最多 4 个字母。构造所有组合的时间复杂度为 O(4^n)
 空间复杂度 递归深度为 n，路径存储需要 O(n)。 结果集存储需要 O(4^n * n) C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 class Solution { public: std::vector&amp;lt;std::string&amp;gt; res; // 存储结果集 std::string path; // 当前路径 std::vector&amp;lt;std::string&amp;gt; strs = { // 数字对应的字母集 &amp;#34;&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;abc&amp;#34;, &amp;#34;def&amp;#34;, &amp;#34;ghi&amp;#34;, &amp;#34;jkl&amp;#34;, &amp;#34;mno&amp;#34;, &amp;#34;pqrs&amp;#34;, &amp;#34;tuv&amp;#34;, &amp;#34;wxyz&amp;#34; }; vector&amp;lt;string&amp;gt; letterCombinations(string digits) { if (digits."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

@@ -31,7 +31,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 空间复杂度 空间复杂度 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 class Solution { public: ListNode* removeNthFromEnd(ListNode* head, int n) { // 创建虚拟头节点 ListNode* dummy = new ListNode(-1); dummy-&amp;gt;next = head; // 计算链表长度 int len = 0; for (ListNode* p = dummy; p; p = p-&amp;gt;next) &#43;&#43;len; // 定位到要删除节点的前驱节点 ListNode* p = dummy; for (int i = 0; i &amp;lt; len - n - 1; &#43;&#43;i) p = p-&amp;gt;next; // 删除目标节点 p-&amp;gt;next = p-&amp;gt;next-&amp;gt;next; // 返回结果链表 return dummy-&amp;gt;next; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

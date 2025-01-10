@@ -22,7 +22,7 @@
 矩阵的第 i 行和第 j 列的元素 matrix[i][j]，在一维数组中对应的索引为 i * m &#43; j 反之，一维数组的索引 k 对应矩阵中的元素为 matrix[k / m][k % m] 二分查找：
 初始时，定义查找区间的左右端点为 l = 0 和 r = m * n - 1 每次取中点 mid，将其映射到二维矩阵元素 matrix[mid / m][mid % m] ，与 target 比较： 若该值大于等于 target，收缩右边界 r = mid 若该值小于 target，收缩左边界 l = mid &#43; 1 循环结束时，检查索引 r 对应的矩阵元素是否等于 target 时间复杂度 每次二分查找都会将查找范围缩小为原来的一半，总体复杂度为 O(log(m * n))"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

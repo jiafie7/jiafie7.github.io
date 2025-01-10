@@ -31,7 +31,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solut
 空间复杂度 使用了哈希表存储前缀和及其次数，空间复杂度为 O(n)，其中 n 是数组的长度
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: int subarraySum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { std::unordered_map&amp;lt;int, int&amp;gt; hash; // 存储前缀和及其出现次数 int res = 0, sum = 0; hash[0] = 1; // 初始化前缀和 0 的计数为 1 for (int num : nums) { sum &#43;= num; // 更新前缀和 res &#43;= hash[sum - k]; // 检查是否存在前缀和满足条件 &#43;&#43; hash[sum]; // 更新当前前缀和的计数 } return res; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

@@ -19,7 +19,7 @@
 特殊情况处理： 如果数组总和 sum 是奇数，则无法分成两个相等的子集，直接返回 false 动态规划定义： 定义一个布尔数组 f，其中 f[j] 表示是否可以从数组中选取一些元素，使得这些元素的和为 j 初始化 f[0] = true，表示总和为 0 的情况总是成立（即不选任何元素） 状态转移方程： 遍历数组 nums 中的每个数 nums[i]，从目标值 target 开始往下更新： f[j] = f[j] || f[j - nums[i]] 表示如果在之前能凑出 j - nums[i]，则加入当前数字后也能凑出 j 最终结果： 如果能凑出目标值 sum / 2，即 f[target] == true，则可以分成两个相等的子集 时间复杂度 外层循环遍历数组 n 次 内层循环遍历目标值 target 次 总时间复杂度 O(n * target)
 空间复杂度 空间复杂度为 O(target)"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

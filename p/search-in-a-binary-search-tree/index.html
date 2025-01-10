@@ -22,7 +22,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class So
 空间复杂度 空间复杂度为 O(h)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: TreeNode* searchBST(TreeNode* root, int val) { // 基本情况：当前节点为空，返回 nullptr if (!root) return nullptr; // 当前节点的值大于目标值，递归查找左子树 if (root-&amp;gt;val &amp;gt; val) return searchBST(root-&amp;gt;left, val); // 当前节点的值小于目标值，递归查找右子树 if (root-&amp;gt;val &amp;lt; val) return searchBST(root-&amp;gt;right, val); // 找到目标节点，返回该节点 return root; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

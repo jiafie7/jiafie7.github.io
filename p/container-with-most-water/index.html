@@ -22,7 +22,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxAre
 可以使用反证法证明。如果指针j当前指向的水柱高度大于等于其最优解位置的高度，则能装的水量一定大于最优解，就和最优解位置矛盾。因此，通过上述过程，一定可以遍历出最优解。
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxArea(vector&amp;lt;int&amp;gt;&amp;amp; height) { int res = 0; for (int i = 0, j = height.size() - 1; i &amp;lt; j; ) { res = max(res, min(height[i], height[j]) * (j - i)); if (height[i] &amp;lt; height[j]) i &#43;&#43; ; else j -- ; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

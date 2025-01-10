@@ -25,7 +25,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 k 是基于第 1 个元素的索引，因此将 k - 1 转换为 0 索引形式进行处理 时间复杂度 平均情况下为 O(n) ：每次划分能排除约一半的元素 最坏情况下为 O(n^2) ：当数组退化为不平衡分区时 空间复杂度 O(log n)：递归栈的深度，取决于分区的层数
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 class Solution { public: // 快速排序分治查找第 k 大元素 int quick_sort(std::vector&amp;lt;int&amp;gt;&amp;amp; nums, int l, int r, int k) { // 当区间缩小到单个元素时，返回该元素 if (l == r) return nums[k]; // 基准值选择第一个元素 int x = nums[l], i = l - 1, j = r &#43; 1; // 快速排序分区过程：双指针划分 while (i &amp;lt; j) { do &#43;&#43;i; while (nums[i] &amp;gt; x); // 找到左侧第一个小于等于基准值的元素 do --j; while (nums[j] &amp;lt; x); // 找到右侧第一个大于等于基准值的元素 if (i &amp;lt; j) std::swap(nums[i], nums[j]); // 交换元素使其划分到正确的区间 } // 判断第 k 大元素所在区间 if (k &amp;lt;= j) return quick_sort(nums, l, j, k); // 在左侧区间 else return quick_sort(nums, j &#43; 1, r, k); // 在右侧区间 } // 主函数：寻找第 k 大元素 int findKthLargest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { return quick_sort(nums, 0, nums."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

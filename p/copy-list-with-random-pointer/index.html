@@ -19,7 +19,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 class Solution { public: Node* copyRandomList(Node* head) { // 第 1 步：在原链表中插入新节点 for (Node* p = head; p; p = p-&amp;gt;next-&amp;gt;next) { Node* q = new Node(p-&amp;gt;val); // 创建新节点 q-&amp;gt;next = p-&amp;gt;next; // 插入新节点到原节点之后 p-&amp;gt;next = q; } // 第 2 步：复制 random 指针 for (Node* p = head; p; p = p-&amp;gt;next-&amp;gt;next) { if (p-&amp;gt;random) p-&amp;gt;next-&amp;gt;random = p-&amp;gt;random-&amp;gt;next; // 设置新节点的 random } // 第 3 步：拆分链表 Node* dummy = new Node(-1); // 虚拟头节点 Node* cur = dummy; for (Node* p = head; p; p = p-&amp;gt;next) { Node* q = p-&amp;gt;next; // 取出新节点 cur = cur-&amp;gt;next = q; // 将新节点连接到深拷贝链表 p-&amp;gt;next = q-&amp;gt;next; // 恢复原链表结构 } return dummy-&amp;gt;next; } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="

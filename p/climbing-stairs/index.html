@@ -25,7 +25,7 @@ f(0) = 1 ：到达第 1 阶的方法只有一种 f(1) = 1 ：到达第 1 阶的�
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int climbStairs(int n) { int a = 1, b = 1; // 初始状态：f(0) = 1, f(1) = 1 while ( -- n) // 从第 2 阶开始计算 { int c = a &#43; b; // 当前阶方法数等于前两阶之和 a = b; // 更新前一阶为当前阶 b = c; // 更新当前阶为下一阶 } return b; // 返回第 n 阶的方法数 } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
-    <link rel="shortcut icon" href="/favicon.jpg" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
     <body class="
