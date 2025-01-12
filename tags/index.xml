@@ -6,7 +6,55 @@
         <description>Recent content in Tags on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C&#43;&#43;</title>
+        <link>https://hangzhang.xyz/tags/c&#43;&#43;/</link>
+        <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangzhang.xyz/tags/c&#43;&#43;/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Double Pointer</title>
+        <link>https://hangzhang.xyz/tags/double-pointer/</link>
+        <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangzhang.xyz/tags/double-pointer/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Greedy</title>
+        <link>https://hangzhang.xyz/tags/greedy/</link>
+        <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangzhang.xyz/tags/greedy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>KMP</title>
+        <link>https://hangzhang.xyz/tags/kmp/</link>
+        <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangzhang.xyz/tags/kmp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Leetcode</title>
+        <link>https://hangzhang.xyz/tags/leetcode/</link>
+        <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangzhang.xyz/tags/leetcode/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Pattern</title>
+        <link>https://hangzhang.xyz/tags/pattern/</link>
+        <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangzhang.xyz/tags/pattern/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Array</title>
         <link>https://hangzhang.xyz/tags/array/</link>
         <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
@@ -15,43 +63,11 @@
         <description></description>
         </item>
         <item>
-        <title>C&#43;&#43;</title>
-        <link>https://hangzhang.xyz/tags/c&#43;&#43;/</link>
-        <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://hangzhang.xyz/tags/c&#43;&#43;/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Greedy</title>
-        <link>https://hangzhang.xyz/tags/greedy/</link>
-        <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://hangzhang.xyz/tags/greedy/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Hash</title>
         <link>https://hangzhang.xyz/tags/hash/</link>
         <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
         
         <guid>https://hangzhang.xyz/tags/hash/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Leetcode</title>
-        <link>https://hangzhang.xyz/tags/leetcode/</link>
-        <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://hangzhang.xyz/tags/leetcode/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Double Pointer</title>
-        <link>https://hangzhang.xyz/tags/double-pointer/</link>
-        <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://hangzhang.xyz/tags/double-pointer/</guid>
         <description></description>
         </item>
         <item>
@@ -327,11 +343,11 @@
         <description></description>
         </item>
         <item>
-        <title>KMP</title>
-        <link>https://hangzhang.xyz/tags/kmp/</link>
-        <pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
+        <title>String</title>
+        <link>https://hangzhang.xyz/tags/string/</link>
+        <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/tags/kmp/</guid>
+        <guid>https://hangzhang.xyz/tags/string/</guid>
         <description></description>
         </item>
         <item>

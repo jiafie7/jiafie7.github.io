@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '><title>Longest Common Prefix</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='14. Longest Common Prefix 分析 逐字符比较： 以第一个字符串 strs[0] 为基准，逐个字符增加前缀 对比每个字符串是否都以当前前缀开头 剪枝优化： 如果某个字符串不包含当前前缀，则当前前缀的上一个状态就是最长公共前缀 时间复杂度 最坏情况：所有字符串相同，需要逐字符对比，O(m * n) ，m 是第一个字符串的长度，n 是字符串数组的长度
+空间复杂度 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { std::string cur; // 当前公共前缀 for (char c : strs[0]) // 遍历第一个字符串的每个字符 { cur &#43;= c; // 将当前字符加入前缀 for (int i = 1; i &amp;lt; strs.'><title>Longest Common Prefix</title>
 
 <link rel='canonical' href='https://hangzhang.xyz/p/longest-common-prefix/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Longest Common Prefix'>
-<meta property='og:description' content='14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; '>
+<meta property='og:description' content='14. Longest Common Prefix 分析 逐字符比较： 以第一个字符串 strs[0] 为基准，逐个字符增加前缀 对比每个字符串是否都以当前前缀开头 剪枝优化： 如果某个字符串不包含当前前缀，则当前前缀的上一个状态就是最长公共前缀 时间复杂度 最坏情况：所有字符串相同，需要逐字符对比，O(m * n) ，m 是第一个字符串的长度，n 是字符串数组的长度
+空间复杂度 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { std::string cur; // 当前公共前缀 for (char c : strs[0]) // 遍历第一个字符串的每个字符 { cur &#43;= c; // 将当前字符加入前缀 for (int i = 1; i &amp;lt; strs.'>
 <meta property='og:url' content='https://hangzhang.xyz/p/longest-common-prefix/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='String' /><meta property='article:published_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-03-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Longest Common Prefix">
-<meta name="twitter:description" content="14. Longest Common Prefix 分析 首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。 再看第二个字符是否一样，这样一直遍历下去&amp;hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { string res; if (strs.empty()) return res; for (int i = 0;; i &#43;&#43; ) { if (i &amp;gt;= strs[0].size()) return res; char c = strs[0][i]; for (auto&amp;amp; str: strs) if (i &amp;gt;= str.size() || str[i] != c) return res; res &#43;= c; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="14. Longest Common Prefix 分析 逐字符比较： 以第一个字符串 strs[0] 为基准，逐个字符增加前缀 对比每个字符串是否都以当前前缀开头 剪枝优化： 如果某个字符串不包含当前前缀，则当前前缀的上一个状态就是最长公共前缀 时间复杂度 最坏情况：所有字符串相同，需要逐字符对比，O(m * n) ，m 是第一个字符串的长度，n 是字符串数组的长度
+空间复杂度 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { std::string cur; // 当前公共前缀 for (char c : strs[0]) // 遍历第一个字符串的每个字符 { cur &#43;= c; // 将当前字符加入前缀 for (int i = 1; i &amp;lt; strs."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -287,8 +290,23 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
     <h2 id="14-longest-common-prefixhttpsleetcodecomproblemslongest-common-prefixdescription"><a class="link" href="https://leetcode.com/problems/longest-common-prefix/description/"  target="_blank" rel="noopener"
     >14. Longest Common Prefix</a></h2>
 <h3 id="分析">分析</h3>
-<p>首先看所有字符串第一个字符是否一样，一样则公共字符串长度至少为1，否则公共字符串为空。
-再看第二个字符是否一样，这样一直遍历下去&hellip; 最坏情况就是把所有字符串的每个字符枚举一遍，时间复杂度小于等于所有字符串之和。</p>
+<ol>
+<li>逐字符比较：
+<ul>
+<li>以第一个字符串 <code>strs[0]</code> 为基准，逐个字符增加前缀</li>
+<li>对比每个字符串是否都以当前前缀开头</li>
+</ul>
+</li>
+<li>剪枝优化：
+<ul>
+<li>如果某个字符串不包含当前前缀，则当前前缀的上一个状态就是最长公共前缀</li>
+</ul>
+</li>
+</ol>
+<h3 id="时间复杂度">时间复杂度</h3>
+<p>最坏情况：所有字符串相同，需要逐字符对比，<code>O(m * n)</code> ，<code>m</code> 是第一个字符串的长度，<code>n</code> 是字符串数组的长度</p>
+<h2 id="空间复杂度">空间复杂度</h2>
+<p><code>O(1)</code></p>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -309,23 +327,75 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">longestCommonPrefix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">strs</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">strs</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">())</span> <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">str</span><span class="p">:</span> <span class="n">strs</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">||</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">+=</span> <span class="n">c</span><span class="p">;</span>    
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="nf">longestCommonPrefix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">strs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">cur</span><span class="p">;</span>  <span class="c1">// 当前公共前缀
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">char</span> <span class="nl">c</span> <span class="p">:</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1">// 遍历第一个字符串的每个字符
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cur</span> <span class="o">+=</span> <span class="n">c</span><span class="p">;</span>  <span class="c1">// 将当前字符加入前缀
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">strs</span><span class="p">.</span><span class="nf">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>  <span class="c1">// 遍历剩余字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 如果当前字符串不以 cur 为前缀
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">if</span> <span class="p">(</span><span class="n">strs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cur</span><span class="p">.</span><span class="nf">size</span><span class="p">())</span> <span class="o">!=</span> <span class="n">cur</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">cur</span><span class="p">.</span><span class="nf">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cur</span><span class="p">.</span><span class="nf">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 返回上一个前缀
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">cur</span><span class="p">;</span>  <span class="c1">// 所有字符串都包含 cur，返回完整前缀
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="优化">优化</h3>
+<p>减少 <code>substr</code> 使用：<code>substr</code> 有额外的时间和空间开销，可直接比较字符，避免生成子串</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="nf">longestCommonPrefix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">strs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">strs</span><span class="p">.</span><span class="nf">empty</span><span class="p">())</span> <span class="k">return</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">strs</span><span class="p">.</span><span class="nf">size</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 如果超出当前字符串长度或字符不匹配
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">strs</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="nf">size</span><span class="p">()</span> <span class="o">||</span> <span class="n">strs</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
@@ -341,6 +411,8 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
             <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
+        
+            <a href="/tags/string/">String</a>
         
     </section>
 
@@ -374,6 +446,82 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
             
                 
 <article class="has-image">
+    <a href="/p/find-the-index-of-the-first-occurrence-in-a-string/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Find the Index of the First Occurrence In a String</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/length-of-last-word/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Length of Last Word</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/text-justification/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Text Justification</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/zigzag-conversion/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Zigzag Conversion</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/candy/">
         
         
@@ -386,82 +534,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 
         <div class="article-details">
             <h2 class="article-title">Candy</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/gas-station/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Gas Station</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/insert-delete-get-random/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Insert Delete Get Random</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/best-time-to-buy-and-sell-stock-ii/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Best Time to Buy and Sell Stock II</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/h-index/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">H Index</h2>
         </div>
     </a>
 </article>
@@ -636,7 +708,13 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
     <li><a href="#14-longest-common-prefixhttpsleetcodecomproblemslongest-common-prefixdescription"><a href="https://leetcode.com/problems/longest-common-prefix/description/">14. Longest Common Prefix</a></a>
       <ol>
         <li><a href="#分析">分析</a></li>
+        <li><a href="#时间复杂度">时间复杂度</a></li>
+      </ol>
+    </li>
+    <li><a href="#空间复杂度">空间复杂度</a>
+      <ol>
         <li><a href="#c代码">C++代码</a></li>
+        <li><a href="#优化">优化</a></li>
       </ol>
     </li>
   </ol>
