@@ -630,7 +630,10 @@
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hangzhang.xyz/</loc>
-    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hangzhang.xyz/post/</loc>
+    <lastmod>2025-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hangzhang.xyz/tags/c&#43;&#43;/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
@@ -651,9 +654,6 @@
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hangzhang.xyz/tags/leetcode/</loc>
-    <lastmod>2025-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hangzhang.xyz/post/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hangzhang.xyz/tags/</loc>
