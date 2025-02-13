@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='152. maxProduct 分析 使用f[i - 1]记录所有以nums[i - 1]元素结尾的连续子数组中的最大乘积
-使用g[i - 1]记录所有以nums[i - 1]元素结尾的连续子数组中的最小乘积
-求f[i]
-当nums[i]为正数时，f[i] = std::max(nums[i], f[i - 1] * nums[i])，因为正数与最大值相乘，值最大，所以与f[i - 1]相乘 当nums[i]为负数时，f[i] = std::max(nums[i], g[i - 1] * nums[i])，因为负数与最小值相乘，值最大，所以与g[i - 1]相乘 求g[i]
-当nums[i]为正数时，g[i] = std::min(nums[i], g[i - 1] * nums[i])，因为正数与最小值相乘，值最小，所以与g[i - 1]相乘 当nums[i]为负数时，g[i] = std::min(nums[i], f[i - 1] * nums[i])，因为负数与最大值相乘，值最小，所以与f[i - 1]相乘 当nums[i]为0时，f[i]和g[i]都变为0，即连续子数组断开，从下一个元素重新开始找最大乘积
-优化：因为每次更新f[i]和g[i]只需要前一个数，所以不需要开两个数组记录所有值
-时间复杂度：O(n)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int maxProduct(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = nums[0]; int f_last = nums[0], g_last = nums[0]; for (int i = 1; i &amp;lt; nums.'><title>maxProduct</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='201. 数字范围按位与 分析 按位与的性质 任何数字与 0 进行按位与，结果都是 0，即 x &amp;amp; 0 = 0 相邻数字的按位与会减少 1 位的 1，例如： 1 2 3 4 7 = 0111 6 = 0110 5 = 0101 4 = 0100 计算 5 &amp;amp; 6 &amp;amp; 7 = 4，可以看到最右侧的 1 被清除了
+观察区间变化 若 left 和 right 的二进制前缀相同，则它们的按位与结果保留这个前缀，后面的位全部补 0 若 left 和 right 的某一位出现了不同（即 0-&amp;gt;1 或 1-&amp;gt;0），则从该位及其更低位的按位与结果必然为 0 时间复杂度 由于整数的二进制表示最多 32 位，我们最多遍历 32 次，因此时间复杂度为 O(1)
+空间复杂度 空间复杂度为 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int rangeBitwiseAnd(int left, int right) { int res = 0; // 存储最终结果 for (int i = 30; i &amp;gt;= 0; -- i) // 从高位到低位遍历每一位 { if ((left &amp;gt;&amp;gt; i &amp;amp; 1) !'><title>Bitwise and of Numbers Range</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/maxproduct/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/bitwise-and-of-numbers-range/'>
 
-<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='maxProduct'>
-<meta property='og:description' content='152. maxProduct 分析 使用f[i - 1]记录所有以nums[i - 1]元素结尾的连续子数组中的最大乘积
-使用g[i - 1]记录所有以nums[i - 1]元素结尾的连续子数组中的最小乘积
-求f[i]
-当nums[i]为正数时，f[i] = std::max(nums[i], f[i - 1] * nums[i])，因为正数与最大值相乘，值最大，所以与f[i - 1]相乘 当nums[i]为负数时，f[i] = std::max(nums[i], g[i - 1] * nums[i])，因为负数与最小值相乘，值最大，所以与g[i - 1]相乘 求g[i]
-当nums[i]为正数时，g[i] = std::min(nums[i], g[i - 1] * nums[i])，因为正数与最小值相乘，值最小，所以与g[i - 1]相乘 当nums[i]为负数时，g[i] = std::min(nums[i], f[i - 1] * nums[i])，因为负数与最大值相乘，值最小，所以与f[i - 1]相乘 当nums[i]为0时，f[i]和g[i]都变为0，即连续子数组断开，从下一个元素重新开始找最大乘积
-优化：因为每次更新f[i]和g[i]只需要前一个数，所以不需要开两个数组记录所有值
-时间复杂度：O(n)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int maxProduct(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = nums[0]; int f_last = nums[0], g_last = nums[0]; for (int i = 1; i &amp;lt; nums.'>
-<meta property='og:url' content='https://hangzhang.xyz/p/maxproduct/'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Bitwise and of Numbers Range'>
+<meta property='og:description' content='201. 数字范围按位与 分析 按位与的性质 任何数字与 0 进行按位与，结果都是 0，即 x &amp;amp; 0 = 0 相邻数字的按位与会减少 1 位的 1，例如： 1 2 3 4 7 = 0111 6 = 0110 5 = 0101 4 = 0100 计算 5 &amp;amp; 6 &amp;amp; 7 = 4，可以看到最右侧的 1 被清除了
+观察区间变化 若 left 和 right 的二进制前缀相同，则它们的按位与结果保留这个前缀，后面的位全部补 0 若 left 和 right 的某一位出现了不同（即 0-&amp;gt;1 或 1-&amp;gt;0），则从该位及其更低位的按位与结果必然为 0 时间复杂度 由于整数的二进制表示最多 32 位，我们最多遍历 32 次，因此时间复杂度为 O(1)
+空间复杂度 空间复杂度为 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int rangeBitwiseAnd(int left, int right) { int res = 0; // 存储最终结果 for (int i = 30; i &amp;gt;= 0; -- i) // 从高位到低位遍历每一位 { if ((left &amp;gt;&amp;gt; i &amp;amp; 1) !'>
+<meta property='og:url' content='https://hangzhang.xyz/p/bitwise-and-of-numbers-range/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='dp' /><meta property='article:published_time' content='2024-11-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
-<meta name="twitter:title" content="maxProduct">
-<meta name="twitter:description" content="152. maxProduct 分析 使用f[i - 1]记录所有以nums[i - 1]元素结尾的连续子数组中的最大乘积
-使用g[i - 1]记录所有以nums[i - 1]元素结尾的连续子数组中的最小乘积
-求f[i]
-当nums[i]为正数时，f[i] = std::max(nums[i], f[i - 1] * nums[i])，因为正数与最大值相乘，值最大，所以与f[i - 1]相乘 当nums[i]为负数时，f[i] = std::max(nums[i], g[i - 1] * nums[i])，因为负数与最小值相乘，值最大，所以与g[i - 1]相乘 求g[i]
-当nums[i]为正数时，g[i] = std::min(nums[i], g[i - 1] * nums[i])，因为正数与最小值相乘，值最小，所以与g[i - 1]相乘 当nums[i]为负数时，g[i] = std::min(nums[i], f[i - 1] * nums[i])，因为负数与最大值相乘，值最小，所以与f[i - 1]相乘 当nums[i]为0时，f[i]和g[i]都变为0，即连续子数组断开，从下一个元素重新开始找最大乘积
-优化：因为每次更新f[i]和g[i]只需要前一个数，所以不需要开两个数组记录所有值
-时间复杂度：O(n)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int maxProduct(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = nums[0]; int f_last = nums[0], g_last = nums[0]; for (int i = 1; i &amp;lt; nums."><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Bit Operation' /><meta property='article:published_time' content='2025-02-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta name="twitter:title" content="Bitwise and of Numbers Range">
+<meta name="twitter:description" content="201. 数字范围按位与 分析 按位与的性质 任何数字与 0 进行按位与，结果都是 0，即 x &amp;amp; 0 = 0 相邻数字的按位与会减少 1 位的 1，例如： 1 2 3 4 7 = 0111 6 = 0110 5 = 0101 4 = 0100 计算 5 &amp;amp; 6 &amp;amp; 7 = 4，可以看到最右侧的 1 被清除了
+观察区间变化 若 left 和 right 的二进制前缀相同，则它们的按位与结果保留这个前缀，后面的位全部补 0 若 left 和 right 的某一位出现了不同（即 0-&amp;gt;1 或 1-&amp;gt;0），则从该位及其更低位的按位与结果必然为 0 时间复杂度 由于整数的二进制表示最多 32 位，我们最多遍历 32 次，因此时间复杂度为 O(1)
+空间复杂度 空间复杂度为 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public: int rangeBitwiseAnd(int left, int right) { int res = 0; // 存储最终结果 for (int i = 30; i &amp;gt;= 0; -- i) // 从高位到低位遍历每一位 { if ((left &amp;gt;&amp;gt; i &amp;amp; 1) !"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -233,9 +221,9 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/maxproduct/">
+            <a href="/p/bitwise-and-of-numbers-range/">
                 
-                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post maxProduct" />
+                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Bitwise and of Numbers Range" />
                 
             </a>
         </div>
@@ -254,7 +242,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/maxproduct/">maxProduct</a>
+            <a href="/p/bitwise-and-of-numbers-range/">Bitwise and of Numbers Range</a>
         </h2>
     
         
@@ -273,7 +261,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 23, 2024</time>
+                <time class="article-time--published">Feb 13, 2025</time>
             </div>
         
 
@@ -302,36 +290,44 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
     <section class="article-content">
     
     
-    <h2 id="152-maxproducthttpsleetcodecnproblemsmaximum-product-subarraydescription"><a class="link" href="https://leetcode.cn/problems/maximum-product-subarray/description/"  target="_blank" rel="noopener"
-    >152. maxProduct</a></h2>
+    <h2 id="201-数字范围按位与httpsleetcodecnproblemsbitwise-and-of-numbers-range"><a class="link" href="https://leetcode.cn/problems/bitwise-and-of-numbers-range/"  target="_blank" rel="noopener"
+    >201. 数字范围按位与</a></h2>
 <h3 id="分析">分析</h3>
+<ol>
+<li>按位与的性质
 <ul>
-<li>
-<p>使用<code>f[i - 1]</code>记录所有以<code>nums[i - 1]</code>元素结尾的连续子数组中的最大乘积</p>
-</li>
-<li>
-<p>使用<code>g[i - 1]</code>记录所有以<code>nums[i - 1]</code>元素结尾的连续子数组中的最小乘积</p>
-</li>
-<li>
-<p>求<code>f[i]</code></p>
-<ul>
-<li>当<code>nums[i]</code>为正数时，<code>f[i] = std::max(nums[i], f[i - 1] * nums[i])</code>，因为正数与最大值相乘，值最大，所以与<code>f[i - 1]</code>相乘</li>
-<li>当<code>nums[i]</code>为负数时，<code>f[i] = std::max(nums[i], g[i - 1] * nums[i])</code>，因为负数与最小值相乘，值最大，所以与<code>g[i - 1]</code>相乘</li>
+<li>任何数字与 <code>0</code> 进行按位与，结果都是 <code>0</code>，即 <code>x &amp; 0 = 0</code></li>
+<li>相邻数字的按位与会减少 <code>1</code> 位的 <code>1</code>，例如：</li>
 </ul>
 </li>
-<li>
-<p>求<code>g[i]</code></p>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7 = 0111
+</span></span><span class="line"><span class="cl">6 = 0110
+</span></span><span class="line"><span class="cl">5 = 0101
+</span></span><span class="line"><span class="cl">4 = 0100
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>计算 <code>5 &amp; 6 &amp; 7 = 4</code>，可以看到最右侧的 <code>1</code> 被清除了</p>
+<ol start="2">
+<li>观察区间变化
 <ul>
-<li>当<code>nums[i]</code>为正数时，<code>g[i] = std::min(nums[i], g[i - 1] * nums[i])</code>，因为正数与最小值相乘，值最小，所以与<code>g[i - 1]</code>相乘</li>
-<li>当<code>nums[i]</code>为负数时，<code>g[i] = std::min(nums[i], f[i - 1] * nums[i])</code>，因为负数与最大值相乘，值最小，所以与<code>f[i - 1]</code>相乘</li>
+<li>若 <code>left</code> 和 <code>right</code> 的二进制前缀相同，则它们的按位与结果保留这个前缀，后面的位全部补 <code>0</code></li>
+<li>若 <code>left</code> 和 <code>right</code> 的某一位出现了不同（即 <code>0-&gt;1</code> 或 <code>1-&gt;0</code>），则从该位及其更低位的按位与结果必然为 <code>0</code></li>
 </ul>
 </li>
-<li>
-<p>当<code>nums[i]</code>为0时，<code>f[i]</code>和<code>g[i]</code>都变为0，即连续子数组断开，从下一个元素重新开始找最大乘积</p>
-</li>
-</ul>
-<p>优化：因为每次更新f[i]和g[i]只需要前一个数，所以不需要开两个数组记录所有值</p>
-<p>时间复杂度：O(n)</p>
+</ol>
+<h3 id="时间复杂度">时间复杂度</h3>
+<p>由于整数的二进制表示最多 <code>32</code> 位，我们最多遍历 <code>32</code> 次，因此时间复杂度为 <code>O(1)</code></p>
+<h3 id="空间复杂度">空间复杂度</h3>
+<p>空间复杂度为 <code>O(1)</code></p>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -353,18 +349,18 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">maxProduct</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">rangeBitwiseAnd</span><span class="p">(</span><span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">f_last</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">g_last</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">f_cur</span> <span class="o">=</span> <span class="n">f_last</span> <span class="o">*</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">g_cur</span> <span class="o">=</span> <span class="n">g_last</span> <span class="o">*</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">        <span class="n">f_last</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">f_cur</span><span class="p">,</span> <span class="n">g_cur</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">g_last</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">min</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">std</span><span class="o">::</span><span class="n">min</span><span class="p">(</span><span class="n">f_cur</span><span class="p">,</span> <span class="n">g_cur</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">f_last</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 存储最终结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span> <span class="n">i</span><span class="p">)</span>  <span class="c1">// 从高位到低位遍历每一位
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">((</span><span class="n">left</span> <span class="o">&gt;&gt;</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="n">right</span> <span class="o">&gt;&gt;</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1">// 如果某一位的 left 和 right 不同，终止循环
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">&gt;&gt;</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1">// 如果 left 在该位是 1，则保留该位
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="n">res</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -383,7 +379,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
         
             <a href="/tags/leetcode/">Leetcode</a>
         
-            <a href="/tags/dp/">Dp</a>
+            <a href="/tags/bit-operation/">Bit Operation</a>
         
     </section>
 
@@ -417,44 +413,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
             
                 
 <article class="has-image">
-    <a href="/p/bitwise-and-of-numbers-range/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Bitwise and of Numbers Range</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/find-k-pairs-with-smallest-sums/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Find K Pairs with Smallest Sums</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/single-number-ii/">
         
         
@@ -474,7 +432,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
             
                 
 <article class="has-image">
-    <a href="/p/add-binary/">
+    <a href="/p/count-bits/">
         
         
             <div class="article-image">
@@ -485,7 +443,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
         
 
         <div class="article-details">
-            <h2 class="article-title">Add Binary</h2>
+            <h2 class="article-title">Count Bits</h2>
         </div>
     </a>
 </article>
@@ -493,7 +451,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
             
                 
 <article class="has-image">
-    <a href="/p/maximum-sum-circular-subarray/">
+    <a href="/p/minimum-flips-to-make-a-or-b-equal-to-c/">
         
         
             <div class="article-image">
@@ -504,7 +462,45 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
         
 
         <div class="article-details">
-            <h2 class="article-title">Maximum Sum Circular Subarray</h2>
+            <h2 class="article-title">Minimum Flips To Make A or B Equal to C</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/reversebits/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">reverseBits</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/find-k-pairs-with-smallest-sums/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Find K Pairs with Smallest Sums</h2>
         </div>
     </a>
 </article>
@@ -676,9 +672,11 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution { public
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#152-maxproducthttpsleetcodecnproblemsmaximum-product-subarraydescription"><a href="https://leetcode.cn/problems/maximum-product-subarray/description/">152. maxProduct</a></a>
+    <li><a href="#201-数字范围按位与httpsleetcodecnproblemsbitwise-and-of-numbers-range"><a href="https://leetcode.cn/problems/bitwise-and-of-numbers-range/">201. 数字范围按位与</a></a>
       <ol>
         <li><a href="#分析">分析</a></li>
+        <li><a href="#时间复杂度">时间复杂度</a></li>
+        <li><a href="#空间复杂度">空间复杂度</a></li>
         <li><a href="#c代码">C++代码</a></li>
       </ol>
     </li>
