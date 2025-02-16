@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='219. 存在重复元素II 分析 哈希表记录元素索引
-用一个哈希表来记录每个元素上一次出现的索引。 遍历数组并检查条件
-每次遍历到当前元素时，检查该元素是否已经存在于哈希表中： 如果存在，比较当前索引和之前索引的差值是否小于等于 k，满足则返回 true 如果不存在，或差值大于 k，则更新该元素的索引为当前索引 遍历结束仍未找到符合条件的元素，则返回 false
-时间复杂度 时间复杂度 O(n)
-空间复杂度 空间复杂度为 O(n)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: bool containsNearbyDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { std::unordered_map&amp;lt;int, int&amp;gt; hash; // 用于存储元素及其最后一次出现的索引 for (int i = 0; i &amp;lt; nums.size(); &#43;&#43; i) { // 如果当前元素之前出现过，且索引之差小于等于 k if (hash.'><title>Contains Duplicate</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='69. x的平方根 分析 初始化：设定左右边界 l = 0 和 r = x，表示搜索区间 二分查找： 通过 (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1 计算中间值 mid。这里使用了 1ll 来确保计算过程中不会发生整数溢出 判断 mid * mid &amp;lt;= x，如果成立，说明平方根的整数部分不大于 mid，我们将搜索区间的左边界 l 移动到 mid 如果 mid * mid &amp;gt; x，说明平方根在 mid 左边，更新右边界 r 为 mid - 1 终止条件：当 l == r 时，搜索结束，r 即为 x 的整数平方根 时间复杂度 总时间复杂度 O(logx)
+空间复杂度 空间复杂度为 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int mySqrt(int x) { int l = 0, r = x; // 设置搜索区间 [0, x] while (l &amp;lt; r) { int mid = (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1; // 计算中间值 mid，避免整数溢出 if (mid &amp;lt;= x / mid) // 如果 mid 的平方小于等于 x，则 mid 可能是答案 l = mid; // 如果 mid 满足条件，调整左边界为 mid else r = mid - 1; // 如果 mid 不满足条件，调整右边界为 mid-1 } return r; // 返回最终的结果，r 为整数平方根 } }; '><title>Sqrt X</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/contains-duplicate/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/sqrt-x/'>
 
-<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Contains Duplicate'>
-<meta property='og:description' content='219. 存在重复元素II 分析 哈希表记录元素索引
-用一个哈希表来记录每个元素上一次出现的索引。 遍历数组并检查条件
-每次遍历到当前元素时，检查该元素是否已经存在于哈希表中： 如果存在，比较当前索引和之前索引的差值是否小于等于 k，满足则返回 true 如果不存在，或差值大于 k，则更新该元素的索引为当前索引 遍历结束仍未找到符合条件的元素，则返回 false
-时间复杂度 时间复杂度 O(n)
-空间复杂度 空间复杂度为 O(n)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: bool containsNearbyDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { std::unordered_map&amp;lt;int, int&amp;gt; hash; // 用于存储元素及其最后一次出现的索引 for (int i = 0; i &amp;lt; nums.size(); &#43;&#43; i) { // 如果当前元素之前出现过，且索引之差小于等于 k if (hash.'>
-<meta property='og:url' content='https://hangzhang.xyz/p/contains-duplicate/'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Sqrt X'>
+<meta property='og:description' content='69. x的平方根 分析 初始化：设定左右边界 l = 0 和 r = x，表示搜索区间 二分查找： 通过 (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1 计算中间值 mid。这里使用了 1ll 来确保计算过程中不会发生整数溢出 判断 mid * mid &amp;lt;= x，如果成立，说明平方根的整数部分不大于 mid，我们将搜索区间的左边界 l 移动到 mid 如果 mid * mid &amp;gt; x，说明平方根在 mid 左边，更新右边界 r 为 mid - 1 终止条件：当 l == r 时，搜索结束，r 即为 x 的整数平方根 时间复杂度 总时间复杂度 O(logx)
+空间复杂度 空间复杂度为 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int mySqrt(int x) { int l = 0, r = x; // 设置搜索区间 [0, x] while (l &amp;lt; r) { int mid = (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1; // 计算中间值 mid，避免整数溢出 if (mid &amp;lt;= x / mid) // 如果 mid 的平方小于等于 x，则 mid 可能是答案 l = mid; // 如果 mid 满足条件，调整左边界为 mid else r = mid - 1; // 如果 mid 不满足条件，调整右边界为 mid-1 } return r; // 返回最终的结果，r 为整数平方根 } }; '>
+<meta property='og:url' content='https://hangzhang.xyz/p/sqrt-x/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='hash' /><meta property='article:published_time' content='2025-01-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
-<meta name="twitter:title" content="Contains Duplicate">
-<meta name="twitter:description" content="219. 存在重复元素II 分析 哈希表记录元素索引
-用一个哈希表来记录每个元素上一次出现的索引。 遍历数组并检查条件
-每次遍历到当前元素时，检查该元素是否已经存在于哈希表中： 如果存在，比较当前索引和之前索引的差值是否小于等于 k，满足则返回 true 如果不存在，或差值大于 k，则更新该元素的索引为当前索引 遍历结束仍未找到符合条件的元素，则返回 false
-时间复杂度 时间复杂度 O(n)
-空间复杂度 空间复杂度为 O(n)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: bool containsNearbyDuplicate(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) { std::unordered_map&amp;lt;int, int&amp;gt; hash; // 用于存储元素及其最后一次出现的索引 for (int i = 0; i &amp;lt; nums.size(); &#43;&#43; i) { // 如果当前元素之前出现过，且索引之差小于等于 k if (hash."><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Math' /><meta property='article:published_time' content='2025-02-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta name="twitter:title" content="Sqrt X">
+<meta name="twitter:description" content="69. x的平方根 分析 初始化：设定左右边界 l = 0 和 r = x，表示搜索区间 二分查找： 通过 (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1 计算中间值 mid。这里使用了 1ll 来确保计算过程中不会发生整数溢出 判断 mid * mid &amp;lt;= x，如果成立，说明平方根的整数部分不大于 mid，我们将搜索区间的左边界 l 移动到 mid 如果 mid * mid &amp;gt; x，说明平方根在 mid 左边，更新右边界 r 为 mid - 1 终止条件：当 l == r 时，搜索结束，r 即为 x 的整数平方根 时间复杂度 总时间复杂度 O(logx)
+空间复杂度 空间复杂度为 O(1)
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int mySqrt(int x) { int l = 0, r = x; // 设置搜索区间 [0, x] while (l &amp;lt; r) { int mid = (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1; // 计算中间值 mid，避免整数溢出 if (mid &amp;lt;= x / mid) // 如果 mid 的平方小于等于 x，则 mid 可能是答案 l = mid; // 如果 mid 满足条件，调整左边界为 mid else r = mid - 1; // 如果 mid 不满足条件，调整右边界为 mid-1 } return r; // 返回最终的结果，r 为整数平方根 } }; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -227,9 +218,9 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/contains-duplicate/">
+            <a href="/p/sqrt-x/">
                 
-                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Contains Duplicate" />
+                    <img src="/leetcode.png" loading="lazy" alt="Featured image of post Sqrt X" />
                 
             </a>
         </div>
@@ -248,7 +239,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/contains-duplicate/">Contains Duplicate</a>
+            <a href="/p/sqrt-x/">Sqrt X</a>
         </h2>
     
         
@@ -267,7 +258,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jan 16, 2025</time>
+                <time class="article-time--published">Feb 16, 2025</time>
             </div>
         
 
@@ -296,35 +287,24 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
     <section class="article-content">
     
     
-    <h2 id="219-存在重复元素iihttpsleetcodecnproblemscontains-duplicate-iidescription"><a class="link" href="https://leetcode.cn/problems/contains-duplicate-ii/description/"  target="_blank" rel="noopener"
-    >219. 存在重复元素II</a></h2>
+    <h2 id="69-x的平方根httpsleetcodecnproblemssqrtx"><a class="link" href="https://leetcode.cn/problems/sqrtx/"  target="_blank" rel="noopener"
+    >69. x的平方根</a></h2>
 <h3 id="分析">分析</h3>
 <ol>
-<li>
-<p>哈希表记录元素索引</p>
+<li>初始化：设定左右边界 <code>l = 0</code> 和 <code>r = x</code>，表示搜索区间</li>
+<li>二分查找：
 <ul>
-<li>用一个哈希表来记录每个元素上一次出现的索引。</li>
+<li>通过 <code>(l + 1ll + r) &gt;&gt; 1</code> 计算中间值 <code>mid</code>。这里使用了 <code>1ll</code> 来确保计算过程中不会发生整数溢出</li>
+<li>判断 <code>mid * mid &lt;= x</code>，如果成立，说明平方根的整数部分不大于 <code>mid</code>，我们将搜索区间的左边界 <code>l</code> 移动到 <code>mid</code></li>
+<li>如果 <code>mid * mid &gt; x</code>，说明平方根在 <code>mid</code> 左边，更新右边界 <code>r</code> 为 <code>mid - 1</code></li>
 </ul>
 </li>
-<li>
-<p>遍历数组并检查条件</p>
-<ul>
-<li>每次遍历到当前元素时，检查该元素是否已经存在于哈希表中：
-<ul>
-<li>如果存在，比较当前索引和之前索引的差值是否小于等于 <code>k</code>，满足则返回 <code>true</code></li>
-<li>如果不存在，或差值大于 <code>k</code>，则更新该元素的索引为当前索引</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>遍历结束仍未找到符合条件的元素，则返回 <code>false</code></p>
-</li>
+<li>终止条件：当 <code>l == r</code> 时，搜索结束，<code>r</code> 即为 <code>x</code> 的整数平方根</li>
 </ol>
 <h3 id="时间复杂度">时间复杂度</h3>
-<p>时间复杂度 <code>O(n)</code></p>
+<p>总时间复杂度 <code>O(logx)</code></p>
 <h3 id="空间复杂度">空间复杂度</h3>
-<p>空间复杂度为 <code>O(n)</code></p>
+<p>空间复杂度为 <code>O(1)</code></p>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -352,20 +332,20 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="nf">containsNearbyDuplicate</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">mySqrt</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">hash</span><span class="p">;</span>  <span class="c1">// 用于存储元素及其最后一次出现的索引
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>  <span class="c1">// 设置搜索区间 [0, x]
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="nf">size</span><span class="p">();</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">// 如果当前元素之前出现过，且索引之差小于等于 k
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="n">hash</span><span class="p">.</span><span class="nf">count</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">-</span> <span class="n">hash</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>  <span class="c1">// 满足条件，直接返回 true
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">            <span class="n">hash</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>  <span class="c1">// 更新当前元素的索引
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span> <span class="o">+</span> <span class="mi">1ll</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 计算中间值 mid，避免整数溢出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">mid</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">mid</span><span class="p">)</span>  <span class="c1">// 如果 mid 的平方小于等于 x，则 mid 可能是答案
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>  <span class="c1">// 如果 mid 满足条件，调整左边界为 mid
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">          <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 如果 mid 不满足条件，调整右边界为 mid-1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>  <span class="c1">// 遍历结束未找到符合条件的元素，返回 false
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">r</span><span class="p">;</span>  <span class="c1">// 返回最终的结果，r 为整数平方根
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
@@ -382,7 +362,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
         
             <a href="/tags/leetcode/">Leetcode</a>
         
-            <a href="/tags/hash/">Hash</a>
+            <a href="/tags/math/">Math</a>
         
     </section>
 
@@ -413,25 +393,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
     <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/sqrt-x/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Sqrt X</h2>
-        </div>
-    </a>
-</article>
-
             
                 
 <article class="has-image">
@@ -492,7 +453,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
             
                 
 <article class="has-image">
-    <a href="/p/bitwise-and-of-numbers-range/">
+    <a href="/p/add-binary/">
         
         
             <div class="article-image">
@@ -503,7 +464,26 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
         
 
         <div class="article-details">
-            <h2 class="article-title">Bitwise and of Numbers Range</h2>
+            <h2 class="article-title">Add Binary</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nth-tribonacci-number/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nth Tribonacci Number</h2>
         </div>
     </a>
 </article>
@@ -675,7 +655,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#219-存在重复元素iihttpsleetcodecnproblemscontains-duplicate-iidescription"><a href="https://leetcode.cn/problems/contains-duplicate-ii/description/">219. 存在重复元素II</a></a>
+    <li><a href="#69-x的平方根httpsleetcodecnproblemssqrtx"><a href="https://leetcode.cn/problems/sqrtx/">69. x的平方根</a></a>
       <ol>
         <li><a href="#分析">分析</a></li>
         <li><a href="#时间复杂度">时间复杂度</a></li>
