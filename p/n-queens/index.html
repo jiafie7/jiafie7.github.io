@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='N 皇后问题 n−皇后问题是指将 n 个皇后放在 n × n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上
-现在给定整数 n，请你输出所有的满足条件的棋子摆法
-分析 N 皇后问题要求在 N × N 的棋盘上放置 N 个皇后，使得：
-同一行 不能有多个皇后 同一列 不能有多个皇后 同一对角线（主对角线、反对角线） 不能有多个皇后 数组
-col[i] 记录第 i 列是否有皇后 dg[u - i &#43; n] 记录主对角线 (row - col 相同) 是否有皇后 udg[u &#43; i] 记录副对角线 (row &#43; col 相同) 是否有皇后 f[N][N] 存储棋盘布局，初始时全部填充 &#39;.&#39;，放置皇后时填 &#39;Q&#39; 深度优先搜索（DFS）&#43; 回溯
-u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋盘 否则，尝试在当前行 u 的每一列 i 放置皇后： 若 (i, u) 不冲突，则放置 &#39;Q&#39;，更新 col、dg、udg，递归 dfs(n, u &#43; 1) 回溯（撤销选择），恢复 &#39;.'><title>N-Queens</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='51. N皇后 分析 棋盘表示： 使用一个长度为 n 的字符串数组 path 表示棋盘，每个字符串表示棋盘的一行，&#39;.&#39; 表示空格，&#39;Q&amp;rsquo; 表示皇后 res 保存所有可能的棋盘方案 冲突检测： 使用三个布尔数组记录皇后占据的列和对角线： col[i] 表示第 i 列是否有皇后 dg[i] 表示正对角线是否有皇后（从左上到右下，索引为 u - i &#43; n） 正对角线元素使用索引u - i来表示，因为正对角线上的元素都满足坐标x - y == 0 棋盘上所有元素坐标之差范围是-(n - 1) ~ n - 1，加偏移量 n 将其映射为1 ~ 2n - 1 udg[i] 表示反对角线是否有皇后（从右上到左下，索引为 u &#43; i） 反对角线元素使用u &#43; i来表示，因为反对角线上的元素都满足坐标x &#43; y == n 棋盘上所有元素坐标之和范围为0 ~ 2(n - 1)，因此不需要加偏移量 回溯放置皇后： 从第 u 行开始，尝试在每一列放置皇后 如果当前列、正对角线、反对角线均未被占用，则将皇后放置在对应位置，并标记这些区域为占用 递归尝试放置下一行的皇后 回溯时，将皇后移除，并恢复状态 结果保存： 当递归到最后一行 u == n 时，说明当前方案有效，将棋盘方案保存到结果中 时间复杂度 每一行最多有 n 个选择，搜索深度为 n，回溯过程的总时间复杂度约为 O(n!'><title>N Queens</title>
 
 <link rel='canonical' href='https://hangzhang.xyz/p/n-queens/'>
 
-<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='N-Queens'>
-<meta property='og:description' content='N 皇后问题 n−皇后问题是指将 n 个皇后放在 n × n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上
-现在给定整数 n，请你输出所有的满足条件的棋子摆法
-分析 N 皇后问题要求在 N × N 的棋盘上放置 N 个皇后，使得：
-同一行 不能有多个皇后 同一列 不能有多个皇后 同一对角线（主对角线、反对角线） 不能有多个皇后 数组
-col[i] 记录第 i 列是否有皇后 dg[u - i &#43; n] 记录主对角线 (row - col 相同) 是否有皇后 udg[u &#43; i] 记录副对角线 (row &#43; col 相同) 是否有皇后 f[N][N] 存储棋盘布局，初始时全部填充 &#39;.&#39;，放置皇后时填 &#39;Q&#39; 深度优先搜索（DFS）&#43; 回溯
-u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋盘 否则，尝试在当前行 u 的每一列 i 放置皇后： 若 (i, u) 不冲突，则放置 &#39;Q&#39;，更新 col、dg、udg，递归 dfs(n, u &#43; 1) 回溯（撤销选择），恢复 &#39;.'>
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='N Queens'>
+<meta property='og:description' content='51. N皇后 分析 棋盘表示： 使用一个长度为 n 的字符串数组 path 表示棋盘，每个字符串表示棋盘的一行，&#39;.&#39; 表示空格，&#39;Q&amp;rsquo; 表示皇后 res 保存所有可能的棋盘方案 冲突检测： 使用三个布尔数组记录皇后占据的列和对角线： col[i] 表示第 i 列是否有皇后 dg[i] 表示正对角线是否有皇后（从左上到右下，索引为 u - i &#43; n） 正对角线元素使用索引u - i来表示，因为正对角线上的元素都满足坐标x - y == 0 棋盘上所有元素坐标之差范围是-(n - 1) ~ n - 1，加偏移量 n 将其映射为1 ~ 2n - 1 udg[i] 表示反对角线是否有皇后（从右上到左下，索引为 u &#43; i） 反对角线元素使用u &#43; i来表示，因为反对角线上的元素都满足坐标x &#43; y == n 棋盘上所有元素坐标之和范围为0 ~ 2(n - 1)，因此不需要加偏移量 回溯放置皇后： 从第 u 行开始，尝试在每一列放置皇后 如果当前列、正对角线、反对角线均未被占用，则将皇后放置在对应位置，并标记这些区域为占用 递归尝试放置下一行的皇后 回溯时，将皇后移除，并恢复状态 结果保存： 当递归到最后一行 u == n 时，说明当前方案有效，将棋盘方案保存到结果中 时间复杂度 每一行最多有 n 个选择，搜索深度为 n，回溯过程的总时间复杂度约为 O(n!'>
 <meta property='og:url' content='https://hangzhang.xyz/p/n-queens/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Backtracking' /><meta property='article:published_time' content='2024-12-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/codetest.jpg' />
-<meta name="twitter:title" content="N-Queens">
-<meta name="twitter:description" content="N 皇后问题 n−皇后问题是指将 n 个皇后放在 n × n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上
-现在给定整数 n，请你输出所有的满足条件的棋子摆法
-分析 N 皇后问题要求在 N × N 的棋盘上放置 N 个皇后，使得：
-同一行 不能有多个皇后 同一列 不能有多个皇后 同一对角线（主对角线、反对角线） 不能有多个皇后 数组
-col[i] 记录第 i 列是否有皇后 dg[u - i &#43; n] 记录主对角线 (row - col 相同) 是否有皇后 udg[u &#43; i] 记录副对角线 (row &#43; col 相同) 是否有皇后 f[N][N] 存储棋盘布局，初始时全部填充 &#39;.&#39;，放置皇后时填 &#39;Q&#39; 深度优先搜索（DFS）&#43; 回溯
-u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋盘 否则，尝试在当前行 u 的每一列 i 放置皇后： 若 (i, u) 不冲突，则放置 &#39;Q&#39;，更新 col、dg、udg，递归 dfs(n, u &#43; 1) 回溯（撤销选择），恢复 &#39;."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/codetest.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='DFS' /><meta property='article:published_time' content='2025-03-31T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-31T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta name="twitter:title" content="N Queens">
+<meta name="twitter:description" content="51. N皇后 分析 棋盘表示： 使用一个长度为 n 的字符串数组 path 表示棋盘，每个字符串表示棋盘的一行，&#39;.&#39; 表示空格，&#39;Q&amp;rsquo; 表示皇后 res 保存所有可能的棋盘方案 冲突检测： 使用三个布尔数组记录皇后占据的列和对角线： col[i] 表示第 i 列是否有皇后 dg[i] 表示正对角线是否有皇后（从左上到右下，索引为 u - i &#43; n） 正对角线元素使用索引u - i来表示，因为正对角线上的元素都满足坐标x - y == 0 棋盘上所有元素坐标之差范围是-(n - 1) ~ n - 1，加偏移量 n 将其映射为1 ~ 2n - 1 udg[i] 表示反对角线是否有皇后（从右上到左下，索引为 u &#43; i） 反对角线元素使用u &#43; i来表示，因为反对角线上的元素都满足坐标x &#43; y == n 棋盘上所有元素坐标之和范围为0 ~ 2(n - 1)，因此不需要加偏移量 回溯放置皇后： 从第 u 行开始，尝试在每一列放置皇后 如果当前列、正对角线、反对角线均未被占用，则将皇后放置在对应位置，并标记这些区域为占用 递归尝试放置下一行的皇后 回溯时，将皇后移除，并恢复状态 结果保存： 当递归到最后一行 u == n 时，说明当前方案有效，将棋盘方案保存到结果中 时间复杂度 每一行最多有 n 个选择，搜索深度为 n，回溯过程的总时间复杂度约为 O(n!"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -229,7 +214,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
         <div class="article-image">
             <a href="/p/n-queens/">
                 
-                    <img src="/codetest.jpg" loading="lazy" alt="Featured image of post N Queens" />
+                    <img src="/codetest.jpg" loading="lazy" alt="Featured image of post N-Queens" />
                 
             </a>
         </div>
@@ -296,56 +281,46 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
     <section class="article-content">
     
     
-    <h2 id="51-n皇后httpsleetcodecnproblemsn-queensdescription"><a class="link" href="https://leetcode.cn/problems/n-queens/description/"  target="_blank" rel="noopener"
-    >51. N皇后</a></h2>
+    <h2 id="n-皇后问题">N 皇后问题</h2>
+<p>n−皇后问题是指将 <code>n</code> 个皇后放在 <code>n × n</code> 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上</p>
+<p>现在给定整数 <code>n</code>，请你输出所有的满足条件的棋子摆法</p>
 <h3 id="分析">分析</h3>
+<p>N 皇后问题要求在 <strong>N × N</strong> 的棋盘上放置 <strong>N</strong> 个皇后，使得：</p>
+<ul>
+<li><strong>同一行</strong> 不能有多个皇后</li>
+<li><strong>同一列</strong> 不能有多个皇后</li>
+<li><strong>同一对角线（主对角线、反对角线）</strong> 不能有多个皇后</li>
+</ul>
 <ol>
-<li>棋盘表示：
+<li>
+<p>数组</p>
 <ul>
-<li>使用一个长度为 <code>n</code> 的字符串数组 <code>path</code> 表示棋盘，每个字符串表示棋盘的一行，<code>'.'</code> 表示空格，<code>'Q</code>&rsquo; 表示皇后</li>
-<li><code>res</code> 保存所有可能的棋盘方案</li>
+<li><code>col[i]</code> 记录第 <code>i</code> 列是否有皇后</li>
+<li><code>dg[u - i + n]</code> 记录主对角线 (<code>row - col</code> 相同) 是否有皇后</li>
+<li><code>udg[u + i]</code> 记录副对角线 (<code>row + col</code> 相同) 是否有皇后</li>
+<li><code>f[N][N]</code> 存储棋盘布局，初始时全部填充 <code>'.'</code>，放置皇后时填 <code>'Q'</code></li>
 </ul>
 </li>
-<li>冲突检测：
+<li>
+<p>深度优先搜索（DFS）+ 回溯</p>
 <ul>
-<li>使用三个布尔数组记录皇后占据的列和对角线：
+<li><code>u == n</code>：说明 <code>n</code> 行都已放置皇后，找到一个合法方案，输出棋盘</li>
+<li>否则，尝试在当前行 <code>u</code> 的每一列 <code>i</code> 放置皇后：
 <ul>
-<li><code>col[i]</code> 表示第 <code>i</code> 列是否有皇后</li>
-<li><code>dg[i]</code> 表示正对角线是否有皇后（从左上到右下，索引为 <code>u - i + n</code>）
-<ul>
-<li>正对角线元素使用索引<code>u - i</code>来表示，因为正对角线上的元素都满足坐标<code>x - y == 0</code></li>
-<li>棋盘上所有元素坐标之差范围是<code>-(n - 1) ~ n - 1</code>，加偏移量 <code>n</code> 将其映射为<code>1 ~ 2n - 1</code></li>
+<li>若 <code>(i, u)</code> 不冲突，则放置 <code>'Q'</code>，更新 <code>col</code>、<code>dg</code>、<code>udg</code>，递归 <code>dfs(n, u + 1)</code></li>
+<li>回溯（撤销选择），恢复 <code>'.'</code>，取消 <code>col</code>、<code>dg</code>、<code>udg</code> 标记</li>
 </ul>
 </li>
-<li><code>udg[i]</code> 表示反对角线是否有皇后（从右上到左下，索引为 <code>u + i</code>）
-<ul>
-<li>反对角线元素使用<code>u + i</code>来表示，因为反对角线上的元素都满足坐标<code>x + y == n</code></li>
-<li>棋盘上所有元素坐标之和范围为<code>0 ~ 2(n - 1)</code>，因此不需要加偏移量</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>回溯放置皇后：
-<ul>
-<li>从第 <code>u</code> 行开始，尝试在每一列放置皇后</li>
-<li>如果当前列、正对角线、反对角线均未被占用，则将皇后放置在对应位置，并标记这些区域为占用</li>
-<li>递归尝试放置下一行的皇后</li>
-<li>回溯时，将皇后移除，并恢复状态</li>
-</ul>
-</li>
-<li>结果保存：
-<ul>
-<li>当递归到最后一行 <code>u == n</code> 时，说明当前方案有效，将棋盘方案保存到结果中</li>
 </ul>
 </li>
 </ol>
 <h3 id="时间复杂度">时间复杂度</h3>
-<p>每一行最多有 <code>n</code> 个选择，搜索深度为 <code>n</code>，回溯过程的总时间复杂度约为 <code>O(n!)</code></p>
+<p>最坏情况下，回溯需要遍历所有排列，时间复杂度为 <code>O(N!)</code></p>
 <h3 id="空间复杂度">空间复杂度</h3>
-<p>需要存储棋盘状态 <code>path</code> 和标记数组（<code>col</code>、<code>dg</code>、<code>udg</code>），每个的大小为 <code>O(n)</code></p>
-<p>总空间复杂度为 <code>O(n²)</code>，主要用于存储结果</p>
+<ul>
+<li><code>O(N²)</code> 存储棋盘 f</li>
+<li>递归深度最多 <code>O(N)</code>，因此递归栈空间复杂度为 <code>O(N)</code></li>
+</ul>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -390,63 +365,49 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
 </span><span class="lnt">39
 </span><span class="lnt">40
 </span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&gt;</span> <span class="n">res</span><span class="p">;</span> <span class="c1">// 存储所有有效的棋盘方案
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">path</span><span class="p">;</span> <span class="c1">// 当前棋盘状态
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">col</span><span class="p">,</span> <span class="n">dg</span><span class="p">,</span> <span class="n">udg</span><span class="p">;</span> <span class="c1">// 列、正对角线、反对角线的占用状态
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">col</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">dg</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">udg</span><span class="p">[</span><span class="n">N</span><span class="p">];</span> <span class="c1">// 标记列、主对角线、副对角线
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">char</span> <span class="n">f</span><span class="p">[</span><span class="n">N</span><span class="p">][</span><span class="n">N</span><span class="p">];</span> <span class="c1">// 存储棋盘
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;</span> <span class="nf">solveNQueens</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">// 初始化棋盘和标记数组
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">path</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="nf">string</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="sc">&#39;.&#39;</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">      <span class="n">col</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="n">dg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="n">udg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">u</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="c1">// 终止条件：成功放置 N 个皇后
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">puts</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="c1">// 输出棋盘
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">);</span> <span class="c1">// 额外空行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="c1">// 开始回溯
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nf">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span> <span class="c1">// 尝试在当前行 u 的每一列 i 放置皇后
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">dg</span><span class="p">[</span><span class="n">u</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">udg</span><span class="p">[</span><span class="n">u</span> <span class="o">+</span> <span class="n">i</span><span class="p">])</span> <span class="c1">// 剪枝，检查列 &amp; 对角线是否可用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dg</span><span class="p">[</span><span class="n">u</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">udg</span><span class="p">[</span><span class="n">u</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// 标记皇后占用位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">f</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;Q&#39;</span><span class="p">;</span> <span class="c1">// 放置皇后
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nf">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">u</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// 递归放置下一行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">f</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;.&#39;</span><span class="p">;</span> <span class="c1">// 回溯：恢复空棋盘
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dg</span><span class="p">[</span><span class="n">u</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">udg</span><span class="p">[</span><span class="n">u</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// 取消标记
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">u</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">// 如果所有行都放置完成，保存当前棋盘方案
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">.</span><span class="nf">push_back</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span> <span class="c1">// 读取 N
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 初始化棋盘
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span> <span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;.&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="c1">// 遍历当前行的每一列，尝试放置皇后
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">dg</span><span class="p">[</span><span class="n">u</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">udg</span><span class="p">[</span><span class="n">u</span> <span class="o">+</span> <span class="n">i</span><span class="p">])</span> <span class="c1">// 检查是否冲突
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="c1">// 放置皇后并标记状态
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dg</span><span class="p">[</span><span class="n">u</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">udg</span><span class="p">[</span><span class="n">u</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">          <span class="n">path</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;Q&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">          <span class="c1">// 递归放置下一行
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nf">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">u</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">          <span class="c1">// 回溯：移除皇后并恢复状态
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="n">path</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;.&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">          <span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dg</span><span class="p">[</span><span class="n">u</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">udg</span><span class="p">[</span><span class="n">u</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 递归搜索
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -459,9 +420,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
         
             <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
-            <a href="/tags/leetcode/">Leetcode</a>
-        
-            <a href="/tags/backtracking/">Backtracking</a>
+            <a href="/tags/dfs/">DFS</a>
         
     </section>
 
@@ -495,18 +454,18 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
             
                 
 <article class="has-image">
-    <a href="/p/combination-sum-iii/">
+    <a href="/p/arrange-numbers/">
         
         
             <div class="article-image">
                 
-                    <img src="/leetcode.png" loading="lazy" data-key="" data-hash="/leetcode.png"/>
+                    <img src="/codetest.jpg" loading="lazy" data-key="" data-hash="/codetest.jpg"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">Combination Sum III</h2>
+            <h2 class="article-title">Arrange Numbers</h2>
         </div>
     </a>
 </article>
@@ -514,7 +473,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
             
                 
 <article class="has-image">
-    <a href="/p/combination-sum/">
+    <a href="/p/combinations/">
         
         
             <div class="article-image">
@@ -525,7 +484,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
         
 
         <div class="article-details">
-            <h2 class="article-title">Combination Sum</h2>
+            <h2 class="article-title">Combinations</h2>
         </div>
     </a>
 </article>
@@ -533,7 +492,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
             
                 
 <article class="has-image">
-    <a href="/p/palindrome-partitioning/">
+    <a href="/p/design-add-and-search-words-data-structure/">
         
         
             <div class="article-image">
@@ -544,7 +503,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
         
 
         <div class="article-details">
-            <h2 class="article-title">Palindrome Partitioning</h2>
+            <h2 class="article-title">Design Add and Search Words Data Structure</h2>
         </div>
     </a>
 </article>
@@ -552,7 +511,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
             
                 
 <article class="has-image">
-    <a href="/p/word-search/">
+    <a href="/p/minimum-absolute-difference-in-bst/">
         
         
             <div class="article-image">
@@ -563,7 +522,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
         
 
         <div class="article-details">
-            <h2 class="article-title">Word Search</h2>
+            <h2 class="article-title">Minimum Absolute Difference In BST</h2>
         </div>
     </a>
 </article>
@@ -571,7 +530,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
             
                 
 <article class="has-image">
-    <a href="/p/permutations/">
+    <a href="/p/surrounded-regions/">
         
         
             <div class="article-image">
@@ -582,7 +541,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
         
 
         <div class="article-details">
-            <h2 class="article-title">Permutations</h2>
+            <h2 class="article-title">Surrounded Regions</h2>
         </div>
     </a>
 </article>
@@ -754,7 +713,7 @@ u == n：说明 n 行都已放置皇后，找到一个合法方案，输出棋�
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#51-n皇后httpsleetcodecnproblemsn-queensdescription"><a href="https://leetcode.cn/problems/n-queens/description/">51. N皇后</a></a>
+    <li><a href="#n-皇后问题">N 皇后问题</a>
       <ol>
         <li><a href="#分析">分析</a></li>
         <li><a href="#时间复杂度">时间复杂度</a></li>
