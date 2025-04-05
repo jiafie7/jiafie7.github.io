@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='有向图的拓扑排序 给定一个 n 个点 m 条边的有向图，点的编号是 1 到 n，图中可能存在重边和自环
-请输出任意一个该有向图的拓扑序列，如果拓扑序列不存在，则输出 −1
-若一个由图中所有点构成的序列 A 满足：对于图中的每条边 (x, y)，x 在 A 中都出现在 y 之前，则称 A 是该图的一个拓扑序列
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Dijkstra 求最短路II 给定一个 n 个点 m 条边的有向图，图中可能存在重边和自环，所有边权均为正值
+请你求出 1 号点到 n 号点的最短距离，如果无法从 1 号点走到 n 号点，则输出 −1
 输入格式
-第一行包含两个整数 n 和 m 接下来 m 行，每行包含两个整数 x 和 y，表示存在一条从点 x 到点 y 的有向边 (x, y) 输出格式
-共一行，如果存在拓扑序列，则输出任意一个合法的拓扑序列即可 否则输出 −1 数据范围
-1 1 ≤ n, m ≤ 105 输入样例
-1 2 3 4 3 3 1 2 2 3 1 3 输出样例
-1 1 2 3 分析 邻接表的构建： h[N]：存储每个节点的邻接表头 e[N]：存储邻接节点的目标节点 ne[N]：存储邻接表中链表的下一个节点 idx：记录当前边的编号 add(a, b)：将一条从节点 a 到节点 b 的边加入邻接表 topsort()： 使用队列 q 来存储入度为零的节点，初始化时将所有入度为零的节点加入队列 在 BFS 遍历过程中，若某个节点的入度减为零，则将其加入队列 最终，如果排序成功且队列中处理的节点数为 n，则说明拓扑排序存在，否则返回 false 时间复杂度 队列中的每个节点会被入队和出队一次，最多访问 n 个节点和 m 条边'><title>Top Sort</title>
+第一行包含整数 n 和 m 接下来 m 行每行包含三个整数 x, y, z，表示存在一条从点 x 到点 y 的有向边，边长为 z 输出格式
+输出一个整数，表示 1 号点到 n 号点的最短距离 如果路径不存在，则输出 −1 数据范围
+1 ≤ n, m ≤ 150000 图中涉及边长均不超过 10000 输入样例
+1 2 3 4 3 3 1 2 2 2 3 1 1 3 4 输出样例
+1 3 分析 n的范围变为 1 ~ 150000，属于稀疏图（点多边少），采用 邻接表 &#43; 堆优化'><title>Dijkstra Finding the Shortest Path II</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/top-sort/'>
+<link rel='canonical' href='https://hangzhang.xyz/p/dijkstra-finding-the-shortest-path-ii/'>
 
-<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Top Sort'>
-<meta property='og:description' content='有向图的拓扑排序 给定一个 n 个点 m 条边的有向图，点的编号是 1 到 n，图中可能存在重边和自环
-请输出任意一个该有向图的拓扑序列，如果拓扑序列不存在，则输出 −1
-若一个由图中所有点构成的序列 A 满足：对于图中的每条边 (x, y)，x 在 A 中都出现在 y 之前，则称 A 是该图的一个拓扑序列
+<link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Dijkstra Finding the Shortest Path II'>
+<meta property='og:description' content='Dijkstra 求最短路II 给定一个 n 个点 m 条边的有向图，图中可能存在重边和自环，所有边权均为正值
+请你求出 1 号点到 n 号点的最短距离，如果无法从 1 号点走到 n 号点，则输出 −1
 输入格式
-第一行包含两个整数 n 和 m 接下来 m 行，每行包含两个整数 x 和 y，表示存在一条从点 x 到点 y 的有向边 (x, y) 输出格式
-共一行，如果存在拓扑序列，则输出任意一个合法的拓扑序列即可 否则输出 −1 数据范围
-1 1 ≤ n, m ≤ 105 输入样例
-1 2 3 4 3 3 1 2 2 3 1 3 输出样例
-1 1 2 3 分析 邻接表的构建： h[N]：存储每个节点的邻接表头 e[N]：存储邻接节点的目标节点 ne[N]：存储邻接表中链表的下一个节点 idx：记录当前边的编号 add(a, b)：将一条从节点 a 到节点 b 的边加入邻接表 topsort()： 使用队列 q 来存储入度为零的节点，初始化时将所有入度为零的节点加入队列 在 BFS 遍历过程中，若某个节点的入度减为零，则将其加入队列 最终，如果排序成功且队列中处理的节点数为 n，则说明拓扑排序存在，否则返回 false 时间复杂度 队列中的每个节点会被入队和出队一次，最多访问 n 个节点和 m 条边'>
-<meta property='og:url' content='https://hangzhang.xyz/p/top-sort/'>
+第一行包含整数 n 和 m 接下来 m 行每行包含三个整数 x, y, z，表示存在一条从点 x 到点 y 的有向边，边长为 z 输出格式
+输出一个整数，表示 1 号点到 n 号点的最短距离 如果路径不存在，则输出 −1 数据范围
+1 ≤ n, m ≤ 150000 图中涉及边长均不超过 10000 输入样例
+1 2 3 4 3 3 1 2 2 2 3 1 1 3 4 输出样例
+1 3 分析 n的范围变为 1 ~ 150000，属于稀疏图（点多边少），采用 邻接表 &#43; 堆优化'>
+<meta property='og:url' content='https://hangzhang.xyz/p/dijkstra-finding-the-shortest-path-ii/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Kahn' /><meta property='article:published_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-04-02T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/codetest.jpg' />
-<meta name="twitter:title" content="Top Sort">
-<meta name="twitter:description" content="有向图的拓扑排序 给定一个 n 个点 m 条边的有向图，点的编号是 1 到 n，图中可能存在重边和自环
-请输出任意一个该有向图的拓扑序列，如果拓扑序列不存在，则输出 −1
-若一个由图中所有点构成的序列 A 满足：对于图中的每条边 (x, y)，x 在 A 中都出现在 y 之前，则称 A 是该图的一个拓扑序列
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Dijkstra' /><meta property='article:published_time' content='2025-04-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-04-05T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/codetest.jpg' />
+<meta name="twitter:title" content="Dijkstra Finding the Shortest Path II">
+<meta name="twitter:description" content="Dijkstra 求最短路II 给定一个 n 个点 m 条边的有向图，图中可能存在重边和自环，所有边权均为正值
+请你求出 1 号点到 n 号点的最短距离，如果无法从 1 号点走到 n 号点，则输出 −1
 输入格式
-第一行包含两个整数 n 和 m 接下来 m 行，每行包含两个整数 x 和 y，表示存在一条从点 x 到点 y 的有向边 (x, y) 输出格式
-共一行，如果存在拓扑序列，则输出任意一个合法的拓扑序列即可 否则输出 −1 数据范围
-1 1 ≤ n, m ≤ 105 输入样例
-1 2 3 4 3 3 1 2 2 3 1 3 输出样例
-1 1 2 3 分析 邻接表的构建： h[N]：存储每个节点的邻接表头 e[N]：存储邻接节点的目标节点 ne[N]：存储邻接表中链表的下一个节点 idx：记录当前边的编号 add(a, b)：将一条从节点 a 到节点 b 的边加入邻接表 topsort()： 使用队列 q 来存储入度为零的节点，初始化时将所有入度为零的节点加入队列 在 BFS 遍历过程中，若某个节点的入度减为零，则将其加入队列 最终，如果排序成功且队列中处理的节点数为 n，则说明拓扑排序存在，否则返回 false 时间复杂度 队列中的每个节点会被入队和出队一次，最多访问 n 个节点和 m 条边"><meta name="twitter:card" content="summary_large_image">
+第一行包含整数 n 和 m 接下来 m 行每行包含三个整数 x, y, z，表示存在一条从点 x 到点 y 的有向边，边长为 z 输出格式
+输出一个整数，表示 1 号点到 n 号点的最短距离 如果路径不存在，则输出 −1 数据范围
+1 ≤ n, m ≤ 150000 图中涉及边长均不超过 10000 输入样例
+1 2 3 4 3 3 1 2 2 2 3 1 1 3 4 输出样例
+1 3 分析 n的范围变为 1 ~ 150000，属于稀疏图（点多边少），采用 邻接表 &#43; 堆优化"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/codetest.jpg' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -236,9 +233,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/top-sort/">
+            <a href="/p/dijkstra-finding-the-shortest-path-ii/">
                 
-                    <img src="/codetest.jpg" loading="lazy" alt="Featured image of post Top Sort" />
+                    <img src="/codetest.jpg" loading="lazy" alt="Featured image of post Dijkstra Finding the Shortest Path II" />
                 
             </a>
         </div>
@@ -257,7 +254,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/top-sort/">Top Sort</a>
+            <a href="/p/dijkstra-finding-the-shortest-path-ii/">Dijkstra Finding the Shortest Path II</a>
         </h2>
     
         
@@ -276,7 +273,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 02, 2025</time>
+                <time class="article-time--published">Apr 05, 2025</time>
             </div>
         
 
@@ -305,30 +302,25 @@
     <section class="article-content">
     
     
-    <h2 id="有向图的拓扑排序">有向图的拓扑排序</h2>
-<p>给定一个 <code>n</code> 个点 <code>m</code> 条边的有向图，点的编号是 <code>1</code> 到 <code>n</code>，图中可能存在重边和自环</p>
-<p>请输出任意一个该有向图的拓扑序列，如果拓扑序列不存在，则输出 <code>−1</code></p>
-<p>若一个由图中所有点构成的序列 <code>A</code> 满足：对于图中的每条边 <code>(x, y)</code>，<code>x</code> 在 <code>A</code> 中都出现在 <code>y</code> 之前，则称 <code>A</code> 是该图的一个拓扑序列</p>
+    <h2 id="dijkstra-求最短路ii">Dijkstra 求最短路II</h2>
+<p>给定一个 <code>n</code> 个点 <code>m</code> 条边的有向图，图中可能存在重边和自环，所有边权均为正值</p>
+<p>请你求出 <code>1</code> 号点到 <code>n</code> 号点的最短距离，如果无法从 <code>1</code> 号点走到 <code>n</code> 号点，则输出 <code>−1</code></p>
 <p><strong>输入格式</strong></p>
 <ul>
-<li>第一行包含两个整数 <code>n</code> 和 <code>m</code></li>
-<li>接下来 <code>m</code> 行，每行包含两个整数 <code>x</code> 和 <code>y</code>，表示存在一条从点 <code>x</code> 到点 <code>y</code> 的有向边 <code>(x, y)</code></li>
+<li>第一行包含整数 <code>n</code> 和 <code>m</code></li>
+<li>接下来 <code>m</code> 行每行包含三个整数 <code>x</code>, <code>y</code>, <code>z</code>，表示存在一条从点 <code>x</code> 到点 <code>y</code> 的有向边，边长为 <code>z</code></li>
 </ul>
 <p><strong>输出格式</strong></p>
 <ul>
-<li>共一行，如果存在拓扑序列，则输出任意一个合法的拓扑序列即可</li>
-<li>否则输出 <code>−1</code></li>
+<li>输出一个整数，表示 <code>1</code> 号点到 <code>n</code> 号点的最短距离</li>
+<li>如果路径不存在，则输出 <code>−1</code></li>
 </ul>
 <p><strong>数据范围</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 ≤ n, m ≤ 105
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>输入样例</strong></p>
+<ul>
+<li><code>1 ≤ n, m ≤ 150000</code></li>
+<li>图中涉及边长均不超过 <code>10000</code></li>
+</ul>
+<p><strong>输入样例</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -338,9 +330,9 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3 3
-</span></span><span class="line"><span class="cl">1 2
-</span></span><span class="line"><span class="cl">2 3
-</span></span><span class="line"><span class="cl">1 3
+</span></span><span class="line"><span class="cl">1 2 2
+</span></span><span class="line"><span class="cl">2 3 1
+</span></span><span class="line"><span class="cl">1 3 4
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>输出样例</strong></p>
@@ -349,36 +341,38 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 2 3
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="分析">分析</h3>
+<p>n的范围变为 <code>1 ~ 150000</code>，属于稀疏图（点多边少），采用 <strong>邻接表 + 堆优化</strong></p>
 <ol>
-<li>邻接表的构建：
+<li>图初始化
 <ul>
-<li><code>h[N]</code>：存储每个节点的邻接表头</li>
-<li><code>e[N]</code>：存储邻接节点的目标节点</li>
-<li><code>ne[N]</code>：存储邻接表中链表的下一个节点</li>
-<li><code>idx</code>：记录当前边的编号</li>
+<li>使用邻接表建图，每次调用 <code>add(a, b, c)</code> 记录一条边</li>
 </ul>
 </li>
-<li><code>add(a, b)</code>：将一条从节点 <code>a</code> 到节点 <code>b</code> 的边加入邻接表</li>
-<li><code>topsort()</code>：
+<li>Dijkstra 主体逻辑
 <ul>
-<li>使用队列 <code>q</code> 来存储入度为零的节点，初始化时将所有入度为零的节点加入队列</li>
-<li>在 <code>BFS</code> 遍历过程中，若某个节点的入度减为零，则将其加入队列</li>
-<li>最终，如果排序成功且队列中处理的节点数为 <code>n</code>，则说明拓扑排序存在，否则返回 <code>false</code></li>
+<li>起点 <code>1</code> 入堆，距离设为 <code>0</code></li>
+<li>每次从堆中取出距离最小的点 <code>ver</code>，如果该点已确定最短路则跳过</li>
+<li>遍历 <code>ver</code> 的所有出边 <code>ver → j</code>：
+<ul>
+<li>若 <code>dist[j] &gt; dist[ver] + w</code>，说明找到了更短路径，更新并入堆</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>输出答案
+<ul>
+<li>若 <code>dist[n] == INF</code>，说明无法到达 <code>n</code>，输出 <code>-1</code></li>
+<li>否则输出 <code>dist[n]</code></li>
 </ul>
 </li>
 </ol>
 <h3 id="时间复杂度">时间复杂度</h3>
-<p>队列中的每个节点会被入队和出队一次，最多访问 <code>n</code> 个节点和 <code>m</code> 条边</p>
-<p>时间复杂度 <code>O(n + m)</code></p>
+<p>时间复杂度 <code>O(mlogn)</code></p>
 <h3 id="空间复杂度">空间复杂度</h3>
-<ul>
-<li>存储邻接表需要 <code>O(n + m)</code> 的空间</li>
-<li>存储入度数组和队列需要 <code>O(n)</code> 的空间</li>
-</ul>
 <p>空间复杂度为 <code>O(n + m)</code></p>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
@@ -450,73 +444,83 @@
 </span><span class="lnt">65
 </span><span class="lnt">66
 </span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;queue&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;utility&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100010</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">h</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">e</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">ne</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">idx</span><span class="p">;</span>  <span class="c1">// 邻接表
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">q</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>  <span class="c1">// 队列和入度数组
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>  <span class="c1">// 节点数和边数
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">PII</span><span class="p">;</span>  <span class="c1">// &lt;最短距离, 点编号&gt;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// 添加一条边到邻接表
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">1000010</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">INF</span> <span class="o">=</span> <span class="mh">0x3f3f3f3f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">h</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">e</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">w</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">ne</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">idx</span><span class="p">;</span> <span class="c1">// 邻接表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">dist</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>      <span class="c1">// 存储最短距离
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">st</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>       <span class="c1">// 标记是否已经确定最短距离
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 添加一条边 a -&gt; b，权值为 c
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">e</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">w</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="n">ne</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span><span class="p">[</span><span class="n">a</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">  <span class="n">h</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">idx</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 拓扑排序算法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">topsort</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">hh</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tt</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 堆优化 Dijkstra 主函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">dijkstra</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="nf">memset</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">INF</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">dist</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 将所有入度为 0 的节点加入队列
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="n">q</span><span class="p">[</span><span class="o">++</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 进行拓扑排序
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">while</span> <span class="p">(</span><span class="n">hh</span> <span class="o">&lt;=</span> <span class="n">tt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">PII</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">greater</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;&gt;</span> <span class="n">heap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">heap</span><span class="p">.</span><span class="nf">push</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">});</span> <span class="c1">// 起点入堆
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="n">heap</span><span class="p">.</span><span class="nf">size</span><span class="p">())</span>
 </span></span><span class="line"><span class="cl">  <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="n">q</span><span class="p">[</span><span class="n">hh</span><span class="o">++</span><span class="p">];</span>  <span class="c1">// 出队一个节点
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">h</span><span class="p">[</span><span class="n">t</span><span class="p">];</span> <span class="n">i</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">ne</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="c1">// 遍历该节点的所有邻接节点
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>  <span class="c1">// 邻接节点 j
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="o">--</span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1">// 如果该节点的入度减为 0，则加入队列
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">q</span><span class="p">[</span><span class="o">++</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PII</span> <span class="n">t</span> <span class="o">=</span> <span class="n">heap</span><span class="p">.</span><span class="nf">top</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">heap</span><span class="p">.</span><span class="nf">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">ver</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="n">ver</span><span class="p">])</span> <span class="k">continue</span><span class="p">;</span>  <span class="c1">// 如果已经处理过，跳过
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">st</span><span class="p">[</span><span class="n">ver</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 遍历 ver 的所有出边
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">h</span><span class="p">[</span><span class="n">ver</span><span class="p">];</span> <span class="n">i</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">ne</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">ver</span><span class="p">]</span> <span class="o">+</span> <span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dist</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="n">ver</span><span class="p">]</span> <span class="o">+</span> <span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">heap</span><span class="p">.</span><span class="nf">push</span><span class="p">({</span><span class="n">dist</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">j</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 如果队列中的节点数等于总节点数，说明拓扑排序成功
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="n">tt</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">dist</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">==</span> <span class="n">INF</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="n">dist</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="nf">memset</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">h</span><span class="p">));</span>  <span class="c1">// 初始化邻接表
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="nf">memset</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">h</span><span class="p">));</span> <span class="c1">// 初始化邻接表
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>  <span class="c1">// 输入节点数和边数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">;</span>  <span class="c1">// 输入每条边
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>  <span class="c1">// 将边加入邻接表
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">++</span><span class="n">d</span><span class="p">[</span><span class="n">y</span><span class="p">];</span>  <span class="c1">// 更新节点 y 的入度
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span> <span class="o">&gt;&gt;</span> <span class="n">z</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>  <span class="c1">// 构建图
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nf">topsort</span><span class="p">())</span>  <span class="c1">// 如果拓扑排序成功
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>  <span class="c1">// 输出拓扑排序
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">else</span>
-</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>  <span class="c1">// 如果无法进行拓扑排序，输出 -1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="nf">dijkstra</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -531,7 +535,7 @@
         
             <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
-            <a href="/tags/kahn/">Kahn</a>
+            <a href="/tags/dijkstra/">Dijkstra</a>
         
     </section>
 
@@ -562,25 +566,6 @@
     <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/dijkstra-finding-the-shortest-path-ii/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/codetest.jpg" loading="lazy" data-key="" data-hash="/codetest.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Dijkstra Finding the Shortest Path II</h2>
-        </div>
-    </a>
-</article>
-
             
                 
 <article class="has-image">
@@ -653,6 +638,25 @@
 
         <div class="article-details">
             <h2 class="article-title">Restore IP Address</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/level-of-point-in-graph/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/codetest.jpg" loading="lazy" data-key="" data-hash="/codetest.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Level of Point in Graph</h2>
         </div>
     </a>
 </article>
@@ -824,7 +828,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#有向图的拓扑排序">有向图的拓扑排序</a>
+    <li><a href="#dijkstra-求最短路ii">Dijkstra 求最短路II</a>
       <ol>
         <li><a href="#分析">分析</a></li>
         <li><a href="#时间复杂度">时间复杂度</a></li>
