@@ -6,10 +6,18 @@
         <description>Recent content in Tags on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Backtracking</title>
+        <link>https://hangzhang.xyz/tags/backtracking/</link>
+        <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangzhang.xyz/tags/backtracking/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>C&#43;&#43;</title>
         <link>https://hangzhang.xyz/tags/c&#43;&#43;/</link>
-        <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
         
         <guid>https://hangzhang.xyz/tags/c&#43;&#43;/</guid>
         <description></description>
@@ -17,7 +25,7 @@
         <item>
         <title>Leetcode</title>
         <link>https://hangzhang.xyz/tags/leetcode/</link>
-        <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
         
         <guid>https://hangzhang.xyz/tags/leetcode/</guid>
         <description></description>
@@ -52,14 +60,6 @@
         <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
         
         <guid>https://hangzhang.xyz/tags/linked-list/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Backtracking</title>
-        <link>https://hangzhang.xyz/tags/backtracking/</link>
-        <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://hangzhang.xyz/tags/backtracking/</guid>
         <description></description>
         </item>
         <item>
