@@ -5,6 +5,9 @@
     <loc>https://hangzhang.xyz/p/longest-continuous-increasing-subsequence/</loc>
     <lastmod>2025-04-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hangzhang.xyz/p/monotone-increasing-digits/</loc>
+    <lastmod>2025-04-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hangzhang.xyz/p/partition-to-k-equal-sum-subsets/</loc>
     <lastmod>2025-04-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -794,6 +797,9 @@
     <loc>https://hangzhang.xyz/tags/double-pointer/</loc>
     <lastmod>2025-04-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hangzhang.xyz/tags/greedy/</loc>
+    <lastmod>2025-04-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hangzhang.xyz/tags/leetcode/</loc>
     <lastmod>2025-04-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -841,9 +847,6 @@
   </url><url>
     <loc>https://hangzhang.xyz/tags/hash/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hangzhang.xyz/tags/greedy/</loc>
-    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hangzhang.xyz/tags/priority-queue/</loc>
     <lastmod>2025-02-25T00:00:00+00:00</lastmod>
