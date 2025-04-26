@@ -7,6 +7,14 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sat, 26 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Backtracking</title>
+        <link>https://hangzhang.xyz/tags/backtracking/</link>
+        <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hangzhang.xyz/tags/backtracking/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>C&#43;&#43;</title>
         <link>https://hangzhang.xyz/tags/c&#43;&#43;/</link>
         <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
@@ -36,14 +44,6 @@
         <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
         
         <guid>https://hangzhang.xyz/tags/leetcode/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Backtracking</title>
-        <link>https://hangzhang.xyz/tags/backtracking/</link>
-        <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://hangzhang.xyz/tags/backtracking/</guid>
         <description></description>
         </item>
         <item>
