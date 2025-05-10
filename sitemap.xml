@@ -5,6 +5,9 @@
     <loc>https://hangzhang.xyz/p/implement-queue-using-stacks/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hangzhang.xyz/p/implement-stack-using-queues/</loc>
+    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hangzhang.xyz/p/longest-continuous-increasing-subsequence/</loc>
     <lastmod>2025-04-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -812,6 +815,9 @@
     <loc>https://hangzhang.xyz/post/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hangzhang.xyz/tags/queue/</loc>
+    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hangzhang.xyz/tags/stack/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -913,9 +919,6 @@
   </url><url>
     <loc>https://hangzhang.xyz/tags/bst/</loc>
     <lastmod>2025-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hangzhang.xyz/tags/queue/</loc>
-    <lastmod>2024-12-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hangzhang.xyz/tags/count/</loc>
     <lastmod>2024-12-14T00:00:00+00:00</lastmod>
