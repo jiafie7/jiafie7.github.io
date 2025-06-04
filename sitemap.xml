@@ -827,9 +827,6 @@
     <loc>https://hangzhang.xyz/</loc>
     <lastmod>2025-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hangzhang.xyz/tags/c&#43;&#43;/</loc>
-    <lastmod>2025-06-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hangzhang.xyz/categories/</loc>
     <lastmod>2025-06-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -847,6 +844,9 @@
   </url><url>
     <loc>https://hangzhang.xyz/tags/</loc>
     <lastmod>2025-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hangzhang.xyz/tags/c&#43;&#43;/</loc>
+    <lastmod>2025-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hangzhang.xyz/tags/double-pointer/</loc>
     <lastmod>2025-05-25T00:00:00+00:00</lastmod>

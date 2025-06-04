@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='55. 跳跃游戏 分析 维护最远可达位置： 使用变量 i 表示当前最远可达的位置 初始位置为 0 逐步检查跳跃能力： 遍历数组，当前下标为 j，检查是否可以到达： 如果 i &amp;lt; j，说明无法继续前进，返回 false 更新最远可达位置： i = max(i, j &#43; nums[j] 终止条件： 遍历结束后，若能始终更新 i 使其覆盖整个数组，返回 true 时间复杂度 遍历数组一次，时间复杂度为 O(n)
-空间复杂度 空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: bool canJump(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 当前最远可达位置 for (int j = 0; j &amp;lt; nums.'><title>Jump Game</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='55. 跳跃游戏 算法 维护最远可达位置： 使用变量 i 表示当前最远可达的位置 初始位置为 0 逐步检查跳跃能力： 遍历数组，当前下标为 j，检查是否可以到达： 如果 i &amp;lt; j，说明无法继续前进，返回 false 更新最远可达位置： i = max(i, j &#43; nums[j] 终止条件： 遍历结束后，若能始终更新 i 使其覆盖整个数组，返回 true 复杂度分析 遍历数组一次，时间复杂度为 O(n) 空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: bool canJump(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 当前最远可达位置 for (int j = 0; j &amp;lt; nums.'><title>Jump Game</title>
 
 <link rel='canonical' href='https://hangzhang.xyz/p/jump-game/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Jump Game'>
-<meta property='og:description' content='55. 跳跃游戏 分析 维护最远可达位置： 使用变量 i 表示当前最远可达的位置 初始位置为 0 逐步检查跳跃能力： 遍历数组，当前下标为 j，检查是否可以到达： 如果 i &amp;lt; j，说明无法继续前进，返回 false 更新最远可达位置： i = max(i, j &#43; nums[j] 终止条件： 遍历结束后，若能始终更新 i 使其覆盖整个数组，返回 true 时间复杂度 遍历数组一次，时间复杂度为 O(n)
-空间复杂度 空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: bool canJump(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 当前最远可达位置 for (int j = 0; j &amp;lt; nums.'>
+<meta property='og:description' content='55. 跳跃游戏 算法 维护最远可达位置： 使用变量 i 表示当前最远可达的位置 初始位置为 0 逐步检查跳跃能力： 遍历数组，当前下标为 j，检查是否可以到达： 如果 i &amp;lt; j，说明无法继续前进，返回 false 更新最远可达位置： i = max(i, j &#43; nums[j] 终止条件： 遍历结束后，若能始终更新 i 使其覆盖整个数组，返回 true 复杂度分析 遍历数组一次，时间复杂度为 O(n) 空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: bool canJump(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 当前最远可达位置 for (int j = 0; j &amp;lt; nums.'>
 <meta property='og:url' content='https://hangzhang.xyz/p/jump-game/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-12-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-15T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2024-12-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-15T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Jump Game">
-<meta name="twitter:description" content="55. 跳跃游戏 分析 维护最远可达位置： 使用变量 i 表示当前最远可达的位置 初始位置为 0 逐步检查跳跃能力： 遍历数组，当前下标为 j，检查是否可以到达： 如果 i &amp;lt; j，说明无法继续前进，返回 false 更新最远可达位置： i = max(i, j &#43; nums[j] 终止条件： 遍历结束后，若能始终更新 i 使其覆盖整个数组，返回 true 时间复杂度 遍历数组一次，时间复杂度为 O(n)
-空间复杂度 空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: bool canJump(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 当前最远可达位置 for (int j = 0; j &amp;lt; nums."><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="55. 跳跃游戏 算法 维护最远可达位置： 使用变量 i 表示当前最远可达的位置 初始位置为 0 逐步检查跳跃能力： 遍历数组，当前下标为 j，检查是否可以到达： 如果 i &amp;lt; j，说明无法继续前进，返回 false 更新最远可达位置： i = max(i, j &#43; nums[j] 终止条件： 遍历结束后，若能始终更新 i 使其覆盖整个数组，返回 true 复杂度分析 遍历数组一次，时间复杂度为 O(n) 空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: bool canJump(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 当前最远可达位置 for (int j = 0; j &amp;lt; nums."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -289,7 +283,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: b
     
     <h2 id="55-跳跃游戏httpsleetcodecnproblemsjump-gamedescription"><a class="link" href="https://leetcode.cn/problems/jump-game/description/"  target="_blank" rel="noopener"
     >55. 跳跃游戏</a></h2>
-<h3 id="分析">分析</h3>
+<h3 id="算法">算法</h3>
 <ol>
 <li>维护最远可达位置：
 <ul>
@@ -317,11 +311,12 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: b
 </ul>
 </li>
 </ol>
-<h3 id="时间复杂度">时间复杂度</h3>
-<p>遍历数组一次，时间复杂度为 <code>O(n)</code></p>
-<h3 id="空间复杂度">空间复杂度</h3>
-<p>空间复杂度为 <code>O(1)</code></p>
-<h3 id="c代码">C++代码</h3>
+<h3 id="复杂度分析">复杂度分析</h3>
+<ul>
+<li>遍历数组一次，时间复杂度为 <code>O(n)</code></li>
+<li>空间复杂度为 <code>O(1)</code></li>
+</ul>
+<h3 id="c-代码">C++ 代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -341,21 +336,71 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: b
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="nf">canJump</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">canJump</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 当前最远可达位置
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="nf">size</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">)</span>  <span class="c1">// 如果无法覆盖当前位置
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="nf">max</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span> <span class="c1">// 更新最远可达位置
+</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span> <span class="c1">// 更新最远可达位置
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// 如果能够遍历完成，返回 true
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="python-代码">Python 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">canJump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="kc">True</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="go-代码">Go 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">canJump</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">);</span> <span class="nx">j</span> <span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">j</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">i</span> <span class="p">=</span> <span class="nb">max</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="o">+</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -365,8 +410,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: b
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
         
@@ -663,10 +706,11 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: b
   <ol>
     <li><a href="#55-跳跃游戏httpsleetcodecnproblemsjump-gamedescription"><a href="https://leetcode.cn/problems/jump-game/description/">55. 跳跃游戏</a></a>
       <ol>
-        <li><a href="#分析">分析</a></li>
-        <li><a href="#时间复杂度">时间复杂度</a></li>
-        <li><a href="#空间复杂度">空间复杂度</a></li>
-        <li><a href="#c代码">C++代码</a></li>
+        <li><a href="#算法">算法</a></li>
+        <li><a href="#复杂度分析">复杂度分析</a></li>
+        <li><a href="#c-代码">C++ 代码</a></li>
+        <li><a href="#python-代码">Python 代码</a></li>
+        <li><a href="#go-代码">Go 代码</a></li>
       </ol>
     </li>
   </ol>

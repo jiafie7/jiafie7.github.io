@@ -9,7 +9,7 @@
 <meta property='og:description' content='3566. 等积子集的划分方案 算法 用两个变量 mul1 和 mul2 分别表示当前两个子集的乘积 从索引 0 开始枚举每个元素，将其放入 mul1 或 mul2 剪枝：如果任何一边的乘积已经超过 target，当前方案结束 若遍历到末尾，判断是否两个乘积都等于 target 复杂度分析 时间复杂度：O(2^n)，每个数都有两种放法，共 2^n 种可能 空间复杂度：O(n)，递归栈深度最多为 n C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: // DFS 枚举当前第 i 个数放到哪个子集（乘积为 mul1 或 mul2） bool dfs(std::vector&amp;lt;int&amp;gt;&amp;amp; nums, int i, long long mul1, long long mul2, long long target) { if (mul1 &amp;gt; target || mul2 &amp;gt; target) { return false; // 剪枝：乘积已经超过目标 } if (i == nums.'>
 <meta property='og:url' content='https://hangzhang.xyz/p/partition-array-into-two-equal-product-subsets/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='DFS' /><meta property='article:published_time' content='2025-06-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-06-03T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='DFS' /><meta property='article:published_time' content='2025-06-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-06-03T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Partition Array Into Two Equal Product Subsets">
 <meta name="twitter:description" content="3566. 等积子集的划分方案 算法 用两个变量 mul1 和 mul2 分别表示当前两个子集的乘积 从索引 0 开始枚举每个元素，将其放入 mul1 或 mul2 剪枝：如果任何一边的乘积已经超过 target，当前方案结束 若遍历到末尾，判断是否两个乘积都等于 target 复杂度分析 时间复杂度：O(2^n)，每个数都有两种放法，共 2^n 种可能 空间复杂度：O(n)，递归栈深度最多为 n C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: // DFS 枚举当前第 i 个数放到哪个子集（乘积为 mul1 或 mul2） bool dfs(std::vector&amp;lt;int&amp;gt;&amp;amp; nums, int i, long long mul1, long long mul2, long long target) { if (mul1 &amp;gt; target || mul2 &amp;gt; target) { return false; // 剪枝：乘积已经超过目标 } if (i == nums."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
@@ -409,8 +409,6 @@
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
         
