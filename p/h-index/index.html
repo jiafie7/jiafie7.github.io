@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='274. H指数 分析 将引用次数降序排序。排序后，论文的引用次数是递减的，若第 i 篇论文（索引为 i - 1）的引用次数大于等于 i，则前面 i - 1 篇论文的引用次数也大于等于 i，，那么就有至少 i 篇论文的引用次数大于等于 i，即满足 H 指数条件
-降序排序： 将引用次数从大到小排序，便于直接比较引用次数与当前索引 i 遍历判断： 从 i = n ~ 1（n 为论文总数），逐步判断 如果第 i 篇论文的引用次数 citations[i - 1] &amp;gt;= i，则满足 H 指数定义 返回当前 i 即为最大 H 指数 未找到满足条件的 H 指数： 如果遍历结束都没有找到，返回 0 时间复杂度 排序需要 O(nlogn) 时间 遍历一次数组 O(n) 总体复杂度：O(nlogn)
-空间复杂度 空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: int hIndex(vector&amp;lt;int&amp;gt;&amp;amp; citations) { // 1.'><title>H Index</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='274. H指数 算法 将引用次数降序排序。排序后，论文的引用次数是递减的，若第 i 篇论文（索引为 i - 1）的引用次数大于等于 i，则前面 i - 1 篇论文的引用次数也大于等于 i，，那么就有至少 i 篇论文的引用次数大于等于 i，即满足 H 指数条件
+降序排序： 将引用次数从大到小排序，便于直接比较引用次数与当前索引 i 遍历判断： 从 i = n ~ 1（n 为论文总数），逐步判断 如果第 i 篇论文的引用次数 citations[i - 1] &amp;gt;= i，则满足 H 指数定义 返回当前 i 即为最大 H 指数 未找到满足条件的 H 指数： 如果遍历结束都没有找到，返回 0 复杂度分析 排序需要 O(nlogn) 时间，遍历一次数组 O(n)，总体时间复杂度为 O(nlogn) 空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: int hIndex(vector&amp;lt;int&amp;gt;&amp;amp; citations) { // 1.'><title>H Index</title>
 
 <link rel='canonical' href='https://hangzhang.xyz/p/h-index/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='H Index'>
-<meta property='og:description' content='274. H指数 分析 将引用次数降序排序。排序后，论文的引用次数是递减的，若第 i 篇论文（索引为 i - 1）的引用次数大于等于 i，则前面 i - 1 篇论文的引用次数也大于等于 i，，那么就有至少 i 篇论文的引用次数大于等于 i，即满足 H 指数条件
-降序排序： 将引用次数从大到小排序，便于直接比较引用次数与当前索引 i 遍历判断： 从 i = n ~ 1（n 为论文总数），逐步判断 如果第 i 篇论文的引用次数 citations[i - 1] &amp;gt;= i，则满足 H 指数定义 返回当前 i 即为最大 H 指数 未找到满足条件的 H 指数： 如果遍历结束都没有找到，返回 0 时间复杂度 排序需要 O(nlogn) 时间 遍历一次数组 O(n) 总体复杂度：O(nlogn)
-空间复杂度 空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: int hIndex(vector&amp;lt;int&amp;gt;&amp;amp; citations) { // 1.'>
+<meta property='og:description' content='274. H指数 算法 将引用次数降序排序。排序后，论文的引用次数是递减的，若第 i 篇论文（索引为 i - 1）的引用次数大于等于 i，则前面 i - 1 篇论文的引用次数也大于等于 i，，那么就有至少 i 篇论文的引用次数大于等于 i，即满足 H 指数条件
+降序排序： 将引用次数从大到小排序，便于直接比较引用次数与当前索引 i 遍历判断： 从 i = n ~ 1（n 为论文总数），逐步判断 如果第 i 篇论文的引用次数 citations[i - 1] &amp;gt;= i，则满足 H 指数定义 返回当前 i 即为最大 H 指数 未找到满足条件的 H 指数： 如果遍历结束都没有找到，返回 0 复杂度分析 排序需要 O(nlogn) 时间，遍历一次数组 O(n)，总体时间复杂度为 O(nlogn) 空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: int hIndex(vector&amp;lt;int&amp;gt;&amp;amp; citations) { // 1.'>
 <meta property='og:url' content='https://hangzhang.xyz/p/h-index/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Sort' /><meta property='article:published_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Sort' /><meta property='article:published_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="H Index">
-<meta name="twitter:description" content="274. H指数 分析 将引用次数降序排序。排序后，论文的引用次数是递减的，若第 i 篇论文（索引为 i - 1）的引用次数大于等于 i，则前面 i - 1 篇论文的引用次数也大于等于 i，，那么就有至少 i 篇论文的引用次数大于等于 i，即满足 H 指数条件
-降序排序： 将引用次数从大到小排序，便于直接比较引用次数与当前索引 i 遍历判断： 从 i = n ~ 1（n 为论文总数），逐步判断 如果第 i 篇论文的引用次数 citations[i - 1] &amp;gt;= i，则满足 H 指数定义 返回当前 i 即为最大 H 指数 未找到满足条件的 H 指数： 如果遍历结束都没有找到，返回 0 时间复杂度 排序需要 O(nlogn) 时间 遍历一次数组 O(n) 总体复杂度：O(nlogn)
-空间复杂度 空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: int hIndex(vector&amp;lt;int&amp;gt;&amp;amp; citations) { // 1."><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="274. H指数 算法 将引用次数降序排序。排序后，论文的引用次数是递减的，若第 i 篇论文（索引为 i - 1）的引用次数大于等于 i，则前面 i - 1 篇论文的引用次数也大于等于 i，，那么就有至少 i 篇论文的引用次数大于等于 i，即满足 H 指数条件
+降序排序： 将引用次数从大到小排序，便于直接比较引用次数与当前索引 i 遍历判断： 从 i = n ~ 1（n 为论文总数），逐步判断 如果第 i 篇论文的引用次数 citations[i - 1] &amp;gt;= i，则满足 H 指数定义 返回当前 i 即为最大 H 指数 未找到满足条件的 H 指数： 如果遍历结束都没有找到，返回 0 复杂度分析 排序需要 O(nlogn) 时间，遍历一次数组 O(n)，总体时间复杂度为 O(nlogn) 空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { public: int hIndex(vector&amp;lt;int&amp;gt;&amp;amp; citations) { // 1."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -276,7 +270,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -292,7 +286,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
     
     <h2 id="274-h指数httpsleetcodecnproblemsh-indexdescription"><a class="link" href="https://leetcode.cn/problems/h-index/description/"  target="_blank" rel="noopener"
     >274. H指数</a></h2>
-<h3 id="分析">分析</h3>
+<h3 id="算法">算法</h3>
 <p>将引用次数降序排序。排序后，论文的引用次数是递减的，若第 <code>i</code> 篇论文（索引为 <code>i - 1</code>）的引用次数大于等于 <code>i</code>，则前面 <code>i - 1</code> 篇论文的引用次数也大于等于 <code>i</code>，，那么就有至少 <code>i</code> 篇论文的引用次数大于等于 <code>i</code>，即满足 <code>H</code> 指数条件</p>
 <ol>
 <li>降序排序：
@@ -313,15 +307,12 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 </ul>
 </li>
 </ol>
-<h3 id="时间复杂度">时间复杂度</h3>
+<h3 id="复杂度分析">复杂度分析</h3>
 <ul>
-<li>排序需要 <code>O(nlogn)</code> 时间</li>
-<li>遍历一次数组 <code>O(n)</code></li>
+<li>排序需要 <code>O(nlogn)</code> 时间，遍历一次数组 <code>O(n)</code>，总体时间复杂度为 <code>O(nlogn)</code></li>
+<li>空间复杂度为 <code>O(1)</code></li>
 </ul>
-<p>总体复杂度：<code>O(nlogn)</code></p>
-<h3 id="空间复杂度">空间复杂度</h3>
-<p>空间复杂度为 <code>O(1)</code></p>
-<h3 id="c代码">C++代码</h3>
+<h3 id="c-代码">C++ 代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -362,6 +353,58 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="python-代码">Python 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">hIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">citations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">citations</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">citations</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">citations</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">i</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="k">return</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="mi">0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="go-代码">Go 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">hIndex</span><span class="p">(</span><span class="nx">citations</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sort</span><span class="p">.</span><span class="nf">Slice</span><span class="p">(</span><span class="nx">citations</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">citations</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="nx">citations</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">citations</span><span class="p">);</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">--</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">citations</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="nx">i</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">i</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
 </div>
 </section>
 
@@ -369,8 +412,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
         
@@ -669,10 +710,11 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Solution { pub
   <ol>
     <li><a href="#274-h指数httpsleetcodecnproblemsh-indexdescription"><a href="https://leetcode.cn/problems/h-index/description/">274. H指数</a></a>
       <ol>
-        <li><a href="#分析">分析</a></li>
-        <li><a href="#时间复杂度">时间复杂度</a></li>
-        <li><a href="#空间复杂度">空间复杂度</a></li>
-        <li><a href="#c代码">C++代码</a></li>
+        <li><a href="#算法">算法</a></li>
+        <li><a href="#复杂度分析">复杂度分析</a></li>
+        <li><a href="#c-代码">C++ 代码</a></li>
+        <li><a href="#python-代码">Python 代码</a></li>
+        <li><a href="#go-代码">Go 代码</a></li>
       </ol>
     </li>
   </ol>
