@@ -2,25 +2,19 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='88. 合并两个有序数组 分析 核心思路：从后往前双指针合并
-由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 时间复杂度 时间复杂度：O(m &#43; n)
-空间复杂度 空间复杂度：O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; '><title>Merge Sorted Array</title>
+由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 复杂度分析 时间复杂度：O(m &#43; n) 空间复杂度：O(1) C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; Python 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify nums1 in-place instead.'><title>Merge Sorted Array</title>
 
 <link rel='canonical' href='https://hangzhang.xyz/p/merge-sorted-array/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Merge Sorted Array'>
 <meta property='og:description' content='88. 合并两个有序数组 分析 核心思路：从后往前双指针合并
-由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 时间复杂度 时间复杂度：O(m &#43; n)
-空间复杂度 空间复杂度：O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; '>
+由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 复杂度分析 时间复杂度：O(m &#43; n) 空间复杂度：O(1) C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; Python 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify nums1 in-place instead.'>
 <meta property='og:url' content='https://hangzhang.xyz/p/merge-sorted-array/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="Merge Sorted Array">
 <meta name="twitter:description" content="88. 合并两个有序数组 分析 核心思路：从后往前双指针合并
-由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 时间复杂度 时间复杂度：O(m &#43; n)
-空间复杂度 空间复杂度：O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; "><meta name="twitter:card" content="summary_large_image">
+由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 复杂度分析 时间复杂度：O(m &#43; n) 空间复杂度：O(1) C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; Python 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify nums1 in-place instead."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -276,7 +270,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class So
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -317,10 +311,11 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class So
 </ul>
 </li>
 </ol>
-<h3 id="时间复杂度">时间复杂度</h3>
-<p>时间复杂度：<code>O(m + n)</code></p>
-<h3 id="空间复杂度">空间复杂度</h3>
-<p>空间复杂度：<code>O(1)</code></p>
+<h3 id="复杂度分析">复杂度分析</h3>
+<ul>
+<li>时间复杂度：<code>O(m + n)</code></li>
+<li>空间复杂度：<code>O(1)</code></li>
+</ul>
 <h3 id="c代码">C++代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -370,6 +365,155 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class So
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="python-代码">Python 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Do not return anything, modify nums1 in-place instead.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">nums1</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">          <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">nums1</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">          <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="n">nums1</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">          <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">          <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="go-代码">Go 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">merge</span><span class="p">(</span><span class="nx">nums1</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">m</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">nums2</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span> <span class="kt">int</span><span class="p">)</span>  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">k</span> <span class="o">:=</span> <span class="nx">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">m</span> <span class="o">-</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">nums1</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">j</span> <span class="o">--</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">nums1</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">=</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">i</span> <span class="o">--</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">k</span> <span class="o">--</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">nums1</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">j</span> <span class="o">--</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">k</span> <span class="o">--</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="javascript-代码">JavaScript 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {number[]} nums1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {number} m
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {number[]} nums2
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {number} n
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @return {void} Do not return anything, modify nums1 in-place instead.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">merge</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">nums1</span><span class="p">,</span> <span class="nx">m</span><span class="p">,</span> <span class="nx">nums2</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">j</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">k</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">+</span> <span class="nx">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">nums1</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">nums1</span><span class="p">[</span><span class="nx">k</span><span class="o">--</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">j</span><span class="o">--</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">nums1</span><span class="p">[</span><span class="nx">k</span><span class="o">--</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">i</span><span class="o">--</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">nums1</span><span class="p">[</span><span class="nx">k</span><span class="o">--</span><span class="p">]</span> <span class="o">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">j</span><span class="o">--</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
 </div>
 </section>
 
@@ -377,8 +521,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class So
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
         
@@ -678,9 +820,11 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class So
     <li><a href="#88-合并两个有序数组httpsleetcodecnproblemsmerge-sorted-arraydescription"><a href="https://leetcode.cn/problems/merge-sorted-array/description/">88. 合并两个有序数组</a></a>
       <ol>
         <li><a href="#分析">分析</a></li>
-        <li><a href="#时间复杂度">时间复杂度</a></li>
-        <li><a href="#空间复杂度">空间复杂度</a></li>
+        <li><a href="#复杂度分析">复杂度分析</a></li>
         <li><a href="#c代码">C++代码</a></li>
+        <li><a href="#python-代码">Python 代码</a></li>
+        <li><a href="#go-代码">Go 代码</a></li>
+        <li><a href="#javascript-代码">JavaScript 代码</a></li>
       </ol>
     </li>
   </ol>
