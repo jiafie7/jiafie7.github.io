@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='283. 移动零 分析 i 用于记录非零元素的位置 遍历数组时，将非零元素按顺序填入数组前部，并记录当前插入的位置 遍历完成后，数组前部已填满非零元素，后续位置全部填充 0 时间复杂度 遍历数组一次，时间复杂度为 O(n) 填充零的操作也是 O(n) ，但两者不重叠，总体为O(n) 空间复杂度 使用了两个指针变量，空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Solution { public: void moveZeroes(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 指针 i，用于记录下一个非零元素的位置 // 1. 遍历数组，将所有非零元素依次放到前部 for (int num : nums) { if (num != 0) { nums[i&#43;&#43;] = num; // 将非零元素放入 i 位置，并移动 i } } // 2.'><title>moveZeroes</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='283. 移动零 算法 i 用于记录非零元素的位置 遍历数组时，将非零元素按顺序填入数组前部，并记录当前插入的位置 遍历完成后，数组前部已填满非零元素，后续位置全部填充 0 复杂度分析 时间复杂度 遍历数组一次，时间复杂度为 O(n) 填充零的操作也是 O(n) ，但两者不重叠，总体为O(n) 空间复杂度 使用了两个指针变量，空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Solution { public: void moveZeroes(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 指针 i，用于记录下一个非零元素的位置 // 1. 遍历数组，将所有非零元素依次放到前部 for (int num : nums) { if (num != 0) { nums[i&#43;&#43;] = num; // 将非零元素放入 i 位置，并移动 i } } // 2.'><title>moveZeroes</title>
 
 <link rel='canonical' href='https://hangzhang.xyz/p/movezeroes/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='moveZeroes'>
-<meta property='og:description' content='283. 移动零 分析 i 用于记录非零元素的位置 遍历数组时，将非零元素按顺序填入数组前部，并记录当前插入的位置 遍历完成后，数组前部已填满非零元素，后续位置全部填充 0 时间复杂度 遍历数组一次，时间复杂度为 O(n) 填充零的操作也是 O(n) ，但两者不重叠，总体为O(n) 空间复杂度 使用了两个指针变量，空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Solution { public: void moveZeroes(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 指针 i，用于记录下一个非零元素的位置 // 1. 遍历数组，将所有非零元素依次放到前部 for (int num : nums) { if (num != 0) { nums[i&#43;&#43;] = num; // 将非零元素放入 i 位置，并移动 i } } // 2.'>
+<meta property='og:description' content='283. 移动零 算法 i 用于记录非零元素的位置 遍历数组时，将非零元素按顺序填入数组前部，并记录当前插入的位置 遍历完成后，数组前部已填满非零元素，后续位置全部填充 0 复杂度分析 时间复杂度 遍历数组一次，时间复杂度为 O(n) 填充零的操作也是 O(n) ，但两者不重叠，总体为O(n) 空间复杂度 使用了两个指针变量，空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Solution { public: void moveZeroes(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 指针 i，用于记录下一个非零元素的位置 // 1. 遍历数组，将所有非零元素依次放到前部 for (int num : nums) { if (num != 0) { nums[i&#43;&#43;] = num; // 将非零元素放入 i 位置，并移动 i } } // 2.'>
 <meta property='og:url' content='https://hangzhang.xyz/p/movezeroes/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="moveZeroes">
-<meta name="twitter:description" content="283. 移动零 分析 i 用于记录非零元素的位置 遍历数组时，将非零元素按顺序填入数组前部，并记录当前插入的位置 遍历完成后，数组前部已填满非零元素，后续位置全部填充 0 时间复杂度 遍历数组一次，时间复杂度为 O(n) 填充零的操作也是 O(n) ，但两者不重叠，总体为O(n) 空间复杂度 使用了两个指针变量，空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Solution { public: void moveZeroes(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 指针 i，用于记录下一个非零元素的位置 // 1. 遍历数组，将所有非零元素依次放到前部 for (int num : nums) { if (num != 0) { nums[i&#43;&#43;] = num; // 将非零元素放入 i 位置，并移动 i } } // 2."><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="283. 移动零 算法 i 用于记录非零元素的位置 遍历数组时，将非零元素按顺序填入数组前部，并记录当前插入的位置 遍历完成后，数组前部已填满非零元素，后续位置全部填充 0 复杂度分析 时间复杂度 遍历数组一次，时间复杂度为 O(n) 填充零的操作也是 O(n) ，但两者不重叠，总体为O(n) 空间复杂度 使用了两个指针变量，空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 class Solution { public: void moveZeroes(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int i = 0; // 指针 i，用于记录下一个非零元素的位置 // 1. 遍历数组，将所有非零元素依次放到前部 for (int num : nums) { if (num != 0) { nums[i&#43;&#43;] = num; // 将非零元素放入 i 位置，并移动 i } } // 2."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -270,7 +267,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 cl
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -286,20 +283,23 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 cl
     
     <h2 id="283-移动零httpsleetcodecnproblemsmove-zeroes"><a class="link" href="https://leetcode.cn/problems/move-zeroes/"  target="_blank" rel="noopener"
     >283. 移动零</a></h2>
-<h3 id="分析">分析</h3>
+<h3 id="算法">算法</h3>
 <ul>
 <li><code>i</code> 用于记录非零元素的位置</li>
 <li>遍历数组时，将非零元素按顺序填入数组前部，并记录当前插入的位置</li>
 <li>遍历完成后，数组前部已填满非零元素，后续位置全部填充 <code>0</code></li>
 </ul>
-<h3 id="时间复杂度">时间复杂度</h3>
+<h3 id="复杂度分析">复杂度分析</h3>
+<h4 id="时间复杂度">时间复杂度</h4>
 <ul>
 <li>遍历数组一次，时间复杂度为 <code>O(n)</code></li>
 <li>填充零的操作也是 <code>O(n)</code> ，但两者不重叠，总体为<code>O(n)</code></li>
 </ul>
-<h3 id="空间复杂度">空间复杂度</h3>
-<p>使用了两个指针变量，空间复杂度为 <code>O(1)</code></p>
-<h3 id="c代码">C++代码</h3>
+<h4 id="空间复杂度">空间复杂度</h4>
+<ul>
+<li>使用了两个指针变量，空间复杂度为 <code>O(1)</code></li>
+</ul>
+<h3 id="c-代码">C++ 代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -327,10 +327,10 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 cl
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">moveZeroes</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="n">moveZeroes</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 指针 i，用于记录下一个非零元素的位置
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -344,11 +344,118 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 cl
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// 2. 将剩余位置填充为 0
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="nf">size</span><span class="p">())</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="python-代码">Python 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">moveZeroes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">      <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="go-代码">Go 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">moveZeroes</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span>  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">x</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">nums</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">x</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">x</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">i</span> <span class="o">++</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">i</span> <span class="o">++</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="javascript-代码">JavaScript 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {number[]} nums
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @return {void} Do not return anything, modify nums in-place instead.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">moveZeroes</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="k">of</span> <span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -359,8 +466,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 cl
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
         
@@ -659,10 +764,17 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 cl
   <ol>
     <li><a href="#283-移动零httpsleetcodecnproblemsmove-zeroes"><a href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></a>
       <ol>
-        <li><a href="#分析">分析</a></li>
-        <li><a href="#时间复杂度">时间复杂度</a></li>
-        <li><a href="#空间复杂度">空间复杂度</a></li>
-        <li><a href="#c代码">C++代码</a></li>
+        <li><a href="#算法">算法</a></li>
+        <li><a href="#复杂度分析">复杂度分析</a>
+          <ol>
+            <li><a href="#时间复杂度">时间复杂度</a></li>
+            <li><a href="#空间复杂度">空间复杂度</a></li>
+          </ol>
+        </li>
+        <li><a href="#c-代码">C++ 代码</a></li>
+        <li><a href="#python-代码">Python 代码</a></li>
+        <li><a href="#go-代码">Go 代码</a></li>
+        <li><a href="#javascript-代码">JavaScript 代码</a></li>
       </ol>
     </li>
   </ol>
