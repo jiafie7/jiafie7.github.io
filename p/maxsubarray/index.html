@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='53. 最大子数组和 分析 定义状态：
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='53. 最大子数组和 算法 定义状态：
 用变量 last 表示以当前元素结尾的最大子数组和 用变量 res 表示全局最大子数组和 状态转移方程：
 对于每个元素 num，当前的 last 值可以由以下两种情况决定： 单独包含当前元素：如果此前的 last 为负数，则舍弃 包含当前元素并延续之前的子数组：如果此前的 last 为正数，则将当前元素加入子数组 状态转移方程：last = max(num, last &#43; num) 更新全局最大值：
-在遍历每个元素后，更新全局最大值 res 为：res = max(res, last) 时间复杂度 单次遍历：仅需遍历数组一次，时间复杂度为 O(n)
-空间复杂度 只使用了 res 和 last 两个变量，空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int maxSubArray(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = INT_MIN; // 全局最大子数组和 int last = 0; // 当前子数组和 for (int num : nums) { last = std::max(num, last &#43; num); // 动态更新以当前元素结尾的最大子数组和 res = std::max(res, last); // 更新全局最大值 } return res; } }; '><title>maxSubArray</title>
+在遍历每个元素后，更新全局最大值 res 为：res = max(res, last) 复杂度分析 时间复杂度 单次遍历：仅需遍历数组一次，时间复杂度为 O(n) 空间复杂度 只使用了 res 和 last 两个变量，空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int maxSubArray(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = INT_MIN; // 全局最大子数组和 int last = 0; // 当前子数组和 for (int num : nums) { last = std::max(num, last &#43; num); // 动态更新以当前元素结尾的最大子数组和 res = std::max(res, last); // 更新全局最大值 } return res; } }; Python 代码 1 2 3 4 5 6 7 class Solution: def maxSubArray(self, nums: List[int]) -&amp;gt; int: res, last = nums[0], 0 for x in nums: last = max(x, last &#43; x) res = max(res, last) return res Go 代码 1 2 3 4 5 6 7 8 func maxSubArray(nums []int) int { res, last := nums[0], 0 for _, x := range nums { last = max(x, last &#43; x) res = max(res, last) } return res } JavaScript 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 /** * @param {number[]} nums * @return {number} */ var maxSubArray = function (nums) { let res = nums[0], last = 0; for (let x of nums) { last = Math.'><title>maxSubArray</title>
 
 <link rel='canonical' href='https://hangzhang.xyz/p/maxsubarray/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='maxSubArray'>
-<meta property='og:description' content='53. 最大子数组和 分析 定义状态：
+<meta property='og:description' content='53. 最大子数组和 算法 定义状态：
 用变量 last 表示以当前元素结尾的最大子数组和 用变量 res 表示全局最大子数组和 状态转移方程：
 对于每个元素 num，当前的 last 值可以由以下两种情况决定： 单独包含当前元素：如果此前的 last 为负数，则舍弃 包含当前元素并延续之前的子数组：如果此前的 last 为正数，则将当前元素加入子数组 状态转移方程：last = max(num, last &#43; num) 更新全局最大值：
-在遍历每个元素后，更新全局最大值 res 为：res = max(res, last) 时间复杂度 单次遍历：仅需遍历数组一次，时间复杂度为 O(n)
-空间复杂度 只使用了 res 和 last 两个变量，空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int maxSubArray(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = INT_MIN; // 全局最大子数组和 int last = 0; // 当前子数组和 for (int num : nums) { last = std::max(num, last &#43; num); // 动态更新以当前元素结尾的最大子数组和 res = std::max(res, last); // 更新全局最大值 } return res; } }; '>
+在遍历每个元素后，更新全局最大值 res 为：res = max(res, last) 复杂度分析 时间复杂度 单次遍历：仅需遍历数组一次，时间复杂度为 O(n) 空间复杂度 只使用了 res 和 last 两个变量，空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int maxSubArray(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = INT_MIN; // 全局最大子数组和 int last = 0; // 当前子数组和 for (int num : nums) { last = std::max(num, last &#43; num); // 动态更新以当前元素结尾的最大子数组和 res = std::max(res, last); // 更新全局最大值 } return res; } }; Python 代码 1 2 3 4 5 6 7 class Solution: def maxSubArray(self, nums: List[int]) -&amp;gt; int: res, last = nums[0], 0 for x in nums: last = max(x, last &#43; x) res = max(res, last) return res Go 代码 1 2 3 4 5 6 7 8 func maxSubArray(nums []int) int { res, last := nums[0], 0 for _, x := range nums { last = max(x, last &#43; x) res = max(res, last) } return res } JavaScript 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 /** * @param {number[]} nums * @return {number} */ var maxSubArray = function (nums) { let res = nums[0], last = 0; for (let x of nums) { last = Math.'>
 <meta property='og:url' content='https://hangzhang.xyz/p/maxsubarray/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
 <meta name="twitter:title" content="maxSubArray">
-<meta name="twitter:description" content="53. 最大子数组和 分析 定义状态：
+<meta name="twitter:description" content="53. 最大子数组和 算法 定义状态：
 用变量 last 表示以当前元素结尾的最大子数组和 用变量 res 表示全局最大子数组和 状态转移方程：
 对于每个元素 num，当前的 last 值可以由以下两种情况决定： 单独包含当前元素：如果此前的 last 为负数，则舍弃 包含当前元素并延续之前的子数组：如果此前的 last 为正数，则将当前元素加入子数组 状态转移方程：last = max(num, last &#43; num) 更新全局最大值：
-在遍历每个元素后，更新全局最大值 res 为：res = max(res, last) 时间复杂度 单次遍历：仅需遍历数组一次，时间复杂度为 O(n)
-空间复杂度 只使用了 res 和 last 两个变量，空间复杂度为 O(1)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int maxSubArray(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = INT_MIN; // 全局最大子数组和 int last = 0; // 当前子数组和 for (int num : nums) { last = std::max(num, last &#43; num); // 动态更新以当前元素结尾的最大子数组和 res = std::max(res, last); // 更新全局最大值 } return res; } }; "><meta name="twitter:card" content="summary_large_image">
+在遍历每个元素后，更新全局最大值 res 为：res = max(res, last) 复杂度分析 时间复杂度 单次遍历：仅需遍历数组一次，时间复杂度为 O(n) 空间复杂度 只使用了 res 和 last 两个变量，空间复杂度为 O(1) C&#43;&#43; 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int maxSubArray(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = INT_MIN; // 全局最大子数组和 int last = 0; // 当前子数组和 for (int num : nums) { last = std::max(num, last &#43; num); // 动态更新以当前元素结尾的最大子数组和 res = std::max(res, last); // 更新全局最大值 } return res; } }; Python 代码 1 2 3 4 5 6 7 class Solution: def maxSubArray(self, nums: List[int]) -&amp;gt; int: res, last = nums[0], 0 for x in nums: last = max(x, last &#43; x) res = max(res, last) return res Go 代码 1 2 3 4 5 6 7 8 func maxSubArray(nums []int) int { res, last := nums[0], 0 for _, x := range nums { last = max(x, last &#43; x) res = max(res, last) } return res } JavaScript 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 /** * @param {number[]} nums * @return {number} */ var maxSubArray = function (nums) { let res = nums[0], last = 0; for (let x of nums) { last = Math."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -282,7 +276,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -298,7 +292,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
     
     <h2 id="53-最大子数组和httpsleetcodecnproblemsmaximum-subarraydescription"><a class="link" href="https://leetcode.cn/problems/maximum-subarray/description/"  target="_blank" rel="noopener"
     >53. 最大子数组和</a></h2>
-<h3 id="分析">分析</h3>
+<h3 id="算法">算法</h3>
 <ol>
 <li>
 <p>定义状态：</p>
@@ -326,11 +320,16 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
 </ul>
 </li>
 </ol>
-<h3 id="时间复杂度">时间复杂度</h3>
-<p>单次遍历：仅需遍历数组一次，时间复杂度为 <code>O(n)</code></p>
-<h3 id="空间复杂度">空间复杂度</h3>
-<p>只使用了 <code>res</code> 和 <code>last</code> 两个变量，空间复杂度为 <code>O(1)</code></p>
-<h3 id="c代码">C++代码</h3>
+<h3 id="复杂度分析">复杂度分析</h3>
+<h4 id="时间复杂度">时间复杂度</h4>
+<ul>
+<li>单次遍历：仅需遍历数组一次，时间复杂度为 <code>O(n)</code></li>
+</ul>
+<h4 id="空间复杂度">空间复杂度</h4>
+<ul>
+<li>只使用了 <code>res</code> 和 <code>last</code> 两个变量，空间复杂度为 <code>O(1)</code></li>
+</ul>
+<h3 id="c-代码">C++ 代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -350,20 +349,97 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="nl">public</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">maxSubArray</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">INT_MIN</span><span class="p">;</span> <span class="c1">// 全局最大子数组和
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">last</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>      <span class="c1">// 当前子数组和
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">num</span> <span class="p">:</span> <span class="n">nums</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">last</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="nf">max</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">last</span> <span class="o">+</span> <span class="n">num</span><span class="p">);</span> <span class="c1">// 动态更新以当前元素结尾的最大子数组和
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">res</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="nf">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">last</span><span class="p">);</span>       <span class="c1">// 更新全局最大值
+</span></span><span class="line"><span class="cl">            <span class="n">last</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">last</span> <span class="o">+</span> <span class="n">num</span><span class="p">);</span> <span class="c1">// 动态更新以当前元素结尾的最大子数组和
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">res</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">last</span><span class="p">);</span>       <span class="c1">// 更新全局最大值
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="python-代码">Python 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">last</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">last</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">last</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="go-代码">Go 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">res</span><span class="p">,</span> <span class="nx">last</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">x</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">nums</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">last</span> <span class="p">=</span> <span class="nb">max</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">last</span> <span class="o">+</span> <span class="nx">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">res</span> <span class="p">=</span> <span class="nb">max</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span> <span class="nx">last</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="javascript-代码">JavaScript 代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {number[]} nums
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @return {number}
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">maxSubArray</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">last</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="k">of</span> <span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">last</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">last</span> <span class="o">+</span> <span class="nx">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">res</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span> <span class="nx">last</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -374,8 +450,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
         
             <a href="/tags/leetcode/">Leetcode</a>
         
@@ -674,10 +748,17 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
   <ol>
     <li><a href="#53-最大子数组和httpsleetcodecnproblemsmaximum-subarraydescription"><a href="https://leetcode.cn/problems/maximum-subarray/description/">53. 最大子数组和</a></a>
       <ol>
-        <li><a href="#分析">分析</a></li>
-        <li><a href="#时间复杂度">时间复杂度</a></li>
-        <li><a href="#空间复杂度">空间复杂度</a></li>
-        <li><a href="#c代码">C++代码</a></li>
+        <li><a href="#算法">算法</a></li>
+        <li><a href="#复杂度分析">复杂度分析</a>
+          <ol>
+            <li><a href="#时间复杂度">时间复杂度</a></li>
+            <li><a href="#空间复杂度">空间复杂度</a></li>
+          </ol>
+        </li>
+        <li><a href="#c-代码">C++ 代码</a></li>
+        <li><a href="#python-代码">Python 代码</a></li>
+        <li><a href="#go-代码">Go 代码</a></li>
+        <li><a href="#javascript-代码">JavaScript 代码</a></li>
       </ol>
     </li>
   </ol>
