@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Array on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/array/</link>
+        <link>https://blog.hangzhang.cv/tags/array/</link>
         <description>Recent content in Array on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/array/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/array/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Insert Delete Get Random</title>
-        <link>https://hangzhang.xyz/p/insert-delete-get-random/</link>
+        <link>https://blog.hangzhang.cv/p/insert-delete-get-random/</link>
         <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/insert-delete-get-random/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Insert Delete Get Random" /&gt;&lt;h2 id=&#34;380-时间插入删除和获取随机元素httpsleetcodecnproblemsinsert-delete-getrandom-o1description&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/insert-delete-getrandom-o1/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/insert-delete-get-random/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Insert Delete Get Random" /&gt;&lt;h2 id=&#34;380-时间插入删除和获取随机元素httpsleetcodecnproblemsinsert-delete-getrandom-o1description&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/insert-delete-getrandom-o1/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;380. 时间插入、删除和获取随机元素&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
 &lt;ol&gt;

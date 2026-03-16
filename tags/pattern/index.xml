@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pattern on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/pattern/</link>
+        <link>https://blog.hangzhang.cv/tags/pattern/</link>
         <description>Recent content in Pattern on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 12 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/pattern/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/pattern/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Zigzag Conversion</title>
-        <link>https://hangzhang.xyz/p/zigzag-conversion/</link>
+        <link>https://blog.hangzhang.cv/p/zigzag-conversion/</link>
         <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/zigzag-conversion/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Zigzag Conversion" /&gt;&lt;h2 id=&#34;6-z字形变换httpsleetcodecnproblemszigzag-conversiondescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/zigzag-conversion/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/zigzag-conversion/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Zigzag Conversion" /&gt;&lt;h2 id=&#34;6-z字形变换httpsleetcodecnproblemszigzag-conversiondescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/zigzag-conversion/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;6. Z字形变换&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;

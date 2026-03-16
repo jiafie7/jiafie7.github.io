@@ -7,7 +7,7 @@
 邻居遍历（避免越界） x ∈ [max(0, i - 1), min(i &#43; 1, n - 1)] y ∈ [max(0, j - 1), min(j &#43; 1, m - 1)] 跳过自己：(x != i || y != j) 遍历细胞的八个邻居，board[i][j] &amp;amp; 1 提取当前状态，统计当前活细胞数 按规则更新下一状态：
 活细胞 → 存活（2~3 个邻居活细胞），否则死亡 死细胞 → 恰好 3 个邻居活细胞复活 board[i][j] |= (next &amp;lt;&amp;lt; 1) 将下一状态存入次低位 更新完成后右移一位：'><title>Game of Life</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/game-of-life/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/game-of-life/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Game of Life'>
 <meta property='og:description' content='289. 生命游戏 分析 原地更新（不额外开辟空间）：
@@ -15,16 +15,16 @@
 最低位（第 0 位）：当前细胞的状态（0 = 死，1 = 活） 次低位（第 1 位）：细胞的下一状态（0 = 死，1 = 活） 计算邻居活细胞数：
 邻居遍历（避免越界） x ∈ [max(0, i - 1), min(i &#43; 1, n - 1)] y ∈ [max(0, j - 1), min(j &#43; 1, m - 1)] 跳过自己：(x != i || y != j) 遍历细胞的八个邻居，board[i][j] &amp;amp; 1 提取当前状态，统计当前活细胞数 按规则更新下一状态：
 活细胞 → 存活（2~3 个邻居活细胞），否则死亡 死细胞 → 恰好 3 个邻居活细胞复活 board[i][j] |= (next &amp;lt;&amp;lt; 1) 将下一状态存入次低位 更新完成后右移一位：'>
-<meta property='og:url' content='https://hangzhang.xyz/p/game-of-life/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/game-of-life/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2025-01-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:published_time' content='2025-01-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Game of Life">
 <meta name="twitter:description" content="289. 生命游戏 分析 原地更新（不额外开辟空间）：
 直接在原矩阵 board 上更新，但在更新过程中要避免影响到邻居细胞的判断 状态编码（利用位运算存储两种状态）：
 最低位（第 0 位）：当前细胞的状态（0 = 死，1 = 活） 次低位（第 1 位）：细胞的下一状态（0 = 死，1 = 活） 计算邻居活细胞数：
 邻居遍历（避免越界） x ∈ [max(0, i - 1), min(i &#43; 1, n - 1)] y ∈ [max(0, j - 1), min(j &#43; 1, m - 1)] 跳过自己：(x != i || y != j) 遍历细胞的八个邻居，board[i][j] &amp;amp; 1 提取当前状态，统计当前活细胞数 按规则更新下一状态：
 活细胞 → 存活（2~3 个邻居活细胞），否则死亡 死细胞 → 恰好 3 个邻居活细胞复活 board[i][j] |= (next &amp;lt;&amp;lt; 1) 将下一状态存入次低位 更新完成后右移一位："><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -651,7 +651,7 @@
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

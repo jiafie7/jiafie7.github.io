@@ -5,20 +5,20 @@
 空间复杂度 递归调用栈的深度取决于图的结构，最坏情况下为 O(N)，加上哈希表的存储空间，总体复杂度为 O(N)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 class Solution { public: Node* cloneGraph(Node* node) { if (!node) return nullptr; std::unordered_map&amp;lt;Node*, Node*&amp;gt; hash; // 哈希表存储节点映射 dfs(node, hash); // 深度优先搜索创建克隆节点 // 第二次遍历复制邻接关系 for (auto&amp;amp; [origin, copy] : hash) for (Node* neighbor : origin-&amp;gt;neighbors) copy-&amp;gt;neighbors.'><title>Clone Graph</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/clone-graph/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/clone-graph/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Clone Graph'>
 <meta property='og:description' content='133. 克隆图 分析 哈希表存储原节点与克隆节点的映射： 使用 hash 保存原图节点到克隆节点的映射关系，用于快速找到已克隆的节点，避免重复克隆 DFS 遍历图的所有节点： 对每个未访问过的节点，创建其克隆节点并存入 hash 遍历当前节点的所有邻居，如果邻居未被克隆，则递归处理 复制邻接关系： 遍历所有节点（已在 hash 中），将每个原节点的邻居对应的克隆节点添加到克隆节点的邻居列表中 最终返回起始节点的克隆版本，即为完整的深拷贝图 时间复杂度 图的所有节点和边都会被访问一次，因此时间复杂度为 O(N &#43; E)，其中 N 是节点数，E 是边数
 空间复杂度 递归调用栈的深度取决于图的结构，最坏情况下为 O(N)，加上哈希表的存储空间，总体复杂度为 O(N)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 class Solution { public: Node* cloneGraph(Node* node) { if (!node) return nullptr; std::unordered_map&amp;lt;Node*, Node*&amp;gt; hash; // 哈希表存储节点映射 dfs(node, hash); // 深度优先搜索创建克隆节点 // 第二次遍历复制邻接关系 for (auto&amp;amp; [origin, copy] : hash) for (Node* neighbor : origin-&amp;gt;neighbors) copy-&amp;gt;neighbors.'>
-<meta property='og:url' content='https://hangzhang.xyz/p/clone-graph/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/clone-graph/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Graph' /><meta property='article:tag' content='Hash' /><meta property='article:published_time' content='2025-01-22T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-22T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Graph' /><meta property='article:tag' content='Hash' /><meta property='article:published_time' content='2025-01-22T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-22T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Clone Graph">
 <meta name="twitter:description" content="133. 克隆图 分析 哈希表存储原节点与克隆节点的映射： 使用 hash 保存原图节点到克隆节点的映射关系，用于快速找到已克隆的节点，避免重复克隆 DFS 遍历图的所有节点： 对每个未访问过的节点，创建其克隆节点并存入 hash 遍历当前节点的所有邻居，如果邻居未被克隆，则递归处理 复制邻接关系： 遍历所有节点（已在 hash 中），将每个原节点的邻居对应的克隆节点添加到克隆节点的邻居列表中 最终返回起始节点的克隆版本，即为完整的深拷贝图 时间复杂度 图的所有节点和边都会被访问一次，因此时间复杂度为 O(N &#43; E)，其中 N 是节点数，E 是边数
 空间复杂度 递归调用栈的深度取决于图的结构，最坏情况下为 O(N)，加上哈希表的存储空间，总体复杂度为 O(N)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 class Solution { public: Node* cloneGraph(Node* node) { if (!node) return nullptr; std::unordered_map&amp;lt;Node*, Node*&amp;gt; hash; // 哈希表存储节点映射 dfs(node, hash); // 深度优先搜索创建克隆节点 // 第二次遍历复制邻接关系 for (auto&amp;amp; [origin, copy] : hash) for (Node* neighbor : origin-&amp;gt;neighbors) copy-&amp;gt;neighbors."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -576,7 +576,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

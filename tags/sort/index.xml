@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Sort on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/sort/</link>
+        <link>https://blog.hangzhang.cv/tags/sort/</link>
         <description>Recent content in Sort on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/sort/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/sort/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Sort An Array</title>
-        <link>https://hangzhang.xyz/p/sort-an-array/</link>
+        <link>https://blog.hangzhang.cv/p/sort-an-array/</link>
         <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/sort-an-array/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Sort An Array" /&gt;&lt;h2 id=&#34;912-排序数组httpsleetcodecnproblemssort-an-arraydescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/sort-an-array/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/sort-an-array/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Sort An Array" /&gt;&lt;h2 id=&#34;912-排序数组httpsleetcodecnproblemssort-an-arraydescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/sort-an-array/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;912. 排序数组&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -107,11 +107,11 @@
         </item>
         <item>
         <title>Sort</title>
-        <link>https://hangzhang.xyz/p/sort/</link>
+        <link>https://blog.hangzhang.cv/p/sort/</link>
         <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/sort/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/codetest.jpg" alt="Featured image of post Sort" /&gt;&lt;h2 id=&#34;排序&#34;&gt;排序&lt;/h2&gt;
+        <guid>https://blog.hangzhang.cv/p/sort/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/codetest.jpg" alt="Featured image of post Sort" /&gt;&lt;h2 id=&#34;排序&#34;&gt;排序&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -782,11 +782,11 @@
         </item>
         <item>
         <title>Insertion Sort List</title>
-        <link>https://hangzhang.xyz/p/insertion-sort-list/</link>
+        <link>https://blog.hangzhang.cv/p/insertion-sort-list/</link>
         <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/insertion-sort-list/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Insertion Sort List" /&gt;&lt;h2 id=&#34;147-对链表进行插入排序httpsleetcodecnproblemsinsertion-sort-listdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/insertion-sort-list/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/insertion-sort-list/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Insertion Sort List" /&gt;&lt;h2 id=&#34;147-对链表进行插入排序httpsleetcodecnproblemsinsertion-sort-listdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/insertion-sort-list/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;147. 对链表进行插入排序&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -874,11 +874,11 @@
         </item>
         <item>
         <title>H Index</title>
-        <link>https://hangzhang.xyz/p/h-index/</link>
+        <link>https://blog.hangzhang.cv/p/h-index/</link>
         <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/h-index/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post H Index" /&gt;&lt;h2 id=&#34;274-h指数httpsleetcodecnproblemsh-indexdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/h-index/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/h-index/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post H Index" /&gt;&lt;h2 id=&#34;274-h指数httpsleetcodecnproblemsh-indexdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/h-index/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;274. H指数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;算法&#34;&gt;算法&lt;/h3&gt;
 &lt;p&gt;将引用次数降序排序。排序后，论文的引用次数是递减的，若第 &lt;code&gt;i&lt;/code&gt; 篇论文（索引为 &lt;code&gt;i - 1&lt;/code&gt;）的引用次数大于等于 &lt;code&gt;i&lt;/code&gt;，则前面 &lt;code&gt;i - 1&lt;/code&gt; 篇论文的引用次数也大于等于 &lt;code&gt;i&lt;/code&gt;，，那么就有至少 &lt;code&gt;i&lt;/code&gt; 篇论文的引用次数大于等于 &lt;code&gt;i&lt;/code&gt;，即满足 &lt;code&gt;H&lt;/code&gt; 指数条件&lt;/p&gt;
@@ -1003,11 +1003,11 @@
         </item>
         <item>
         <title>Minimum Number Of Arrows To Burst Balloons</title>
-        <link>https://hangzhang.xyz/p/minimum-number-of-arrows-to-burst-balloons/</link>
+        <link>https://blog.hangzhang.cv/p/minimum-number-of-arrows-to-burst-balloons/</link>
         <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/minimum-number-of-arrows-to-burst-balloons/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Minimum Number Of Arrows To Burst Balloons" /&gt;&lt;h2 id=&#34;452-用最少数量的箭引爆气球httpsleetcodecnproblemsminimum-number-of-arrows-to-burst-balloonsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/minimum-number-of-arrows-to-burst-balloons/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Minimum Number Of Arrows To Burst Balloons" /&gt;&lt;h2 id=&#34;452-用最少数量的箭引爆气球httpsleetcodecnproblemsminimum-number-of-arrows-to-burst-balloonsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;452. 用最少数量的箭引爆气球&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;算法&#34;&gt;算法&lt;/h3&gt;
 &lt;ul&gt;
@@ -1170,11 +1170,11 @@
         </item>
         <item>
         <title>Non Overlapping Intervals</title>
-        <link>https://hangzhang.xyz/p/non-overlapping-intervals/</link>
+        <link>https://blog.hangzhang.cv/p/non-overlapping-intervals/</link>
         <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/non-overlapping-intervals/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Non Overlapping Intervals" /&gt;&lt;h2 id=&#34;435-无重叠区间httpsleetcodecnproblemsnon-overlapping-intervalsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/non-overlapping-intervals/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/non-overlapping-intervals/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Non Overlapping Intervals" /&gt;&lt;h2 id=&#34;435-无重叠区间httpsleetcodecnproblemsnon-overlapping-intervalsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/non-overlapping-intervals/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;435. 无重叠区间&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ul&gt;
@@ -1280,11 +1280,11 @@
         </item>
         <item>
         <title>Search Suggestions System</title>
-        <link>https://hangzhang.xyz/p/search-suggestions-system/</link>
+        <link>https://blog.hangzhang.cv/p/search-suggestions-system/</link>
         <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/search-suggestions-system/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Search Suggestions System" /&gt;&lt;h2 id=&#34;1268-搜索推荐系统httpsleetcodecnproblemssearch-suggestions-systemdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/search-suggestions-system/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/search-suggestions-system/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Search Suggestions System" /&gt;&lt;h2 id=&#34;1268-搜索推荐系统httpsleetcodecnproblemssearch-suggestions-systemdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/search-suggestions-system/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1268. 搜索推荐系统&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -1414,11 +1414,11 @@
         </item>
         <item>
         <title>Successful Pairs Of Spells And Potions</title>
-        <link>https://hangzhang.xyz/p/successful-pairs-of-spells-and-potions/</link>
+        <link>https://blog.hangzhang.cv/p/successful-pairs-of-spells-and-potions/</link>
         <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/successful-pairs-of-spells-and-potions/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Successful Pairs Of Spells And Potions" /&gt;&lt;h2 id=&#34;2300-咒语和药水的成功对数httpsleetcodecnproblemssuccessful-pairs-of-spells-and-potionsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/successful-pairs-of-spells-and-potions/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Successful Pairs Of Spells And Potions" /&gt;&lt;h2 id=&#34;2300-咒语和药水的成功对数httpsleetcodecnproblemssuccessful-pairs-of-spells-and-potionsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;2300. 咒语和药水的成功对数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -1521,11 +1521,11 @@
         </item>
         <item>
         <title>groupAnagrams</title>
-        <link>https://hangzhang.xyz/p/groupanagrams/</link>
+        <link>https://blog.hangzhang.cv/p/groupanagrams/</link>
         <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/groupanagrams/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post groupAnagrams" /&gt;&lt;h2 id=&#34;49-字母异位词分组httpsleetcodecnproblemsgroup-anagramsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/group-anagrams/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/groupanagrams/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post groupAnagrams" /&gt;&lt;h2 id=&#34;49-字母异位词分组httpsleetcodecnproblemsgroup-anagramsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/group-anagrams/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;49. 字母异位词分组&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;算法&#34;&gt;算法&lt;/h3&gt;
 &lt;ol&gt;
@@ -1732,11 +1732,11 @@
         </item>
         <item>
         <title>mergeIntervals</title>
-        <link>https://hangzhang.xyz/p/mergeintervals/</link>
+        <link>https://blog.hangzhang.cv/p/mergeintervals/</link>
         <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/mergeintervals/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post mergeIntervals" /&gt;&lt;h2 id=&#34;56-mergeintervalshttpsleetcodecnproblemsmerge-intervalsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/merge-intervals/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/mergeintervals/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post mergeIntervals" /&gt;&lt;h2 id=&#34;56-mergeintervalshttpsleetcodecnproblemsmerge-intervalsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/merge-intervals/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;56. mergeIntervals&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;

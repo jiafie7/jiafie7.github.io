@@ -5,20 +5,20 @@
 空间复杂度 空间复杂度 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 class Solution { public: ListNode* reverseBetween(ListNode* head, int left, int right) { ListNode* dummy = new ListNode(-1); // 创建虚拟头节点，简化边界处理 dummy-&amp;gt;next = head; ListNode* p = dummy; // 将 p 移动到 left 前一个节点的位置 for (int i = 0; i &amp;lt; left - 1; &#43;&#43; i) p = p-&amp;gt;next; // 初始化要反转的部分的起始节点 ListNode *prev = p-&amp;gt;next, *cur = prev-&amp;gt;next; // 头插法反转 [left, right] 区间 for (int i = 0; i &amp;lt; right - left; &#43;&#43; i) { ListNode *next = cur-&amp;gt;next; // 暂存下一个节点 cur-&amp;gt;next = prev; // 当前节点指向前一个节点 prev = cur, cur = next; // 向前推进指针 } // 拼接反转后的子链表与剩余链表 ListNode *q = p-&amp;gt;next; // 反转前的 left 节点，反转后变成尾部 p-&amp;gt;next = prev; // p 指向反转后的头部 q-&amp;gt;next = cur; // 原 left 节点指向反转后剩余的部分 return dummy-&amp;gt;next; // 返回新链表头节点 } }; '><title>Reverse Linked List II</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/reverse-linked-list-ii/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/reverse-linked-list-ii/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Reverse Linked List II'>
 <meta property='og:description' content='92. 反转链表II 分析 创建一个虚拟头节点 dummy，它的 next 指向 head，简化边界情况处理（如 left = 1） 用指针 p 找到 left 节点的前一个节点 从 p-&amp;gt;next 开始反转区间 [left, right] 的节点，采用头插法实现 反转完成后，将前后链表重新接好 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 class Solution { public: ListNode* reverseBetween(ListNode* head, int left, int right) { ListNode* dummy = new ListNode(-1); // 创建虚拟头节点，简化边界处理 dummy-&amp;gt;next = head; ListNode* p = dummy; // 将 p 移动到 left 前一个节点的位置 for (int i = 0; i &amp;lt; left - 1; &#43;&#43; i) p = p-&amp;gt;next; // 初始化要反转的部分的起始节点 ListNode *prev = p-&amp;gt;next, *cur = prev-&amp;gt;next; // 头插法反转 [left, right] 区间 for (int i = 0; i &amp;lt; right - left; &#43;&#43; i) { ListNode *next = cur-&amp;gt;next; // 暂存下一个节点 cur-&amp;gt;next = prev; // 当前节点指向前一个节点 prev = cur, cur = next; // 向前推进指针 } // 拼接反转后的子链表与剩余链表 ListNode *q = p-&amp;gt;next; // 反转前的 left 节点，反转后变成尾部 p-&amp;gt;next = prev; // p 指向反转后的头部 q-&amp;gt;next = cur; // 原 left 节点指向反转后剩余的部分 return dummy-&amp;gt;next; // 返回新链表头节点 } }; '>
-<meta property='og:url' content='https://hangzhang.xyz/p/reverse-linked-list-ii/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/reverse-linked-list-ii/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Linked List' /><meta property='article:published_time' content='2025-05-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-21T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Linked List' /><meta property='article:published_time' content='2025-05-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-21T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Reverse Linked List II">
 <meta name="twitter:description" content="92. 反转链表II 分析 创建一个虚拟头节点 dummy，它的 next 指向 head，简化边界情况处理（如 left = 1） 用指针 p 找到 left 节点的前一个节点 从 p-&amp;gt;next 开始反转区间 [left, right] 的节点，采用头插法实现 反转完成后，将前后链表重新接好 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 class Solution { public: ListNode* reverseBetween(ListNode* head, int left, int right) { ListNode* dummy = new ListNode(-1); // 创建虚拟头节点，简化边界处理 dummy-&amp;gt;next = head; ListNode* p = dummy; // 将 p 移动到 left 前一个节点的位置 for (int i = 0; i &amp;lt; left - 1; &#43;&#43; i) p = p-&amp;gt;next; // 初始化要反转的部分的起始节点 ListNode *prev = p-&amp;gt;next, *cur = prev-&amp;gt;next; // 头插法反转 [left, right] 区间 for (int i = 0; i &amp;lt; right - left; &#43;&#43; i) { ListNode *next = cur-&amp;gt;next; // 暂存下一个节点 cur-&amp;gt;next = prev; // 当前节点指向前一个节点 prev = cur, cur = next; // 向前推进指针 } // 拼接反转后的子链表与剩余链表 ListNode *q = p-&amp;gt;next; // 反转前的 left 节点，反转后变成尾部 p-&amp;gt;next = prev; // p 指向反转后的头部 q-&amp;gt;next = cur; // 原 left 节点指向反转后剩余的部分 return dummy-&amp;gt;next; // 返回新链表头节点 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -565,7 +565,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hash Table on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/hash-table/</link>
+        <link>https://blog.hangzhang.cv/tags/hash-table/</link>
         <description>Recent content in Hash Table on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/hash-table/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/hash-table/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Isomorphic Strings</title>
-        <link>https://hangzhang.xyz/p/isomorphic-strings/</link>
+        <link>https://blog.hangzhang.cv/p/isomorphic-strings/</link>
         <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/isomorphic-strings/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Isomorphic Strings" /&gt;&lt;h2 id=&#34;205-同构字符串httpsleetcodecnproblemsisomorphic-stringsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/isomorphic-strings/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/isomorphic-strings/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Isomorphic Strings" /&gt;&lt;h2 id=&#34;205-同构字符串httpsleetcodecnproblemsisomorphic-stringsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/isomorphic-strings/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;205. 同构字符串&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -121,11 +121,11 @@
         </item>
         <item>
         <title>Ransom Note</title>
-        <link>https://hangzhang.xyz/p/ransom-note/</link>
+        <link>https://blog.hangzhang.cv/p/ransom-note/</link>
         <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/ransom-note/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Ransom Note" /&gt;&lt;h2 id=&#34;383-赎金信httpsleetcodecnproblemsransom-notedescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/ransom-note/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/ransom-note/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Ransom Note" /&gt;&lt;h2 id=&#34;383-赎金信httpsleetcodecnproblemsransom-notedescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/ransom-note/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;383. 赎金信&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -210,11 +210,11 @@
         </item>
         <item>
         <title>Word Pattern</title>
-        <link>https://hangzhang.xyz/p/word-pattern/</link>
+        <link>https://blog.hangzhang.cv/p/word-pattern/</link>
         <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/word-pattern/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Word Pattern" /&gt;&lt;h2 id=&#34;290-单词规律httpsleetcodecnproblemsword-patterndescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/word-pattern/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/word-pattern/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Word Pattern" /&gt;&lt;h2 id=&#34;290-单词规律httpsleetcodecnproblemsword-patterndescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/word-pattern/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;290. 单词规律&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -364,11 +364,11 @@
         </item>
         <item>
         <title>groupAnagrams</title>
-        <link>https://hangzhang.xyz/p/groupanagrams/</link>
+        <link>https://blog.hangzhang.cv/p/groupanagrams/</link>
         <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/groupanagrams/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post groupAnagrams" /&gt;&lt;h2 id=&#34;49-字母异位词分组httpsleetcodecnproblemsgroup-anagramsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/group-anagrams/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/groupanagrams/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post groupAnagrams" /&gt;&lt;h2 id=&#34;49-字母异位词分组httpsleetcodecnproblemsgroup-anagramsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/group-anagrams/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;49. 字母异位词分组&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;算法&#34;&gt;算法&lt;/h3&gt;
 &lt;ol&gt;
@@ -575,11 +575,11 @@
         </item>
         <item>
         <title>LRUCache</title>
-        <link>https://hangzhang.xyz/p/lrucache/</link>
+        <link>https://blog.hangzhang.cv/p/lrucache/</link>
         <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/lrucache/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post LRUCache" /&gt;&lt;h2 id=&#34;31-lrucachehttpsleetcodecnproblemsorixpsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/OrIXps/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/lrucache/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post LRUCache" /&gt;&lt;h2 id=&#34;31-lrucachehttpsleetcodecnproblemsorixpsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/OrIXps/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;31. LRUCache&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;LRU（Least Recently Used）是一种缓存替换策略，淘汰最久未被使用的数据，以保证缓存内存的有效利用率&lt;/p&gt;

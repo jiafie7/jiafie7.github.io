@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Job on Hang Zhang</title>
-        <link>https://hangzhang.xyz/categories/job/</link>
+        <link>https://blog.hangzhang.cv/categories/job/</link>
         <description>Recent content in Job on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/categories/job/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/categories/job/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Number of Unique Paths</title>
-        <link>https://hangzhang.xyz/p/number-of-unique-paths/</link>
+        <link>https://blog.hangzhang.cv/p/number-of-unique-paths/</link>
         <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/number-of-unique-paths/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/codetest.jpg" alt="Featured image of post Number of Unique Paths" /&gt;&lt;h2 id=&#34;不同路径数&#34;&gt;不同路径数&lt;/h2&gt;
+        <guid>https://blog.hangzhang.cv/p/number-of-unique-paths/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/codetest.jpg" alt="Featured image of post Number of Unique Paths" /&gt;&lt;h2 id=&#34;不同路径数&#34;&gt;不同路径数&lt;/h2&gt;
 &lt;p&gt;给定一个 &lt;code&gt;n × m&lt;/code&gt; 的二维矩阵，其中的每个元素都是一个 &lt;code&gt;[1,9]&lt;/code&gt; 之间的正整数&lt;/p&gt;
 &lt;p&gt;从矩阵中的任意位置出发，每次可以沿上下左右四个方向前进一步，走过的位置可以重复走&lt;/p&gt;
 &lt;p&gt;走了 &lt;code&gt;k&lt;/code&gt; 次后，经过的元素会构成一个 &lt;code&gt;k + 1&lt;/code&gt; 位数。&lt;/p&gt;

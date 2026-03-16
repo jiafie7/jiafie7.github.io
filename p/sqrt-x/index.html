@@ -5,20 +5,20 @@
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int mySqrt(int x) { int l = 0, r = x; // 设置搜索区间 [0, x] while (l &amp;lt; r) { int mid = (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1; // 计算中间值 mid，避免整数溢出 if (mid &amp;lt;= x / mid) // 如果 mid 的平方小于等于 x，则 mid 可能是答案 l = mid; // 如果 mid 满足条件，调整左边界为 mid else r = mid - 1; // 如果 mid 不满足条件，调整右边界为 mid-1 } return r; // 返回最终的结果，r 为整数平方根 } }; '><title>Sqrt X</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/sqrt-x/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/sqrt-x/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Sqrt X'>
 <meta property='og:description' content='69. x的平方根 分析 初始化：设定左右边界 l = 0 和 r = x，表示搜索区间 二分查找： 通过 (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1 计算中间值 mid。这里使用了 1ll 来确保计算过程中不会发生整数溢出 判断 mid * mid &amp;lt;= x，如果成立，说明平方根的整数部分不大于 mid，我们将搜索区间的左边界 l 移动到 mid 如果 mid * mid &amp;gt; x，说明平方根在 mid 左边，更新右边界 r 为 mid - 1 终止条件：当 l == r 时，搜索结束，r 即为 x 的整数平方根 时间复杂度 总时间复杂度 O(logx)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int mySqrt(int x) { int l = 0, r = x; // 设置搜索区间 [0, x] while (l &amp;lt; r) { int mid = (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1; // 计算中间值 mid，避免整数溢出 if (mid &amp;lt;= x / mid) // 如果 mid 的平方小于等于 x，则 mid 可能是答案 l = mid; // 如果 mid 满足条件，调整左边界为 mid else r = mid - 1; // 如果 mid 不满足条件，调整右边界为 mid-1 } return r; // 返回最终的结果，r 为整数平方根 } }; '>
-<meta property='og:url' content='https://hangzhang.xyz/p/sqrt-x/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/sqrt-x/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Math' /><meta property='article:published_time' content='2025-02-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Math' /><meta property='article:published_time' content='2025-02-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Sqrt X">
 <meta name="twitter:description" content="69. x的平方根 分析 初始化：设定左右边界 l = 0 和 r = x，表示搜索区间 二分查找： 通过 (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1 计算中间值 mid。这里使用了 1ll 来确保计算过程中不会发生整数溢出 判断 mid * mid &amp;lt;= x，如果成立，说明平方根的整数部分不大于 mid，我们将搜索区间的左边界 l 移动到 mid 如果 mid * mid &amp;gt; x，说明平方根在 mid 左边，更新右边界 r 为 mid - 1 终止条件：当 l == r 时，搜索结束，r 即为 x 的整数平方根 时间复杂度 总时间复杂度 O(logx)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution { public: int mySqrt(int x) { int l = 0, r = x; // 设置搜索区间 [0, x] while (l &amp;lt; r) { int mid = (l &#43; 1ll &#43; r) &amp;gt;&amp;gt; 1; // 计算中间值 mid，避免整数溢出 if (mid &amp;lt;= x / mid) // 如果 mid 的平方小于等于 x，则 mid 可能是答案 l = mid; // 如果 mid 满足条件，调整左边界为 mid else r = mid - 1; // 如果 mid 不满足条件，调整右边界为 mid-1 } return r; // 返回最终的结果，r 为整数平方根 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -544,7 +544,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 class Solution
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

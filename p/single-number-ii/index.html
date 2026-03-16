@@ -9,7 +9,7 @@
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = 0; for (int i = 0; i &amp;lt; 32; &#43;&#43;i) // 遍历每一个二进制位 { int c = 0; // 统计当前二进制位上 1 的数量 for (int x : nums) c &#43;= (x &amp;gt;&amp;gt; i) &amp;amp; 1; // 若该二进制位的 1 数量不是 3 的倍数，将该位加入结果 res |= (c % 3) &amp;lt;&amp;lt; i; } return res; } }; '><title>Single Number II</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/single-number-ii/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/single-number-ii/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Single Number II'>
 <meta property='og:description' content='137. 只出现一次的数字II 分析 考虑整数在计算机中以 32 位二进制形式表示，可以逐位统计数组中每个位上的 1 的出现次数
@@ -19,9 +19,9 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solut
 将每一位结果通过位运算 res |= (c % 3) &amp;lt;&amp;lt; i 累加到最终结果 res 中 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = 0; for (int i = 0; i &amp;lt; 32; &#43;&#43;i) // 遍历每一个二进制位 { int c = 0; // 统计当前二进制位上 1 的数量 for (int x : nums) c &#43;= (x &amp;gt;&amp;gt; i) &amp;amp; 1; // 若该二进制位的 1 数量不是 3 的倍数，将该位加入结果 res |= (c % 3) &amp;lt;&amp;lt; i; } return res; } }; '>
-<meta property='og:url' content='https://hangzhang.xyz/p/single-number-ii/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/single-number-ii/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Bit Operation' /><meta property='article:published_time' content='2025-02-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-11T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Bit Operation' /><meta property='article:published_time' content='2025-02-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-11T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Single Number II">
 <meta name="twitter:description" content="137. 只出现一次的数字II 分析 考虑整数在计算机中以 32 位二进制形式表示，可以逐位统计数组中每个位上的 1 的出现次数
 逐位遍历
@@ -30,7 +30,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solut
 将每一位结果通过位运算 res |= (c % 3) &amp;lt;&amp;lt; i 累加到最终结果 res 中 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution { public: int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int res = 0; for (int i = 0; i &amp;lt; 32; &#43;&#43;i) // 遍历每一个二进制位 { int c = 0; // 统计当前二进制位上 1 的数量 for (int x : nums) c &#43;= (x &amp;gt;&amp;gt; i) &amp;amp; 1; // 若该二进制位的 1 数量不是 3 的倍数，将该位加入结果 res |= (c % 3) &amp;lt;&amp;lt; i; } return res; } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -569,7 +569,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solut
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

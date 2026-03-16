@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Queue on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/queue/</link>
+        <link>https://blog.hangzhang.cv/tags/queue/</link>
         <description>Recent content in Queue on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/queue/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/queue/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Implement Stack Using Queues</title>
-        <link>https://hangzhang.xyz/p/implement-stack-using-queues/</link>
+        <link>https://blog.hangzhang.cv/p/implement-stack-using-queues/</link>
         <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/implement-stack-using-queues/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Implement Stack Using Queues" /&gt;&lt;h2 id=&#34;225-用队列实现栈httpsleetcodecnproblemsimplement-stack-using-queues&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/implement-stack-using-queues/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/implement-stack-using-queues/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Implement Stack Using Queues" /&gt;&lt;h2 id=&#34;225-用队列实现栈httpsleetcodecnproblemsimplement-stack-using-queues&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/implement-stack-using-queues/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;225. 用队列实现栈&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;每次访问栈顶元素 &lt;code&gt;top()&lt;/code&gt; 或弹出栈顶元素 &lt;code&gt;pop()&lt;/code&gt; 时，先将队列中的前 &lt;code&gt;size - 1&lt;/code&gt; 个元素重新入队，从而把「最后加入的元素」移动到队头，模拟栈顶&lt;/p&gt;
@@ -135,11 +135,11 @@
         </item>
         <item>
         <title>Dota 2 Senate</title>
-        <link>https://hangzhang.xyz/p/dota-2-senate/</link>
+        <link>https://blog.hangzhang.cv/p/dota-2-senate/</link>
         <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/dota-2-senate/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Dota 2 Senate" /&gt;&lt;h2 id=&#34;649-dota2参议院httpsleetcodecnproblemsdota2-senatedescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/dota2-senate/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/dota-2-senate/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Dota 2 Senate" /&gt;&lt;h2 id=&#34;649-dota2参议院httpsleetcodecnproblemsdota2-senatedescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/dota2-senate/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;649. Dota2参议院&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;使用两个队列分别存储两派参议员的索引位置，模拟投票过程：&lt;/p&gt;

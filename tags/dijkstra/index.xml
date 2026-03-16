@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Dijkstra on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/dijkstra/</link>
+        <link>https://blog.hangzhang.cv/tags/dijkstra/</link>
         <description>Recent content in Dijkstra on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 05 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/dijkstra/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 05 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/dijkstra/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Dijkstra Finding the Shortest Path II</title>
-        <link>https://hangzhang.xyz/p/dijkstra-finding-the-shortest-path-ii/</link>
+        <link>https://blog.hangzhang.cv/p/dijkstra-finding-the-shortest-path-ii/</link>
         <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/dijkstra-finding-the-shortest-path-ii/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/codetest.jpg" alt="Featured image of post Dijkstra Finding the Shortest Path II" /&gt;&lt;h2 id=&#34;dijkstra-求最短路ii&#34;&gt;Dijkstra 求最短路II&lt;/h2&gt;
+        <guid>https://blog.hangzhang.cv/p/dijkstra-finding-the-shortest-path-ii/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/codetest.jpg" alt="Featured image of post Dijkstra Finding the Shortest Path II" /&gt;&lt;h2 id=&#34;dijkstra-求最短路ii&#34;&gt;Dijkstra 求最短路II&lt;/h2&gt;
 &lt;p&gt;给定一个 &lt;code&gt;n&lt;/code&gt; 个点 &lt;code&gt;m&lt;/code&gt; 条边的有向图，图中可能存在重边和自环，所有边权均为正值&lt;/p&gt;
 &lt;p&gt;请你求出 &lt;code&gt;1&lt;/code&gt; 号点到 &lt;code&gt;n&lt;/code&gt; 号点的最短距离，如果无法从 &lt;code&gt;1&lt;/code&gt; 号点走到 &lt;code&gt;n&lt;/code&gt; 号点，则输出 &lt;code&gt;−1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;输入格式&lt;/strong&gt;&lt;/p&gt;
@@ -239,11 +239,11 @@
         </item>
         <item>
         <title>Dijkstra Finding the Shortest Path I</title>
-        <link>https://hangzhang.xyz/p/dijkstra-finding-the-shortest-path-i/</link>
+        <link>https://blog.hangzhang.cv/p/dijkstra-finding-the-shortest-path-i/</link>
         <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/dijkstra-finding-the-shortest-path-i/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/codetest.jpg" alt="Featured image of post Dijkstra Finding the Shortest Path I" /&gt;&lt;h2 id=&#34;dijkstra-求最短路i&#34;&gt;Dijkstra 求最短路I&lt;/h2&gt;
+        <guid>https://blog.hangzhang.cv/p/dijkstra-finding-the-shortest-path-i/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/codetest.jpg" alt="Featured image of post Dijkstra Finding the Shortest Path I" /&gt;&lt;h2 id=&#34;dijkstra-求最短路i&#34;&gt;Dijkstra 求最短路I&lt;/h2&gt;
 &lt;p&gt;给定一个 &lt;code&gt;n&lt;/code&gt; 个点 &lt;code&gt;m&lt;/code&gt; 条边的有向图，图中可能存在重边和自环，所有边权均为正值&lt;/p&gt;
 &lt;p&gt;请你求出 &lt;code&gt;1&lt;/code&gt; 号点到 &lt;code&gt;n&lt;/code&gt; 号点的最短距离，如果无法从 &lt;code&gt;1&lt;/code&gt; 号点走到 &lt;code&gt;n&lt;/code&gt; 号点，则输出 &lt;code&gt;−1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;输入格式&lt;/strong&gt;&lt;/p&gt;

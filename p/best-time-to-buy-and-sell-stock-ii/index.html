@@ -7,7 +7,7 @@
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxProfit(vector&amp;lt;int&amp;gt;&amp;amp; prices) { int res = 0; // 初始化总利润 for (int i = 1; i &amp;lt; prices.size(); &#43;&#43;i) // 遍历价格数组 if (prices[i] &amp;gt; prices[i - 1]) // 如果今天比昨天贵 res &#43;= prices[i] - prices[i - 1]; // 累加差价利润 return res; // 返回总利润 } }; '><title>Best Time to Buy and Sell Stock II</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/best-time-to-buy-and-sell-stock-ii/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/best-time-to-buy-and-sell-stock-ii/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Best Time to Buy and Sell Stock II'>
 <meta property='og:description' content='122. 买卖股票的最佳时机II 分析 如果今天的股票价格比昨天高，就可以将这部分差价计入利润。这样相当于在每个上升区间都进行买入和卖出操作。将所有上涨的差价累加，即可获得最大利润
@@ -15,16 +15,16 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxPro
 股票可以在同一天买入和卖出，相当于在每个上涨区间及时买卖。 比如：[1, 2, 3, 4, 5]，买入 1 卖出 5 的利润和每天买卖 (1→2，2→3，3→4，4→5) 是相等的 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxProfit(vector&amp;lt;int&amp;gt;&amp;amp; prices) { int res = 0; // 初始化总利润 for (int i = 1; i &amp;lt; prices.size(); &#43;&#43;i) // 遍历价格数组 if (prices[i] &amp;gt; prices[i - 1]) // 如果今天比昨天贵 res &#43;= prices[i] - prices[i - 1]; // 累加差价利润 return res; // 返回总利润 } }; '>
-<meta property='og:url' content='https://hangzhang.xyz/p/best-time-to-buy-and-sell-stock-ii/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/best-time-to-buy-and-sell-stock-ii/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Greedy' /><meta property='article:published_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Greedy' /><meta property='article:published_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Best Time to Buy and Sell Stock II">
 <meta name="twitter:description" content="122. 买卖股票的最佳时机II 分析 如果今天的股票价格比昨天高，就可以将这部分差价计入利润。这样相当于在每个上升区间都进行买入和卖出操作。将所有上涨的差价累加，即可获得最大利润
 为什么这样是最优的？
 股票可以在同一天买入和卖出，相当于在每个上涨区间及时买卖。 比如：[1, 2, 3, 4, 5]，买入 1 卖出 5 的利润和每天买卖 (1→2，2→3，3→4，4→5) 是相等的 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(1)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxProfit(vector&amp;lt;int&amp;gt;&amp;amp; prices) { int res = 0; // 初始化总利润 for (int i = 1; i &amp;lt; prices.size(); &#43;&#43;i) // 遍历价格数组 if (prices[i] &amp;gt; prices[i - 1]) // 如果今天比昨天贵 res &#43;= prices[i] - prices[i - 1]; // 累加差价利润 return res; // 返回总利润 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -531,7 +531,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 class Solution { public: int maxPro
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

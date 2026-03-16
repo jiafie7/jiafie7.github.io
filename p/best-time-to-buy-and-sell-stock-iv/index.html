@@ -6,22 +6,22 @@
 当 k &amp;lt; n / 2 时，我们需要考虑最多进行 k 次交易的情况。为此，我们需要使用动态规划来计算不同交易次数的最大利润 使用动态规划状态 f[i][j] 表示前 i 天内进行 j 次交易的最大利润。我们还可以使用辅助数组 g[i][j] 来记录前 i 天内进行 j-1 次交易，买入股票时的状态（即股票买入价格的最优状态） 每次更新 f[i][j] 和 g[i][j] 时，考虑的是： 卖出：通过 g[i-1][j] &#43; prices[i-1] 来记录前 i-1 天完成 j 次交易的最大利润加上当前价格（即卖出） 买入：通过 f[i-1][j-1] - prices[i-1] 来记录前 i-1 天完成 j-1 次交易的最大利润减去当前价格（即买入） 状态转移方程
 f[i][j] = max(f[i-1][j], g[i-1][j] &#43; prices[i-1])：卖出时，选择前 i-1 天进行 j 次交易的最大利润，再加上今天卖出的利润 g[i][j] = max(g[i-1][j], f[i-1][j-1] - prices[i-1])：买入时，选择前 i-1 天进行 j-1 次交易的最大利润，再减去今天买入的价格 时间复杂度 时间复杂度 O(k * n)'><title>Best Time to Buy and Sell Stock IV</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/best-time-to-buy-and-sell-stock-iv/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/best-time-to-buy-and-sell-stock-iv/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Best Time to Buy and Sell Stock IV'>
 <meta property='og:description' content='188. 买卖股票的最佳时机IV 分析 无交易限制的情况：
 当 k &amp;gt;= n / 2（即可以无限次交易的情况），那么我们可以通过每次只要当前价格比前一天高就进行交易，获取利润 这种情况下，我们只需要遍历数组，当 prices[i] &amp;lt; prices[i &#43; 1] 时，进行买卖，利润就会累加 有交易次数限制的情况：
 当 k &amp;lt; n / 2 时，我们需要考虑最多进行 k 次交易的情况。为此，我们需要使用动态规划来计算不同交易次数的最大利润 使用动态规划状态 f[i][j] 表示前 i 天内进行 j 次交易的最大利润。我们还可以使用辅助数组 g[i][j] 来记录前 i 天内进行 j-1 次交易，买入股票时的状态（即股票买入价格的最优状态） 每次更新 f[i][j] 和 g[i][j] 时，考虑的是： 卖出：通过 g[i-1][j] &#43; prices[i-1] 来记录前 i-1 天完成 j 次交易的最大利润加上当前价格（即卖出） 买入：通过 f[i-1][j-1] - prices[i-1] 来记录前 i-1 天完成 j-1 次交易的最大利润减去当前价格（即买入） 状态转移方程
 f[i][j] = max(f[i-1][j], g[i-1][j] &#43; prices[i-1])：卖出时，选择前 i-1 天进行 j 次交易的最大利润，再加上今天卖出的利润 g[i][j] = max(g[i-1][j], f[i-1][j-1] - prices[i-1])：买入时，选择前 i-1 天进行 j-1 次交易的最大利润，再减去今天买入的价格 时间复杂度 时间复杂度 O(k * n)'>
-<meta property='og:url' content='https://hangzhang.xyz/p/best-time-to-buy-and-sell-stock-iv/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/best-time-to-buy-and-sell-stock-iv/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2025-02-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2025-02-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Best Time to Buy and Sell Stock IV">
 <meta name="twitter:description" content="188. 买卖股票的最佳时机IV 分析 无交易限制的情况：
 当 k &amp;gt;= n / 2（即可以无限次交易的情况），那么我们可以通过每次只要当前价格比前一天高就进行交易，获取利润 这种情况下，我们只需要遍历数组，当 prices[i] &amp;lt; prices[i &#43; 1] 时，进行买卖，利润就会累加 有交易次数限制的情况：
 当 k &amp;lt; n / 2 时，我们需要考虑最多进行 k 次交易的情况。为此，我们需要使用动态规划来计算不同交易次数的最大利润 使用动态规划状态 f[i][j] 表示前 i 天内进行 j 次交易的最大利润。我们还可以使用辅助数组 g[i][j] 来记录前 i 天内进行 j-1 次交易，买入股票时的状态（即股票买入价格的最优状态） 每次更新 f[i][j] 和 g[i][j] 时，考虑的是： 卖出：通过 g[i-1][j] &#43; prices[i-1] 来记录前 i-1 天完成 j 次交易的最大利润加上当前价格（即卖出） 买入：通过 f[i-1][j-1] - prices[i-1] 来记录前 i-1 天完成 j-1 次交易的最大利润减去当前价格（即买入） 状态转移方程
 f[i][j] = max(f[i-1][j], g[i-1][j] &#43; prices[i-1])：卖出时，选择前 i-1 天进行 j 次交易的最大利润，再加上今天卖出的利润 g[i][j] = max(g[i-1][j], f[i-1][j-1] - prices[i-1])：买入时，选择前 i-1 天进行 j-1 次交易的最大利润，再减去今天买入的价格 时间复杂度 时间复杂度 O(k * n)"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -609,7 +609,7 @@ f[i][j] = max(f[i-1][j], g[i-1][j] &#43; prices[i-1])：卖出时，选择前 i-
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

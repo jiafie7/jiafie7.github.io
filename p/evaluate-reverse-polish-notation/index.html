@@ -7,7 +7,7 @@
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 class Solution { public: int evalRPN(vector&amp;lt;string&amp;gt;&amp;amp; tokens) { std::stack&amp;lt;int&amp;gt; stk; // 用来存储操作数 for (std::string&amp;amp; token : tokens) { // 如果是运算符，弹出两个元素进行运算 if (token == &amp;#34;&#43;&amp;#34; || token == &amp;#34;-&amp;#34; || token == &amp;#34;/&amp;#34; || token == &amp;#34;*&amp;#34;) { int b = stk.'><title>Evaluate Reverse Polish Notation</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/evaluate-reverse-polish-notation/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/evaluate-reverse-polish-notation/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Evaluate Reverse Polish Notation'>
 <meta property='og:description' content='150. 逆波兰表达式求值 分析 遍历 tokens 数组，对于每个元素：
@@ -15,16 +15,16 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 class Solution { public: int evalRPN(vector&amp;lt;string&amp;gt;&amp;amp; tokens) { std::stack&amp;lt;int&amp;gt; stk; // 用来存储操作数 for (std::string&amp;amp; token : tokens) { // 如果是运算符，弹出两个元素进行运算 if (token == &amp;#34;&#43;&amp;#34; || token == &amp;#34;-&amp;#34; || token == &amp;#34;/&amp;#34; || token == &amp;#34;*&amp;#34;) { int b = stk.'>
-<meta property='og:url' content='https://hangzhang.xyz/p/evaluate-reverse-polish-notation/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/evaluate-reverse-polish-notation/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Stack' /><meta property='article:published_time' content='2025-01-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-18T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Stack' /><meta property='article:published_time' content='2025-01-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-18T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Evaluate Reverse Polish Notation">
 <meta name="twitter:description" content="150. 逆波兰表达式求值 分析 遍历 tokens 数组，对于每个元素：
 如果是数字，将其转换为整数并压入栈中 如果是运算符，弹出栈顶的两个数字进行运算，并将结果压回栈中 最后，栈中会留下一个元素，这个元素即为整个表达式的结果
 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 class Solution { public: int evalRPN(vector&amp;lt;string&amp;gt;&amp;amp; tokens) { std::stack&amp;lt;int&amp;gt; stk; // 用来存储操作数 for (std::string&amp;amp; token : tokens) { // 如果是运算符，弹出两个元素进行运算 if (token == &amp;#34;&#43;&amp;#34; || token == &amp;#34;-&amp;#34; || token == &amp;#34;/&amp;#34; || token == &amp;#34;*&amp;#34;) { int b = stk."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -581,7 +581,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

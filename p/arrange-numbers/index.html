@@ -10,7 +10,7 @@
 1 3 输出样例：
 1 2 3 4 5 6 1 2 3 1 3 2 2 1 3 2 3 1 3 1 2 3 2 1 分析 数组 path[N] 存储当前排列的路径 布尔数组 st[N] 记录数字是否已经被使用，避免重复选择 递归 dfs(n, u)，表示当前正在构造第 u 个位置的数字： 如果 u == n，说明已经构造完成，将 path 输出 否则，遍历 1 ~ n，依次尝试将每个未使用的数字填入 path[u]： 标记该数字为已使用 (st[num] = true) 递归进入下一层 dfs(n, u &#43; 1) 回溯，撤销选择 st[num] = false 以尝试其他方案 时间复杂度 全排列的数量为 n!'><title>Arrange Numbers</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/arrange-numbers/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/arrange-numbers/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Arrange Numbers'>
 <meta property='og:description' content='排列数字 给定一个整数 n，将数字 1 ∼ n 排成一排，将会有很多种排列方法
@@ -21,9 +21,9 @@
 1 1 ≤ n ≤ 7 输入样例：
 1 3 输出样例：
 1 2 3 4 5 6 1 2 3 1 3 2 2 1 3 2 3 1 3 1 2 3 2 1 分析 数组 path[N] 存储当前排列的路径 布尔数组 st[N] 记录数字是否已经被使用，避免重复选择 递归 dfs(n, u)，表示当前正在构造第 u 个位置的数字： 如果 u == n，说明已经构造完成，将 path 输出 否则，遍历 1 ~ n，依次尝试将每个未使用的数字填入 path[u]： 标记该数字为已使用 (st[num] = true) 递归进入下一层 dfs(n, u &#43; 1) 回溯，撤销选择 st[num] = false 以尝试其他方案 时间复杂度 全排列的数量为 n!'>
-<meta property='og:url' content='https://hangzhang.xyz/p/arrange-numbers/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/arrange-numbers/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='DFS' /><meta property='article:published_time' content='2025-03-31T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-31T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/codetest.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='DFS' /><meta property='article:published_time' content='2025-03-31T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-31T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/codetest.jpg' />
 <meta name="twitter:title" content="Arrange Numbers">
 <meta name="twitter:description" content="排列数字 给定一个整数 n，将数字 1 ∼ n 排成一排，将会有很多种排列方法
 现在，请你按照字典序将所有的排列方法输出
@@ -33,7 +33,7 @@
 1 1 ≤ n ≤ 7 输入样例：
 1 3 输出样例：
 1 2 3 4 5 6 1 2 3 1 3 2 2 1 3 2 3 1 3 1 2 3 2 1 分析 数组 path[N] 存储当前排列的路径 布尔数组 st[N] 记录数字是否已经被使用，避免重复选择 递归 dfs(n, u)，表示当前正在构造第 u 个位置的数字： 如果 u == n，说明已经构造完成，将 path 输出 否则，遍历 1 ~ n，依次尝试将每个未使用的数字填入 path[u]： 标记该数字为已使用 (st[num] = true) 递归进入下一层 dfs(n, u &#43; 1) 回溯，撤销选择 st[num] = false 以尝试其他方案 时间复杂度 全排列的数量为 n!"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/codetest.jpg' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/codetest.jpg' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -640,7 +640,7 @@
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

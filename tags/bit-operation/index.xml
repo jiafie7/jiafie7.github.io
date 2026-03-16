@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Bit Operation on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/bit-operation/</link>
+        <link>https://blog.hangzhang.cv/tags/bit-operation/</link>
         <description>Recent content in Bit Operation on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 17 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/bit-operation/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 17 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/bit-operation/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Is Unique</title>
-        <link>https://hangzhang.xyz/p/is-unique/</link>
+        <link>https://blog.hangzhang.cv/p/is-unique/</link>
         <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/is-unique/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Is Unique" /&gt;&lt;h2 id=&#34;判断字符是否唯一httpsleetcodecnproblemsis-unique-lcci&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/is-unique-lcci/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/is-unique/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Is Unique" /&gt;&lt;h2 id=&#34;判断字符是否唯一httpsleetcodecnproblemsis-unique-lcci&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/is-unique-lcci/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;判断字符是否唯一&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -86,11 +86,11 @@
         </item>
         <item>
         <title>Bitwise and of Numbers Range</title>
-        <link>https://hangzhang.xyz/p/bitwise-and-of-numbers-range/</link>
+        <link>https://blog.hangzhang.cv/p/bitwise-and-of-numbers-range/</link>
         <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/bitwise-and-of-numbers-range/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Bitwise and of Numbers Range" /&gt;&lt;h2 id=&#34;201-数字范围按位与httpsleetcodecnproblemsbitwise-and-of-numbers-range&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/bitwise-and-of-numbers-range/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/bitwise-and-of-numbers-range/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Bitwise and of Numbers Range" /&gt;&lt;h2 id=&#34;201-数字范围按位与httpsleetcodecnproblemsbitwise-and-of-numbers-range&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/bitwise-and-of-numbers-range/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;201. 数字范围按位与&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -171,11 +171,11 @@
         </item>
         <item>
         <title>Single Number II</title>
-        <link>https://hangzhang.xyz/p/single-number-ii/</link>
+        <link>https://blog.hangzhang.cv/p/single-number-ii/</link>
         <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/single-number-ii/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Single Number II" /&gt;&lt;h2 id=&#34;137-只出现一次的数字iihttpsleetcodecnproblemssingle-number-ii&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/single-number-ii/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/single-number-ii/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Single Number II" /&gt;&lt;h2 id=&#34;137-只出现一次的数字iihttpsleetcodecnproblemssingle-number-ii&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/single-number-ii/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;137. 只出现一次的数字II&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;考虑整数在计算机中以 &lt;code&gt;32&lt;/code&gt; 位二进制形式表示，可以逐位统计数组中每个位上的 &lt;code&gt;1&lt;/code&gt; 的出现次数&lt;/p&gt;
@@ -255,11 +255,11 @@
         </item>
         <item>
         <title>Count Bits</title>
-        <link>https://hangzhang.xyz/p/count-bits/</link>
+        <link>https://blog.hangzhang.cv/p/count-bits/</link>
         <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/count-bits/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Count Bits" /&gt;&lt;h2 id=&#34;338-比特位计数httpsleetcodecnproblemscounting-bitsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/counting-bits/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/count-bits/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Count Bits" /&gt;&lt;h2 id=&#34;338-比特位计数httpsleetcodecnproblemscounting-bitsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/counting-bits/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;338. 比特位计数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -331,11 +331,11 @@
         </item>
         <item>
         <title>Minimum Flips To Make A or B Equal to C</title>
-        <link>https://hangzhang.xyz/p/minimum-flips-to-make-a-or-b-equal-to-c/</link>
+        <link>https://blog.hangzhang.cv/p/minimum-flips-to-make-a-or-b-equal-to-c/</link>
         <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/minimum-flips-to-make-a-or-b-equal-to-c/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Minimum Flips To Make A or B Equal to C" /&gt;&lt;h2 id=&#34;1318-或运算的最小翻转次数httpsleetcodecnproblemsminimum-flips-to-make-a-or-b-equal-to-cdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/minimum-flips-to-make-a-or-b-equal-to-c/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/minimum-flips-to-make-a-or-b-equal-to-c/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Minimum Flips To Make A or B Equal to C" /&gt;&lt;h2 id=&#34;1318-或运算的最小翻转次数httpsleetcodecnproblemsminimum-flips-to-make-a-or-b-equal-to-cdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/minimum-flips-to-make-a-or-b-equal-to-c/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1318. 或运算的最小翻转次数&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -431,11 +431,11 @@
         </item>
         <item>
         <title>reverseBits</title>
-        <link>https://hangzhang.xyz/p/reversebits/</link>
+        <link>https://blog.hangzhang.cv/p/reversebits/</link>
         <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/reversebits/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post reverseBits" /&gt;&lt;h2 id=&#34;190-reversebitshttpsleetcodecnproblemsreverse-bits&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/reverse-bits/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/reversebits/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post reverseBits" /&gt;&lt;h2 id=&#34;190-reversebitshttpsleetcodecnproblemsreverse-bits&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/reverse-bits/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;190. reverseBits&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;核心步骤：取二进制数的第i位&lt;code&gt;n &amp;gt;&amp;gt; i &amp;amp; 1&lt;/code&gt;&lt;/p&gt;

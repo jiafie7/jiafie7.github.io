@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Kahn on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/kahn/</link>
+        <link>https://blog.hangzhang.cv/tags/kahn/</link>
         <description>Recent content in Kahn on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 02 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/kahn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 02 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/kahn/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Top Sort</title>
-        <link>https://hangzhang.xyz/p/top-sort/</link>
+        <link>https://blog.hangzhang.cv/p/top-sort/</link>
         <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/top-sort/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/codetest.jpg" alt="Featured image of post Top Sort" /&gt;&lt;h2 id=&#34;有向图的拓扑排序&#34;&gt;有向图的拓扑排序&lt;/h2&gt;
+        <guid>https://blog.hangzhang.cv/p/top-sort/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/codetest.jpg" alt="Featured image of post Top Sort" /&gt;&lt;h2 id=&#34;有向图的拓扑排序&#34;&gt;有向图的拓扑排序&lt;/h2&gt;
 &lt;p&gt;给定一个 &lt;code&gt;n&lt;/code&gt; 个点 &lt;code&gt;m&lt;/code&gt; 条边的有向图，点的编号是 &lt;code&gt;1&lt;/code&gt; 到 &lt;code&gt;n&lt;/code&gt;，图中可能存在重边和自环&lt;/p&gt;
 &lt;p&gt;请输出任意一个该有向图的拓扑序列，如果拓扑序列不存在，则输出 &lt;code&gt;−1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;若一个由图中所有点构成的序列 &lt;code&gt;A&lt;/code&gt; 满足：对于图中的每条边 &lt;code&gt;(x, y)&lt;/code&gt;，&lt;code&gt;x&lt;/code&gt; 在 &lt;code&gt;A&lt;/code&gt; 中都出现在 &lt;code&gt;y&lt;/code&gt; 之前，则称 &lt;code&gt;A&lt;/code&gt; 是该图的一个拓扑序列&lt;/p&gt;

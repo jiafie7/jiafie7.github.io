@@ -5,20 +5,20 @@
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int minCostClimbingStairs(vector&amp;lt;int&amp;gt;&amp;amp; cost) { int n = cost.size(); std::vector&amp;lt;int&amp;gt; f(n &#43; 1); // DP 数组，大小为 n&#43;1 // 从第 2 个台阶开始计算最低花费 for (int i = 2; i &amp;lt;= n; &#43;&#43;i) f[i] = std::min(f[i - 1] &#43; cost[i - 1], f[i - 2] &#43; cost[i - 2]); return f[n]; // 返回到达顶部的最小花费 } }; '><title>Min Cost Climbing Stairs</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/min-cost-climbing-stairs/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/min-cost-climbing-stairs/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Min Cost Climbing Stairs'>
 <meta property='og:description' content='746. 使用最小花费爬楼梯 分析 状态定义： 定义 f[i] 为到达第 i 个台阶的最低花费 状态转移： 每次可以从前一个台阶爬上来，也可以从前两个台阶爬上来，选择花费较小的一种：f[i] = min(f[i-1] &#43; cost[i-1], f[i-2] &#43; cost[i-2]) 初始状态： f[0] = 0 ：第 0 台阶为起点，不需要任何花费 f[1] = 0 ：第 1 台阶为起点，也不需要任何花费 目标： 返回 f[n] ，即爬到楼梯顶部的最小花费 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int minCostClimbingStairs(vector&amp;lt;int&amp;gt;&amp;amp; cost) { int n = cost.size(); std::vector&amp;lt;int&amp;gt; f(n &#43; 1); // DP 数组，大小为 n&#43;1 // 从第 2 个台阶开始计算最低花费 for (int i = 2; i &amp;lt;= n; &#43;&#43;i) f[i] = std::min(f[i - 1] &#43; cost[i - 1], f[i - 2] &#43; cost[i - 2]); return f[n]; // 返回到达顶部的最小花费 } }; '>
-<meta property='og:url' content='https://hangzhang.xyz/p/min-cost-climbing-stairs/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/min-cost-climbing-stairs/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Dynamic Programming' /><meta property='article:published_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Min Cost Climbing Stairs">
 <meta name="twitter:description" content="746. 使用最小花费爬楼梯 分析 状态定义： 定义 f[i] 为到达第 i 个台阶的最低花费 状态转移： 每次可以从前一个台阶爬上来，也可以从前两个台阶爬上来，选择花费较小的一种：f[i] = min(f[i-1] &#43; cost[i-1], f[i-2] &#43; cost[i-2]) 初始状态： f[0] = 0 ：第 0 台阶为起点，不需要任何花费 f[1] = 0 ：第 1 台阶为起点，也不需要任何花费 目标： 返回 f[n] ，即爬到楼梯顶部的最小花费 时间复杂度 时间复杂度 O(n)
 空间复杂度 空间复杂度为 O(n)
 C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: int minCostClimbingStairs(vector&amp;lt;int&amp;gt;&amp;amp; cost) { int n = cost.size(); std::vector&amp;lt;int&amp;gt; f(n &#43; 1); // DP 数组，大小为 n&#43;1 // 从第 2 个台阶开始计算最低花费 for (int i = 2; i &amp;lt;= n; &#43;&#43;i) f[i] = std::min(f[i - 1] &#43; cost[i - 1], f[i - 2] &#43; cost[i - 2]); return f[n]; // 返回到达顶部的最小花费 } }; "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -548,7 +548,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public: i
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

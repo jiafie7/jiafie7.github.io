@@ -4,18 +4,18 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='88. 合并两个有序数组 分析 核心思路：从后往前双指针合并
 由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 复杂度分析 时间复杂度：O(m &#43; n) 空间复杂度：O(1) C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; Python 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify nums1 in-place instead.'><title>Merge Sorted Array</title>
 
-<link rel='canonical' href='https://hangzhang.xyz/p/merge-sorted-array/'>
+<link rel='canonical' href='https://blog.hangzhang.cv/p/merge-sorted-array/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Merge Sorted Array'>
 <meta property='og:description' content='88. 合并两个有序数组 分析 核心思路：从后往前双指针合并
 由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 复杂度分析 时间复杂度：O(m &#43; n) 空间复杂度：O(1) C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; Python 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify nums1 in-place instead.'>
-<meta property='og:url' content='https://hangzhang.xyz/p/merge-sorted-array/'>
+<meta property='og:url' content='https://blog.hangzhang.cv/p/merge-sorted-array/'>
 <meta property='og:site_name' content='Hang Zhang'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://hangzhang.xyz/leetcode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Double Pointer' /><meta property='article:published_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Merge Sorted Array">
 <meta name="twitter:description" content="88. 合并两个有序数组 分析 核心思路：从后往前双指针合并
 由于 nums1 后面有足够的空间，可以从后往前填充最大元素，避免频繁移动数据 使用双指针分别指向两个数组的末尾，逐步比较并将较大的数放到 nums1 的最后 初始化指针： i = m - 1 ：指向 nums1 有效部分的末尾 j = n - 1 ：指向 nums2 的末尾 k = m &#43; n - 1 ：指向 nums1 的末尾（总长度） 双指针比较： 比较 nums1[i] 和 nums2[j]，将较大值放到 nums1[k]，然后指针向前移动 处理剩余元素： 如果 nums2 还有剩余元素，继续填充到 nums1 中（nums1 剩下的部分已经是有序的，无需处理） 复杂度分析 时间复杂度：O(m &#43; n) 空间复杂度：O(1) C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 class Solution { public: void merge(vector&amp;lt;int&amp;gt;&amp;amp; nums1, int m, vector&amp;lt;int&amp;gt;&amp;amp; nums2, int n) { int i = m - 1; // 指向 nums1 有效部分的末尾 int j = n - 1; // 指向 nums2 的末尾 int k = m &#43; n - 1; // 指向合并后 nums1 的末尾 // 从后往前比较，填充较大元素 while (i &amp;gt;= 0 &amp;amp;&amp;amp; j &amp;gt;= 0) if (nums1[i] &amp;gt;= nums2[j]) nums1[k--] = nums1[i--]; // nums1 较大，放到末尾 else nums1[k--] = nums2[j--]; // nums2 较大，放到末尾 // 如果 nums2 还有剩余元素，继续填充 while (j &amp;gt;= 0) nums1[k--] = nums2[j--]; } }; Python 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify nums1 in-place instead."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://hangzhang.xyz/leetcode.png' />
+    <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -706,7 +706,7 @@
         
             2023 - 
         
-        2025 Hang Zhang
+        2026 Hang Zhang
     </section>
     
     <section class="powerby">

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Greedy on Hang Zhang</title>
-        <link>https://hangzhang.xyz/tags/greedy/</link>
+        <link>https://blog.hangzhang.cv/tags/greedy/</link>
         <description>Recent content in Greedy on Hang Zhang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 11 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hangzhang.xyz/tags/greedy/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 11 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hangzhang.cv/tags/greedy/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Transform Array to All Equal Elements</title>
-        <link>https://hangzhang.xyz/p/transform-array-to-all-equal-elements/</link>
+        <link>https://blog.hangzhang.cv/p/transform-array-to-all-equal-elements/</link>
         <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/transform-array-to-all-equal-elements/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Transform Array to All Equal Elements" /&gt;&lt;h2 id=&#34;3576-数组元素相等转换httpsleetcodecnproblemstransform-array-to-all-equal-elements&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/transform-array-to-all-equal-elements/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/transform-array-to-all-equal-elements/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Transform Array to All Equal Elements" /&gt;&lt;h2 id=&#34;3576-数组元素相等转换httpsleetcodecnproblemstransform-array-to-all-equal-elements&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/transform-array-to-all-equal-elements/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;3576. 数组元素相等转换&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;算法&#34;&gt;算法&lt;/h3&gt;
 &lt;ul&gt;
@@ -213,11 +213,11 @@
         </item>
         <item>
         <title>Minimum Subsequence in Non Increasing Order</title>
-        <link>https://hangzhang.xyz/p/minimum-subsequence-in-non-increasing-order/</link>
+        <link>https://blog.hangzhang.cv/p/minimum-subsequence-in-non-increasing-order/</link>
         <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/minimum-subsequence-in-non-increasing-order/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Minimum Subsequence in Non Increasing Order" /&gt;&lt;h2 id=&#34;1403-非递增顺序的最小子序列httpsleetcodecnproblemsminimum-subsequence-in-non-increasing-order&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/minimum-subsequence-in-non-increasing-order/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/minimum-subsequence-in-non-increasing-order/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Minimum Subsequence in Non Increasing Order" /&gt;&lt;h2 id=&#34;1403-非递增顺序的最小子序列httpsleetcodecnproblemsminimum-subsequence-in-non-increasing-order&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/minimum-subsequence-in-non-increasing-order/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;1403. 非递增顺序的最小子序列&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -286,11 +286,11 @@
         </item>
         <item>
         <title>Monotone Increasing Digits</title>
-        <link>https://hangzhang.xyz/p/monotone-increasing-digits/</link>
+        <link>https://blog.hangzhang.cv/p/monotone-increasing-digits/</link>
         <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/monotone-increasing-digits/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Monotone Increasing Digits" /&gt;&lt;h2 id=&#34;738-单调递增的数字httpsleetcodecnproblemsmonotone-increasing-digitsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/monotone-increasing-digits/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/monotone-increasing-digits/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Monotone Increasing Digits" /&gt;&lt;h2 id=&#34;738-单调递增的数字httpsleetcodecnproblemsmonotone-increasing-digitsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/monotone-increasing-digits/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;738. 单调递增的数字&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -382,11 +382,11 @@
         </item>
         <item>
         <title>IPO</title>
-        <link>https://hangzhang.xyz/p/ipo/</link>
+        <link>https://blog.hangzhang.cv/p/ipo/</link>
         <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/ipo/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post IPO" /&gt;&lt;h2 id=&#34;502ipohttpsleetcodecnproblemsipodescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/ipo/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/ipo/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post IPO" /&gt;&lt;h2 id=&#34;502ipohttpsleetcodecnproblemsipodescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/ipo/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;502.IPO&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -501,11 +501,11 @@
         </item>
         <item>
         <title>Text Justification</title>
-        <link>https://hangzhang.xyz/p/text-justification/</link>
+        <link>https://blog.hangzhang.cv/p/text-justification/</link>
         <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/text-justification/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Text Justification" /&gt;&lt;h2 id=&#34;68-文本左右对齐httpsleetcodecnproblemstext-justificationdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/text-justification/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/text-justification/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Text Justification" /&gt;&lt;h2 id=&#34;68-文本左右对齐httpsleetcodecnproblemstext-justificationdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/text-justification/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;68. 文本左右对齐&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -668,11 +668,11 @@
         </item>
         <item>
         <title>Candy</title>
-        <link>https://hangzhang.xyz/p/candy/</link>
+        <link>https://blog.hangzhang.cv/p/candy/</link>
         <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/candy/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Candy" /&gt;&lt;h2 id=&#34;135-分发糖果httpsleetcodecnproblemscandy&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/candy/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/candy/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Candy" /&gt;&lt;h2 id=&#34;135-分发糖果httpsleetcodecnproblemscandy&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/candy/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;135. 分发糖果&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -782,11 +782,11 @@
         </item>
         <item>
         <title>Gas Station</title>
-        <link>https://hangzhang.xyz/p/gas-station/</link>
+        <link>https://blog.hangzhang.cv/p/gas-station/</link>
         <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/gas-station/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Gas Station" /&gt;&lt;h2 id=&#34;134-加油站httpsleetcodecnproblemsgas-stationdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/gas-station/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/gas-station/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Gas Station" /&gt;&lt;h2 id=&#34;134-加油站httpsleetcodecnproblemsgas-stationdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/gas-station/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;134. 加油站&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ol&gt;
@@ -884,11 +884,11 @@
         </item>
         <item>
         <title>Best Time to Buy and Sell Stock II</title>
-        <link>https://hangzhang.xyz/p/best-time-to-buy-and-sell-stock-ii/</link>
+        <link>https://blog.hangzhang.cv/p/best-time-to-buy-and-sell-stock-ii/</link>
         <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/best-time-to-buy-and-sell-stock-ii/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Best Time to Buy and Sell Stock II" /&gt;&lt;h2 id=&#34;122-买卖股票的最佳时机iihttpsleetcodecnproblemsbest-time-to-buy-and-sell-stock-iidescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/best-time-to-buy-and-sell-stock-ii/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Best Time to Buy and Sell Stock II" /&gt;&lt;h2 id=&#34;122-买卖股票的最佳时机iihttpsleetcodecnproblemsbest-time-to-buy-and-sell-stock-iidescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;122. 买卖股票的最佳时机II&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;p&gt;如果今天的股票价格比昨天高，就可以将这部分差价计入利润。这样相当于在每个上升区间都进行买入和卖出操作。将所有上涨的差价累加，即可获得最大利润&lt;/p&gt;
@@ -936,11 +936,11 @@
         </item>
         <item>
         <title>Minimum Number Of Arrows To Burst Balloons</title>
-        <link>https://hangzhang.xyz/p/minimum-number-of-arrows-to-burst-balloons/</link>
+        <link>https://blog.hangzhang.cv/p/minimum-number-of-arrows-to-burst-balloons/</link>
         <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/minimum-number-of-arrows-to-burst-balloons/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Minimum Number Of Arrows To Burst Balloons" /&gt;&lt;h2 id=&#34;452-用最少数量的箭引爆气球httpsleetcodecnproblemsminimum-number-of-arrows-to-burst-balloonsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/minimum-number-of-arrows-to-burst-balloons/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Minimum Number Of Arrows To Burst Balloons" /&gt;&lt;h2 id=&#34;452-用最少数量的箭引爆气球httpsleetcodecnproblemsminimum-number-of-arrows-to-burst-balloonsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;452. 用最少数量的箭引爆气球&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;算法&#34;&gt;算法&lt;/h3&gt;
 &lt;ul&gt;
@@ -1103,11 +1103,11 @@
         </item>
         <item>
         <title>Non Overlapping Intervals</title>
-        <link>https://hangzhang.xyz/p/non-overlapping-intervals/</link>
+        <link>https://blog.hangzhang.cv/p/non-overlapping-intervals/</link>
         <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hangzhang.xyz/p/non-overlapping-intervals/</guid>
-        <description>&lt;img src="https://hangzhang.xyz/leetcode.png" alt="Featured image of post Non Overlapping Intervals" /&gt;&lt;h2 id=&#34;435-无重叠区间httpsleetcodecnproblemsnon-overlapping-intervalsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/non-overlapping-intervals/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://blog.hangzhang.cv/p/non-overlapping-intervals/</guid>
+        <description>&lt;img src="https://blog.hangzhang.cv/leetcode.png" alt="Featured image of post Non Overlapping Intervals" /&gt;&lt;h2 id=&#34;435-无重叠区间httpsleetcodecnproblemsnon-overlapping-intervalsdescription&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.cn/problems/non-overlapping-intervals/description/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;435. 无重叠区间&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
 &lt;ul&gt;
