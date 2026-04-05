@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='79. 单词搜索 分析 遍历网格：
-使用双层循环遍历网格中的每个字符 如果发现当前字符和目标单词的首字符匹配，则从这个位置开始进行深度优先搜索 dfs()：
-检查当前网格字符是否匹配目标单词的当前字符 如果匹配，检查是否已经完成整个单词的匹配 临时将当前字符标记为已访问（用 * 替代），以防止重复访问 按照上下左右四个方向继续搜索，递归调用 dfs() 如果所有方向都无法匹配剩余字符，则将当前字符还原，返回 false 返回结果：
-如果某次 DFS 找到了目标单词，则立即返回 true 如果遍历完网格后仍未找到匹配，返回 false 时间复杂度 每个网格单元都可能作为起点触发一次深度优先搜索。 搜索深度最多为 word.length。 最坏情况下，搜索路径为网格大小 m × n 的全部单元 时间复杂度为 O(m × n × 4^l)，其中 l 是单词的长度
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='79. 单词搜索 分析 从任意位置出发向下 dfs，只在搜到时，返回 true 若当前位置与 word 不等，返回 false 否则说明相等，检查是否搜到末尾，若搜到末尾返回 true 否则继续向下搜索 暂存当前字符 向四个方向向下 dfs 恢复现场 时间复杂度 每个网格单元都可能作为起点触发一次深度优先搜索。 搜索深度最多为 word.length。 最坏情况下，搜索路径为网格大小 m × n 的全部单元 时间复杂度为 O(m × n × 4^l)，其中 l 是单词的长度
 空间复杂度 递归栈的深度最多为单词的长度 l，空间复杂度为 O(l)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 class Solution { public: bool exist(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; board, string word) { // 遍历整个网格 for (int i = 0; i &amp;lt; board.'><title>Word Search</title>
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 class Solution { public: bool exist(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; board, string word) { // 遍历整个网格 for (int i = 0; i &amp;lt; board.'><title>Word Search</title>
 
 <link rel='canonical' href='https://blog.hangzhang.cv/p/word-search/'>
 
 <link rel="stylesheet" href="/scss/style.min.d8118f156935b64eca93aca758476adca858d2c47354971654d9bd2933a0e45f.css"><meta property='og:title' content='Word Search'>
-<meta property='og:description' content='79. 单词搜索 分析 遍历网格：
-使用双层循环遍历网格中的每个字符 如果发现当前字符和目标单词的首字符匹配，则从这个位置开始进行深度优先搜索 dfs()：
-检查当前网格字符是否匹配目标单词的当前字符 如果匹配，检查是否已经完成整个单词的匹配 临时将当前字符标记为已访问（用 * 替代），以防止重复访问 按照上下左右四个方向继续搜索，递归调用 dfs() 如果所有方向都无法匹配剩余字符，则将当前字符还原，返回 false 返回结果：
-如果某次 DFS 找到了目标单词，则立即返回 true 如果遍历完网格后仍未找到匹配，返回 false 时间复杂度 每个网格单元都可能作为起点触发一次深度优先搜索。 搜索深度最多为 word.length。 最坏情况下，搜索路径为网格大小 m × n 的全部单元 时间复杂度为 O(m × n × 4^l)，其中 l 是单词的长度
+<meta property='og:description' content='79. 单词搜索 分析 从任意位置出发向下 dfs，只在搜到时，返回 true 若当前位置与 word 不等，返回 false 否则说明相等，检查是否搜到末尾，若搜到末尾返回 true 否则继续向下搜索 暂存当前字符 向四个方向向下 dfs 恢复现场 时间复杂度 每个网格单元都可能作为起点触发一次深度优先搜索。 搜索深度最多为 word.length。 最坏情况下，搜索路径为网格大小 m × n 的全部单元 时间复杂度为 O(m × n × 4^l)，其中 l 是单词的长度
 空间复杂度 递归栈的深度最多为单词的长度 l，空间复杂度为 O(l)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 class Solution { public: bool exist(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; board, string word) { // 遍历整个网格 for (int i = 0; i &amp;lt; board.'>
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 class Solution { public: bool exist(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; board, string word) { // 遍历整个网格 for (int i = 0; i &amp;lt; board.'>
 <meta property='og:url' content='https://blog.hangzhang.cv/p/word-search/'>
 <meta property='og:site_name' content='Hang Zhang'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Backtracking' /><meta property='article:published_time' content='2024-12-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-05T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.hangzhang.cv/leetcode.png' />
 <meta name="twitter:title" content="Word Search">
-<meta name="twitter:description" content="79. 单词搜索 分析 遍历网格：
-使用双层循环遍历网格中的每个字符 如果发现当前字符和目标单词的首字符匹配，则从这个位置开始进行深度优先搜索 dfs()：
-检查当前网格字符是否匹配目标单词的当前字符 如果匹配，检查是否已经完成整个单词的匹配 临时将当前字符标记为已访问（用 * 替代），以防止重复访问 按照上下左右四个方向继续搜索，递归调用 dfs() 如果所有方向都无法匹配剩余字符，则将当前字符还原，返回 false 返回结果：
-如果某次 DFS 找到了目标单词，则立即返回 true 如果遍历完网格后仍未找到匹配，返回 false 时间复杂度 每个网格单元都可能作为起点触发一次深度优先搜索。 搜索深度最多为 word.length。 最坏情况下，搜索路径为网格大小 m × n 的全部单元 时间复杂度为 O(m × n × 4^l)，其中 l 是单词的长度
+<meta name="twitter:description" content="79. 单词搜索 分析 从任意位置出发向下 dfs，只在搜到时，返回 true 若当前位置与 word 不等，返回 false 否则说明相等，检查是否搜到末尾，若搜到末尾返回 true 否则继续向下搜索 暂存当前字符 向四个方向向下 dfs 恢复现场 时间复杂度 每个网格单元都可能作为起点触发一次深度优先搜索。 搜索深度最多为 word.length。 最坏情况下，搜索路径为网格大小 m × n 的全部单元 时间复杂度为 O(m × n × 4^l)，其中 l 是单词的长度
 空间复杂度 递归栈的深度最多为单词的长度 l，空间复杂度为 O(l)
-C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 class Solution { public: bool exist(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; board, string word) { // 遍历整个网格 for (int i = 0; i &amp;lt; board."><meta name="twitter:card" content="summary_large_image">
+C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 class Solution { public: bool exist(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; board, string word) { // 遍历整个网格 for (int i = 0; i &amp;lt; board."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://blog.hangzhang.cv/leetcode.png' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -299,32 +290,15 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
     <h2 id="79-单词搜索httpsleetcodecnproblemsword-searchdescription"><a class="link" href="https://leetcode.cn/problems/word-search/description/"  target="_blank" rel="noopener"
     >79. 单词搜索</a></h2>
 <h3 id="分析">分析</h3>
-<ol>
-<li>
-<p>遍历网格：</p>
 <ul>
-<li>使用双层循环遍历网格中的每个字符</li>
-<li>如果发现当前字符和目标单词的首字符匹配，则从这个位置开始进行深度优先搜索</li>
+<li>从任意位置出发向下 <code>dfs</code>，只在搜到时，返回 <code>true</code></li>
+<li>若当前位置与 <code>word</code> 不等，返回 <code>false</code></li>
+<li>否则说明相等，检查是否搜到末尾，若搜到末尾返回 <code>true</code></li>
+<li>否则继续向下搜索</li>
+<li>暂存当前字符</li>
+<li>向四个方向向下 <code>dfs</code></li>
+<li>恢复现场</li>
 </ul>
-</li>
-<li>
-<p><code>dfs()</code>：</p>
-<ul>
-<li>检查当前网格字符是否匹配目标单词的当前字符</li>
-<li>如果匹配，检查是否已经完成整个单词的匹配</li>
-<li>临时将当前字符标记为已访问（用 <code>*</code> 替代），以防止重复访问</li>
-<li>按照上下左右四个方向继续搜索，递归调用 <code>dfs()</code></li>
-<li>如果所有方向都无法匹配剩余字符，则将当前字符还原，返回 <code>false</code></li>
-</ul>
-</li>
-<li>
-<p>返回结果：</p>
-<ul>
-<li>如果某次 <code>DFS</code> 找到了目标单词，则立即返回 <code>true</code></li>
-<li>如果遍历完网格后仍未找到匹配，返回 <code>false</code></li>
-</ul>
-</li>
-</ol>
 <h3 id="时间复杂度">时间复杂度</h3>
 <ul>
 <li>每个网格单元都可能作为起点触发一次深度优先搜索。</li>
@@ -381,7 +355,6 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 </span><span class="lnt">42
 </span><span class="lnt">43
 </span><span class="lnt">44
-</span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">class</span> <span class="n">Solution</span>
@@ -392,8 +365,7 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 </span></span><span class="line"><span class="cl">      <span class="c1">// 遍历整个网格
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">board</span><span class="p">.</span><span class="nf">size</span><span class="p">();</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">board</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">size</span><span class="p">();</span> <span class="o">++</span> <span class="n">j</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">          <span class="c1">// 如果从某个位置开始匹配成功，直接返回true
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="k">if</span> <span class="p">(</span><span class="nf">dfs</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="p">(</span><span class="nf">dfs</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// 如果遍历完所有位置都未找到，返回false
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
@@ -411,8 +383,8 @@ C&#43;&#43;代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
 </span></span><span class="line"><span class="cl">      <span class="c1">// 标记当前字符已访问
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kt">char</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">      <span class="n">board</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;*&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">dx</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="n">dy</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span> <span class="c1">// 四个方向数组
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">dx</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="n">dy</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">      <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">b</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
